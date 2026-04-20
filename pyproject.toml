@@ -14,10 +14,12 @@ dependencies = [
     "pydantic>=2.6",
     "pyyaml>=6.0",
     "openai>=1.0",
+    "anthropic>=0.40",
 ]
 
 [project.scripts]
 trajeval = "evaluator.cli:app"
+datagen = "dataset.cli:app"
 
 [tool.hatch.build.targets.wheel]
-packages = ["evaluator"]
+packages = ["evaluator", "dataset"]
