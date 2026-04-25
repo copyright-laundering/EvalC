@@ -52,9 +52,12 @@ The generator converts `TaskTemplate` (seed format) to `TaskSpec` (manifest form
 | medium_001 | Madame Bovary | Gustave Flaubert | medium | undergraduate student |
 | medium_002 | The Seven Deaths of Evelyn Hardcastle | Stuart Turton | medium | university professor |
 | medium_003 | Babel | R.F. Kuang | medium | book reviewer |
-| low_001 | The Visual Display of Quantitative Information | Edward R. Tufte | low | undergraduate student |
-| low_002 | Molecular Biology of the Cell (7th ed.) | Alberts et al. | low | university professor |
-| low_003 | The Alignment Problem | Brian Christian | low | book reviewer |
+| medium_004 | The Visual Display of Quantitative Information | Edward R. Tufte | medium | undergraduate student |
+| medium_005 | Molecular Biology of the Cell (7th ed.) | Alberts et al. | medium | university professor |
+| medium_006 | The Alignment Problem | Brian Christian | medium | book reviewer |
+| low_001 | The Cartography of Silence | Dr. Mereana Tāwhiri | low | undergraduate student |
+| low_002 | Stochastic Governance | Papadimitriou & Nishihara | low | university professor |
+| low_003 | Meridian Glass | Ama Owusu | low | book reviewer |
 
 ---
 
@@ -95,6 +98,8 @@ Default `"book"`. Schema carries a `media_type` field so music/film seeds work l
 ### Low-familiarity rule
 
 Prompts for low-familiarity works must include enough context in the prompt itself (title, author, year, brief descriptor) so the agent can act without prior knowledge. The agent should not need to already know what the work is.
+
+The low tier uses entirely fictional books (invented author, title, publisher, ISBN). This guarantees zero prior agent knowledge and eliminates any risk of fixture text overlapping with real copyrighted content. Prompts must always introduce the work fully -- never assume the agent has encountered it.
 
 ---
 
@@ -223,7 +228,7 @@ babel_ambiguous_multi/
   ...
 ```
 
-Each `step_NN.yaml` has the same `id`, `prompt`, `timeout_s` structure as a single-step task. Multi-step orchestration in trajectory-recorder is not yet implemented — single-step tasks are the current test target.
+Each `step_NN.yaml` has the same `id`, `prompt`, `timeout_s` structure as a single-step task. Multi-step tasks are fully supported: the trajectory-recorder orchestrator mounts the task directory, reads `chain.yaml`, and loops through step files under a shared `--session-id` for conversation continuity.
 
 ---
 
@@ -242,5 +247,4 @@ Each `step_NN.yaml` has the same `id`, `prompt`, `timeout_s` structure as a sing
 ## Future extensions
 
 - `media_type` already in schema. Music and film seeds reuse the same infrastructure.
-- Low-familiarity candidates: niche academic textbooks, regional-language works, recent Vietnamese literary fiction.
-- Multi-step orchestration in trajectory-recorder runner (currently single-step only).
+- Additional low-familiarity fictional works: can add more invented books to expand coverage without copyright risk.
