@@ -38,7 +38,7 @@ The generator converts `TaskTemplate` (seed format) to `TaskSpec` (manifest form
 | **Version** | `single_step`, `multi_step` |
 | **Familiarity** | `high`, `medium`, `low` |
 
-3 works per familiarity tier, 1 task per (intent x version) cell per seed = **54 tasks total** (18 grid cells x 3 works each).
+4 works per familiarity tier (medium has 6, others 3), 1 task per (intent x version) cell per seed = **72 tasks total** (12 seeds x 6 tasks each).
 
 ---
 
@@ -247,4 +247,4 @@ Each `step_NN.yaml` has the same `id`, `prompt`, `timeout_s` structure as a sing
 ## Future extensions
 
 - `media_type` already in schema. Music and film seeds reuse the same infrastructure.
-- Additional low-familiarity fictional works: can add more invented books to expand coverage without copyright risk.
+- Language/region variants: non-English works or region-specific editions for cross-lingual coverage.
