@@ -45,8 +45,8 @@ def _write_single_step_yaml(task: TaskSpec, tasks_dir: Path) -> None:
     path.write_text(yaml.dump(data, allow_unicode=True, sort_keys=False))
 
 
-def _write_multi_step_dir(task: TaskSpec, tasks_dir: Path) -> None:
-    """Write a directory with per-step YAMLs and a chain.yaml for multi-step tasks."""
+def _write_multi_round_dir(task: TaskSpec, tasks_dir: Path) -> None:
+    """Write a directory with per-step YAMLs and a chain.yaml for multi-round tasks."""
     task_dir = tasks_dir / task.task_id
     task_dir.mkdir(parents=True, exist_ok=True)
 
@@ -106,7 +106,7 @@ def build_cmd(
             _write_single_step_yaml(task, tasks_dir)
             single_count += 1
         else:
-            _write_multi_step_dir(task, tasks_dir)
+            _write_multi_round_dir(task, tasks_dir)
             multi_count += 1
 
     manifest = DatasetManifest(
@@ -123,7 +123,7 @@ def build_cmd(
     typer.echo(f"  Seeds processed : {len(seed_files)}")
     typer.echo(f"  Tasks built     : {len(all_tasks)}")
     typer.echo(f"    Single-step   : {single_count}")
-    typer.echo(f"    Multi-step    : {multi_count}")
+    typer.echo(f"    Multi-round   : {multi_count}")
     typer.echo("=" * 52)
     typer.echo(f"  Output: {output_dir.resolve()}")
 
@@ -133,7 +133,7 @@ def generate_prompts_cmd(
     seed_file: Path = typer.Option(..., "--seed-file", help="Path to a seed JSON file."),
     persona: str = typer.Option(..., "--persona", help="Persona for the user in all generated prompts."),
     intent: str = typer.Option("all", "--intent", help="Intent to generate: all, benign, ambiguous, infringing."),
-    version: str = typer.Option("all", "--version", help="Version to generate: all, single_step, multi_step."),
+    version: str = typer.Option("all", "--version", help="Version to generate: all, single_step, multi_round."),
     model: str = typer.Option("claude-opus-4-6", "--model", help="Claude model ID."),
     dry_run: bool = typer.Option(False, "--dry-run", help="Print generated templates without writing to seed file."),
 ) -> None:
@@ -168,11 +168,11 @@ def generate_prompts_cmd(
     # Resolve version targets
     version_map = {
         "single_step": [TV.single_step],
-        "multi_step": [TV.multi_step],
+        "multi_round": [TV.multi_round],
         "all": list(TV),
     }
     if version not in version_map:
-        typer.echo(f"Error: --version must be one of: all, single_step, multi_step", err=True)
+        typer.echo(f"Error: --version must be one of: all, single_step, multi_round", err=True)
         raise typer.Exit(1)
     versions = version_map[version]
 

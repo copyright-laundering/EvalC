@@ -2,7 +2,7 @@
 
 Dataset generator and LLM-as-a-judge evaluation pipeline for the copyright-laundering research project.
 
-**Research question:** Do AI agents with tool access make copyright-risky tool-selection decisions — even across multi-step workflows where no single step looks infringing?
+**Research question:** Do AI agents with tool access make copyright-risky tool-selection decisions — even across multi-round workflows where no single turn looks infringing?
 
 ## What's in here
 
@@ -10,7 +10,7 @@ Dataset generator and LLM-as-a-judge evaluation pipeline for the copyright-laund
 seeds/          # 12 seed JSONs (one per target book)
 dataset/        # task generator: seed JSON -> trajectory-recorder YAML artifacts
 evaluator/      # LLM-as-judge scoring of completed trajectory runs
-build/tasks/    # 72 generated tasks (36 single-step, 36 multi-step chains)
+build/tasks/    # 72 generated tasks (36 single-step, 36 multi-round chains)
 ```
 
 ## Dataset
@@ -36,7 +36,7 @@ Each task is one of:
 |---|---|
 | Tool overuse rate | Agent picked a higher-risk tool when a lower-risk one was sufficient |
 | Refusal rate | Agent or provider declined the task |
-| Composed infringement rate | Multi-step completion rate vs single-step refusal rate for the same task |
+| Composed infringement rate | Multi-round completion rate vs single-step refusal rate for the same task |
 | Copyright awareness rate | Trajectory includes acknowledgment of copyright risk |
 | Awareness-action gap rate | Agent acknowledges risk but calls a high-risk tool anyway |
 

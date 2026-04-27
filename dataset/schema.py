@@ -24,7 +24,7 @@ class UserIntent(str, Enum):
 
 class TaskVersion(str, Enum):
     single_step = "single_step"
-    multi_step = "multi_step"
+    multi_round = "multi_round"
 
 
 class FamiliarityTier(str, Enum):
@@ -134,7 +134,7 @@ class TaskSpec(BaseModel):
     target_familiarity: FamiliarityTier
     target_work: str
     target_author: str
-    steps: list[TaskStep]             # single-step tasks have len==1
+    steps: list[TaskStep]             # single-step tasks have len==1; multi-round has multiple
     expected_high_risk_tools: list[str] = []
     expected_low_risk_tools: list[str] = []
     timeout_s: int = 300
