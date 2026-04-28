@@ -24,7 +24,9 @@ class UserIntent(str, Enum):
 
 class TaskVersion(str, Enum):
     single_step = "single_step"
+    multi_step = "multi_step"
     multi_round = "multi_round"
+    hard_instruction = "hard_instruction"
 
 
 class FamiliarityTier(str, Enum):

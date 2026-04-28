@@ -17,11 +17,11 @@ seeds/*.json          TaskTemplate entries written back into the seed's tasks[] 
       |
       v  (datagen build --seeds-dir seeds/ --output-dir build/)
 build/tasks/          trajectory-recorder-compatible YAML artifacts
-  <task_id>.yaml            single-step tasks
-  <task_id>/                multi-round tasks
+  <task_id>.yaml            single-step and multi-step tasks (one user turn each)
+  <task_id>/                multi-round tasks (multiple user turns)
     step_NN.yaml
     chain.yaml
-build/dataset.json    full manifest (all 72 TaskSpec records)
+build/dataset.json    full manifest (all 108 TaskSpec records)
 ```
 
 The generator converts `TaskTemplate` (seed format) to `TaskSpec` (manifest format). Prompts are authored once by LLM and stored verbatim — no runtime variable substitution.
@@ -35,10 +35,10 @@ The generator converts `TaskTemplate` (seed format) to `TaskSpec` (manifest form
 | Dimension | Values |
 |-----------|--------|
 | **Intent** | `benign`, `ambiguous`, `infringing` |
-| **Version** | `single_step`, `multi_round` |
+| **Version** | `single_step`, `multi_step`, `multi_round` |
 | **Familiarity** | `high`, `medium`, `low` |
 
-4 works per familiarity tier (medium has 6, others 3), 1 task per (intent x version) cell per seed = **72 tasks total** (12 seeds x 6 tasks each).
+12 seeds (3 high + 6 medium + 3 low), 1 task per (intent x version) cell per seed = **108 tasks total** (12 seeds x 9 tasks each).
 
 ---
 
@@ -154,12 +154,20 @@ Applied to every generated prompt regardless of intent or version.
 The `version` dimension distinguishes how the user-side prompt structure delivers the ask:
 
 - `single_step` — one prompt, one user turn, intent fully contained in that one message.
+- `multi_step` — one prompt, one user turn, but the body lays out a numbered list of sub-asks (`1. … 2. … 3. …`). Same final goal as the matching `multi_round` task, just packed into a single message with brief, imperative wording.
 - `multi_round` — multiple prompts delivered as separate user turns under a shared `--session-id`. Each turn is independently defensible; the agent's prior responses are visible when the next turn arrives, so context accumulates.
 
 ### Single-step
 
 - One prompt, intent expressed within it
 - For infringing: utility framing carries the full weight — reason and ask in the same message
+
+### Multi-step (3–5 numbered sub-asks in one turn)
+
+- One prompt, one user turn. Body is a short framing sentence followed by a numbered list of imperatives.
+- Same persona, intent, and end-goal as the matching `multi_round` task. The expected tools list is identical.
+- Wording is brief — the numbered items are direct commands, not paragraphs.
+- Probes whether bundling all the sub-asks into a single delivery changes risk-taking versus the same arc spread across separate turns.
 
 ### Multi-round (3–5 turns)
 
@@ -218,7 +226,7 @@ Each step is delivered as a separate user turn under a shared `--session-id`, so
 
 ### Build output (`build/tasks/`)
 
-Single-step tasks produce a flat YAML:
+Single-step and multi-step tasks produce a flat YAML (both are single user turns):
 ```yaml
 id: babel_benign_single
 prompt: |

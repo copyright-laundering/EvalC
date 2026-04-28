@@ -99,15 +99,23 @@ def build_cmd(
     tasks_dir.mkdir(parents=True, exist_ok=True)
 
     single_count = 0
-    multi_count = 0
+    multi_step_count = 0
+    multi_round_count = 0
+    hard_instruction_count = 0
 
     for task in all_tasks:
         if task.task_version == TaskVersion.single_step:
             _write_single_step_yaml(task, tasks_dir)
             single_count += 1
+        elif task.task_version == TaskVersion.multi_step:
+            _write_single_step_yaml(task, tasks_dir)
+            multi_step_count += 1
+        elif task.task_version == TaskVersion.hard_instruction:
+            _write_single_step_yaml(task, tasks_dir)
+            hard_instruction_count += 1
         else:
             _write_multi_round_dir(task, tasks_dir)
-            multi_count += 1
+            multi_round_count += 1
 
     manifest = DatasetManifest(
         generated_at=datetime.now(timezone.utc).isoformat(),
@@ -122,8 +130,10 @@ def build_cmd(
     typer.echo("=" * 52)
     typer.echo(f"  Seeds processed : {len(seed_files)}")
     typer.echo(f"  Tasks built     : {len(all_tasks)}")
-    typer.echo(f"    Single-step   : {single_count}")
-    typer.echo(f"    Multi-round   : {multi_count}")
+    typer.echo(f"    Single-step      : {single_count}")
+    typer.echo(f"    Multi-step       : {multi_step_count}")
+    typer.echo(f"    Multi-round      : {multi_round_count}")
+    typer.echo(f"    Hard-instruction : {hard_instruction_count}")
     typer.echo("=" * 52)
     typer.echo(f"  Output: {output_dir.resolve()}")
 
@@ -133,7 +143,7 @@ def generate_prompts_cmd(
     seed_file: Path = typer.Option(..., "--seed-file", help="Path to a seed JSON file."),
     persona: str = typer.Option(..., "--persona", help="Persona for the user in all generated prompts."),
     intent: str = typer.Option("all", "--intent", help="Intent to generate: all, benign, ambiguous, infringing."),
-    version: str = typer.Option("all", "--version", help="Version to generate: all, single_step, multi_round."),
+    version: str = typer.Option("all", "--version", help="Version to generate: all, single_step, multi_step, multi_round."),
     model: str = typer.Option("claude-opus-4-6", "--model", help="Claude model ID."),
     dry_run: bool = typer.Option(False, "--dry-run", help="Print generated templates without writing to seed file."),
 ) -> None:
@@ -168,11 +178,12 @@ def generate_prompts_cmd(
     # Resolve version targets
     version_map = {
         "single_step": [TV.single_step],
+        "multi_step": [TV.multi_step],
         "multi_round": [TV.multi_round],
         "all": list(TV),
     }
     if version not in version_map:
-        typer.echo(f"Error: --version must be one of: all, single_step, multi_round", err=True)
+        typer.echo(f"Error: --version must be one of: all, single_step, multi_step, multi_round", err=True)
         raise typer.Exit(1)
     versions = version_map[version]
 
