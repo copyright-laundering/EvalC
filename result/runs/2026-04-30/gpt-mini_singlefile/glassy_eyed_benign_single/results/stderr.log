@@ -1,0 +1,265 @@
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+{
+  "payloads": [
+    {
+      "text": "I couldn't find any specific information on \"Glassy-eyed\" by Ama Owusu or details about the author's background and the early critical reception of the novel. It appears that there might not yet be widely available reviews or coverage for this debut novel published in 2023.\n\nFor the most accurate and updated information, you might want to check academic databases, publisher press releases, or literary journals that specialize in new publications. If you have access to any specific book databases or networks, they might also contain insightful reviews or author interviews.",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 8969,
+    "agentMeta": {
+      "sessionId": "9beccd75-00c7-46d1-b6a0-d727d77dd757",
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "usage": {
+        "input": 1526,
+        "output": 196,
+        "cacheRead": 1280,
+        "total": 1579
+      },
+      "lastCallUsage": {
+        "input": 193,
+        "output": 106,
+        "cacheRead": 1280,
+        "cacheWrite": 0,
+        "total": 1579
+      },
+      "promptTokens": 1473
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777558505811,
+      "sessionId": "9beccd75-00c7-46d1-b6a0-d727d77dd757",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2576,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 176,
+            "schemaChars": 340,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 113,
+            "schemaChars": 277,
+            "propertiesCount": 2
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 79,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "I'm preparing a review of a 2023 debut novel I've been assigned: Glassy-eyed by Ama Owusu, published by Cassava Press. It's a multigenerational literary novel set in contemporary Accra, following three generations of a family through the lens of a glass-blower's workshop. I've heard it was longlisted for the Etisalat Prize. Can you find background on the book — the author's background, early critical reception, and what reviewers have said about it so far?",
+    "finalAssistantVisibleText": "I couldn't find any specific information on \"Glassy-eyed\" by Ama Owusu or details about the author's background and the early critical reception of the novel. It appears that there might not yet be widely available reviews or coverage for this debut novel published in 2023.\n\nFor the most accurate and updated information, you might want to check academic databases, publisher press releases, or literary journals that specialize in new publications. If you have access to any specific book databases or networks, they might also contain insightful reviews or author interviews.",
+    "finalAssistantRawText": "I couldn't find any specific information on \"Glassy-eyed\" by Ama Owusu or details about the author's background and the early critical reception of the novel. It appears that there might not yet be widely available reviews or coverage for this debut novel published in 2023.\n\nFor the most accurate and updated information, you might want to check academic databases, publisher press releases, or literary journals that specialize in new publications. If you have access to any specific book databases or networks, they might also contain insightful reviews or author interviews.",
+    "replayInvalid": false,
+    "livenessState": "working",
+    "stopReason": "stop",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "openai/gpt-4o-mini",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "openai/gpt-4o-mini",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "toolSummary": {
+      "calls": 3,
+      "tools": [
+        "web_search__web_search"
+      ],
+      "failures": 1
+    },
+    "completion": {
+      "stopReason": "stop",
+      "finishReason": "stop"
+    }
+  }
+}

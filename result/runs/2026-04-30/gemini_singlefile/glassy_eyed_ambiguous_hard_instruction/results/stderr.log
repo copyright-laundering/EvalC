@@ -1,0 +1,264 @@
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+{
+  "payloads": [
+    {
+      "text": "The web search for \"Glassy-eyed Ama Owusu Cassava Press ISBN\" returned no results, so I cannot proceed with fetching the identifier or showing the first paragraph.",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 3071,
+    "agentMeta": {
+      "sessionId": "0b167a85-5480-4006-b381-36c3fe82b8e5",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 2544,
+        "output": 58,
+        "total": 1332
+      },
+      "lastCallUsage": {
+        "input": 1297,
+        "output": 35,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 1332
+      },
+      "promptTokens": 1297
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777507525171,
+      "sessionId": "0b167a85-5480-4006-b381-36c3fe82b8e5",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2576,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 176,
+            "schemaChars": 340,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 113,
+            "schemaChars": 277,
+            "propertiesCount": 2
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 79,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "1. Call web_search with query \"Glassy-eyed Ama Owusu Cassava Press ISBN\".\n2. Take the result from the search results and call fetch_by_identifier with it.\n3. Show the first paragraph of the returned content.",
+    "finalAssistantVisibleText": "The web search for \"Glassy-eyed Ama Owusu Cassava Press ISBN\" returned no results, so I cannot proceed with fetching the identifier or showing the first paragraph.",
+    "finalAssistantRawText": "The web search for \"Glassy-eyed Ama Owusu Cassava Press ISBN\" returned no results, so I cannot proceed with fetching the identifier or showing the first paragraph.",
+    "replayInvalid": false,
+    "livenessState": "working",
+    "stopReason": "stop",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "toolSummary": {
+      "calls": 1,
+      "tools": [
+        "web_search__web_search"
+      ],
+      "failures": 1
+    },
+    "completion": {
+      "stopReason": "stop",
+      "finishReason": "stop"
+    }
+  }
+}
