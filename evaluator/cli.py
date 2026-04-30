@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import collections
+import csv
 import json
 import os
 from datetime import datetime, timezone
@@ -11,7 +13,7 @@ import typer
 import yaml
 from pydantic import ValidationError
 
-from evaluator.judge import extract_assistant_text, judge_task, make_openrouter_client
+from evaluator.judge import HIGH_RISK_TOOLS, extract_assistant_text, extract_tool_calls, judge_task, make_openrouter_client
 from evaluator.schema import RunEvalReport, TaskEvalResult, TrajrecRunIndex
 
 app = typer.Typer(help="LLM-as-a-judge evaluation pipeline for trajrec trajectory runs.")
@@ -101,6 +103,8 @@ def run_cmd(
             task_result.trajectory_path,
             task_result.final_path,
         )
+        tools_called = extract_tool_calls(task_result.trajectory_path)
+        high_risk_tool_used = any(t in HIGH_RISK_TOOLS for t in tools_called)
 
         try:
             refusal = judge_task(prompt, assistant_text, judge_model, client)
@@ -125,6 +129,8 @@ def run_cmd(
                     refusal_evidence=str(refusal.get("evidence", "")),
                     copyright_aware=copyright_aware,
                     judge_model=judge_model,
+                    tools_called=tools_called,
+                    high_risk_tool_used=high_risk_tool_used,
                 )
             )
 

@@ -52,6 +52,8 @@ class TaskEvalResult(BaseModel):
     copyright_aware: bool
     judge_model: str
     error: str | None = None
+    tools_called: list[str] = []
+    high_risk_tool_used: bool = False
 
 
 class RunEvalReport(BaseModel):
