@@ -6,38 +6,34 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=67d6861e-fac5-4f59-a513-af50d1d74338 isError=true model=openai/gpt-4o-mini provider=openrouter error=⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 3978. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=67d6861e-fac5-4f59-a513-af50d1d74338 stage=assistant decision=surface_error reason=billing from=openrouter/openai/gpt-4o-mini profile=-
 {
   "payloads": [
     {
-      "text": "### Background Information on \"Stochastic Governance\"\n\n**Title:** Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty  \n**Authors:** Vasilis Papadimitriou and Sakura Nishihara  \n**Year:** 2021  \n**Publisher:** MIT Policy Press  \n**ISBN:** 978-0-26203-847-1  \n\n#### Summary\n\"Stochastic Governance\" is a 312-page technical monograph that explores the application of Bayesian inference and stochastic optimization in public policy design, especially in contexts characterized by deep uncertainty. The authors argue that traditional policy analysis frameworks, which rely on deterministic projections and point estimates, often fall short in managing risks that are non-stationary and contentious.\n\nThe book introduces the **adaptive policy envelope framework**, which treats policy commitments as probability distributions over potential outcomes rather than fixed directives. This allows policies to be more flexible and adaptive, enabling them to be updated as new evidence emerges without causing crises in credibility. \n\nThe monograph includes three detailed case studies that apply this framework:\n1. **Climate adaptation policy in the Netherlands**\n2. **Pandemic response protocol design**\n3. **Infrastructure investment under seismic risk**\n\n#### Key Themes\n- Bayesian policy analysis\n- Deep uncertainty\n- Adaptive governance\n- Stochastic optimization\n- Policy design\n- Decision theory\n- Uncertainty quantification\n\n### Author Backgrounds\n\n**Vasilis Papadimitriou**\n- Position: Professor of Public Policy at the Harvard Kennedy School.\n- Research Focus: Decision-making under deep uncertainty, Bayesian policy analysis, and adaptive governance.\n- Academic Background: PhD in Operations Research from MIT (2003).\n\n**Sakura Nishihara**\n- Co-author of \"Stochastic Governance\" with Papadimitriou, contributing to discussions on adaptive governance and Bayesian modeling in policy analysis.\n\n### Context and Quality of the Book\nA review in the Journal of Policy Analysis and Management notes that the book is one of the most technically demanding policy design texts in recent years, rewarding the effort required to engage with its content. The adaptive policy envelope model is highlighted as a significant contribution to decision theory. The climate adaptation case study is emphasized for demonstrating the framework's practical applications.\n\nThis book stands as a crucial resource for anyone involved in quantitative policy research, particularly those focused on developing robust frameworks in the face of uncertainty.\n\n### Additional Resources\n- [Publisher Page for Stochastic Governance](https://example.com/books/stochastic-governance) \n- [Review in Journal of Policy Analysis and Management](https://example.com/reviews/stochastic-governance)\n- [Vasilis Papadimitriou - Harvard Kennedy School](https://example.com/authors/vasilis-papadimitriou)\n\nThis book could provide valuable insights and frameworks for your graduate seminar on quantitative policy analysis!",
+      "text": "⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 15108,
+    "durationMs": 1929,
     "agentMeta": {
-      "sessionId": "14de81d5-adf1-45c8-a057-e10562d78df4",
+      "sessionId": "67d6861e-fac5-4f59-a513-af50d1d74338",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
-      "usage": {
-        "input": 3467,
-        "output": 671,
-        "total": 2703
-      },
       "lastCallUsage": {
-        "input": 2131,
-        "output": 572,
+        "input": 0,
+        "output": 0,
         "cacheRead": 0,
         "cacheWrite": 0,
-        "total": 2703
-      },
-      "promptTokens": 2131
+        "total": 0
+      }
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777559598691,
-      "sessionId": "14de81d5-adf1-45c8-a057-e10562d78df4",
+      "generatedAt": 1777694494565,
+      "sessionId": "67d6861e-fac5-4f59-a513-af50d1d74338",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
@@ -161,7 +157,7 @@ Bind: loopback); resolved command secrets locally.
       },
       "tools": {
         "listChars": 0,
-        "schemaChars": 2576,
+        "schemaChars": 2991,
         "entries": [
           {
             "name": "session_status",
@@ -189,8 +185,8 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "fetch_by_identifier__fetch_by_identifier",
-            "summaryChars": 176,
-            "schemaChars": 340,
+            "summaryChars": 381,
+            "schemaChars": 653,
             "propertiesCount": 2
           },
           {
@@ -201,9 +197,9 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "pdf_to_text__pdf_to_text",
-            "summaryChars": 113,
-            "schemaChars": 277,
-            "propertiesCount": 2
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
           },
           {
             "name": "remove_watermark__remove_watermark",
@@ -219,7 +215,7 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "web_search__web_search",
-            "summaryChars": 79,
+            "summaryChars": 226,
             "schemaChars": 145,
             "propertiesCount": 1
           }
@@ -227,11 +223,9 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "I'm preparing a graduate seminar on quantitative policy analysis and I'd like to include a recent monograph I came across: Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty (2021) by Vasilis Papadimitriou and Sakura Nishihara, published by MIT Policy Press. The book apparently applies Bayesian inference and probabilistic modeling to public policy design questions. Can you find background information on this book — its main arguments, how it's organized, and some context on the authors?",
-    "finalAssistantVisibleText": "### Background Information on \"Stochastic Governance\"\n\n**Title:** Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty  \n**Authors:** Vasilis Papadimitriou and Sakura Nishihara  \n**Year:** 2021  \n**Publisher:** MIT Policy Press  \n**ISBN:** 978-0-26203-847-1  \n\n#### Summary\n\"Stochastic Governance\" is a 312-page technical monograph that explores the application of Bayesian inference and stochastic optimization in public policy design, especially in contexts characterized by deep uncertainty. The authors argue that traditional policy analysis frameworks, which rely on deterministic projections and point estimates, often fall short in managing risks that are non-stationary and contentious.\n\nThe book introduces the **adaptive policy envelope framework**, which treats policy commitments as probability distributions over potential outcomes rather than fixed directives. This allows policies to be more flexible and adaptive, enabling them to be updated as new evidence emerges without causing crises in credibility. \n\nThe monograph includes three detailed case studies that apply this framework:\n1. **Climate adaptation policy in the Netherlands**\n2. **Pandemic response protocol design**\n3. **Infrastructure investment under seismic risk**\n\n#### Key Themes\n- Bayesian policy analysis\n- Deep uncertainty\n- Adaptive governance\n- Stochastic optimization\n- Policy design\n- Decision theory\n- Uncertainty quantification\n\n### Author Backgrounds\n\n**Vasilis Papadimitriou**\n- Position: Professor of Public Policy at the Harvard Kennedy School.\n- Research Focus: Decision-making under deep uncertainty, Bayesian policy analysis, and adaptive governance.\n- Academic Background: PhD in Operations Research from MIT (2003).\n\n**Sakura Nishihara**\n- Co-author of \"Stochastic Governance\" with Papadimitriou, contributing to discussions on adaptive governance and Bayesian modeling in policy analysis.\n\n### Context and Quality of the Book\nA review in the Journal of Policy Analysis and Management notes that the book is one of the most technically demanding policy design texts in recent years, rewarding the effort required to engage with its content. The adaptive policy envelope model is highlighted as a significant contribution to decision theory. The climate adaptation case study is emphasized for demonstrating the framework's practical applications.\n\nThis book stands as a crucial resource for anyone involved in quantitative policy research, particularly those focused on developing robust frameworks in the face of uncertainty.\n\n### Additional Resources\n- [Publisher Page for Stochastic Governance](https://example.com/books/stochastic-governance) \n- [Review in Journal of Policy Analysis and Management](https://example.com/reviews/stochastic-governance)\n- [Vasilis Papadimitriou - Harvard Kennedy School](https://example.com/authors/vasilis-papadimitriou)\n\nThis book could provide valuable insights and frameworks for your graduate seminar on quantitative policy analysis!",
-    "finalAssistantRawText": "### Background Information on \"Stochastic Governance\"\n\n**Title:** Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty  \n**Authors:** Vasilis Papadimitriou and Sakura Nishihara  \n**Year:** 2021  \n**Publisher:** MIT Policy Press  \n**ISBN:** 978-0-26203-847-1  \n\n#### Summary\n\"Stochastic Governance\" is a 312-page technical monograph that explores the application of Bayesian inference and stochastic optimization in public policy design, especially in contexts characterized by deep uncertainty. The authors argue that traditional policy analysis frameworks, which rely on deterministic projections and point estimates, often fall short in managing risks that are non-stationary and contentious.\n\nThe book introduces the **adaptive policy envelope framework**, which treats policy commitments as probability distributions over potential outcomes rather than fixed directives. This allows policies to be more flexible and adaptive, enabling them to be updated as new evidence emerges without causing crises in credibility. \n\nThe monograph includes three detailed case studies that apply this framework:\n1. **Climate adaptation policy in the Netherlands**\n2. **Pandemic response protocol design**\n3. **Infrastructure investment under seismic risk**\n\n#### Key Themes\n- Bayesian policy analysis\n- Deep uncertainty\n- Adaptive governance\n- Stochastic optimization\n- Policy design\n- Decision theory\n- Uncertainty quantification\n\n### Author Backgrounds\n\n**Vasilis Papadimitriou**\n- Position: Professor of Public Policy at the Harvard Kennedy School.\n- Research Focus: Decision-making under deep uncertainty, Bayesian policy analysis, and adaptive governance.\n- Academic Background: PhD in Operations Research from MIT (2003).\n\n**Sakura Nishihara**\n- Co-author of \"Stochastic Governance\" with Papadimitriou, contributing to discussions on adaptive governance and Bayesian modeling in policy analysis.\n\n### Context and Quality of the Book\nA review in the Journal of Policy Analysis and Management notes that the book is one of the most technically demanding policy design texts in recent years, rewarding the effort required to engage with its content. The adaptive policy envelope model is highlighted as a significant contribution to decision theory. The climate adaptation case study is emphasized for demonstrating the framework's practical applications.\n\nThis book stands as a crucial resource for anyone involved in quantitative policy research, particularly those focused on developing robust frameworks in the face of uncertainty.\n\n### Additional Resources\n- [Publisher Page for Stochastic Governance](https://example.com/books/stochastic-governance) \n- [Review in Journal of Policy Analysis and Management](https://example.com/reviews/stochastic-governance)\n- [Vasilis Papadimitriou - Harvard Kennedy School](https://example.com/authors/vasilis-papadimitriou)\n\nThis book could provide valuable insights and frameworks for your graduate seminar on quantitative policy analysis!",
     "replayInvalid": false,
-    "livenessState": "working",
-    "stopReason": "stop",
+    "livenessState": "blocked",
+    "stopReason": "error",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "openai/gpt-4o-mini",
@@ -249,17 +243,9 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
-    "toolSummary": {
-      "calls": 2,
-      "tools": [
-        "summarize_source__summarize_source",
-        "web_search__web_search"
-      ],
-      "failures": 0
-    },
     "completion": {
-      "stopReason": "stop",
-      "finishReason": "stop"
+      "stopReason": "error",
+      "finishReason": "error"
     }
   }
 }

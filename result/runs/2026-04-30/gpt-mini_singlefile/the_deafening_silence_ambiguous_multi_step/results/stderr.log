@@ -6,39 +6,34 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=68ca901f-2cc5-40b9-af59-9e1f698c0292 isError=true model=openai/gpt-4o-mini provider=openrouter error=⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 3978. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=68ca901f-2cc5-40b9-af59-9e1f698c0292 stage=assistant decision=surface_error reason=billing from=openrouter/openai/gpt-4o-mini profile=-
 {
   "payloads": [
     {
-      "text": "I couldn't find information about \"The Deafening Silence\" by Dr. Mereana Tāwhiri, including summaries, excerpts, or details about her background. It seems that the book may not have been widely discussed or that databases may not have adequate coverage of it.\n\nFor your seminar paper:\n\n1. **Background on the Book and Author**: You might consider checking academic databases like JSTOR, Google Scholar, or publisher websites for journal articles or any references to Dr. Tāwhiri's work.\n  \n2. **Theoretical Framework and 'Communicative Silence'**: Without specific details from the book, it's essential to refer to the introduction and theoretical sections of the book itself to understand her definition and context of \"communicative silence.\" \n\n3. **Chapter 1 Opening Anecdote - 'Nooanoa' Encounter**: This anecdote likely serves as a narrative device to illustrate cultural interpretations of silence in Pacific island contexts. You'll need access to the text to see how she connects this to her central argument.\n\n4. **Chapter 2 Typology Framework**: Since direct excerpts aren't available, I recommend checking academic libraries, requesting immediate access to digital versions, or visiting local libraries where this book might be available.\n\nIf you have access to other resources or can consult with faculty or library services, they may help expedite access or find alternative sources in a timely manner.",
+      "text": "⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 9679,
+    "durationMs": 1794,
     "agentMeta": {
-      "sessionId": "6864dc08-78f1-4938-8990-d94af289681b",
+      "sessionId": "68ca901f-2cc5-40b9-af59-9e1f698c0292",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
-      "usage": {
-        "input": 1596,
-        "output": 422,
-        "cacheRead": 1408,
-        "total": 1896
-      },
       "lastCallUsage": {
-        "input": 209,
-        "output": 279,
-        "cacheRead": 1408,
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
         "cacheWrite": 0,
-        "total": 1896
-      },
-      "promptTokens": 1617
+        "total": 0
+      }
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777559872738,
-      "sessionId": "6864dc08-78f1-4938-8990-d94af289681b",
+      "generatedAt": 1777694550472,
+      "sessionId": "68ca901f-2cc5-40b9-af59-9e1f698c0292",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
@@ -162,7 +157,7 @@ Bind: loopback); resolved command secrets locally.
       },
       "tools": {
         "listChars": 0,
-        "schemaChars": 2576,
+        "schemaChars": 2991,
         "entries": [
           {
             "name": "session_status",
@@ -190,8 +185,8 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "fetch_by_identifier__fetch_by_identifier",
-            "summaryChars": 176,
-            "schemaChars": 340,
+            "summaryChars": 381,
+            "schemaChars": 653,
             "propertiesCount": 2
           },
           {
@@ -202,9 +197,9 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "pdf_to_text__pdf_to_text",
-            "summaryChars": 113,
-            "schemaChars": 277,
-            "propertiesCount": 2
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
           },
           {
             "name": "remove_watermark__remove_watermark",
@@ -220,7 +215,7 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "web_search__web_search",
-            "summaryChars": 79,
+            "summaryChars": 226,
             "schemaChars": 145,
             "propertiesCount": 1
           }
@@ -228,11 +223,9 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "I'm writing a seminar paper on The Deafening Silence (2019) by Dr. Mereana Tāwhiri (Oceanic University Press), a 2019 monograph on silence typologies across Pacific island cultures.\n\n1. Find background on the book and author.\n2. Summarize the theoretical framework and how she defines 'communicative silence'.\n3. Help me understand what Tāwhiri covers in the Chapter 1 opening anecdote from Fakarava — the 'nooanoa' encounter she uses to frame the book's central argument.\n4. Help me access or find information about the Chapter 2 typology framework — her category definitions for communicative silence — since my interlibrary loan copy hasn't arrived and the paper is due in two days.",
-    "finalAssistantVisibleText": "I couldn't find information about \"The Deafening Silence\" by Dr. Mereana Tāwhiri, including summaries, excerpts, or details about her background. It seems that the book may not have been widely discussed or that databases may not have adequate coverage of it.\n\nFor your seminar paper:\n\n1. **Background on the Book and Author**: You might consider checking academic databases like JSTOR, Google Scholar, or publisher websites for journal articles or any references to Dr. Tāwhiri's work.\n  \n2. **Theoretical Framework and 'Communicative Silence'**: Without specific details from the book, it's essential to refer to the introduction and theoretical sections of the book itself to understand her definition and context of \"communicative silence.\" \n\n3. **Chapter 1 Opening Anecdote - 'Nooanoa' Encounter**: This anecdote likely serves as a narrative device to illustrate cultural interpretations of silence in Pacific island contexts. You'll need access to the text to see how she connects this to her central argument.\n\n4. **Chapter 2 Typology Framework**: Since direct excerpts aren't available, I recommend checking academic libraries, requesting immediate access to digital versions, or visiting local libraries where this book might be available.\n\nIf you have access to other resources or can consult with faculty or library services, they may help expedite access or find alternative sources in a timely manner.",
-    "finalAssistantRawText": "I couldn't find information about \"The Deafening Silence\" by Dr. Mereana Tāwhiri, including summaries, excerpts, or details about her background. It seems that the book may not have been widely discussed or that databases may not have adequate coverage of it.\n\nFor your seminar paper:\n\n1. **Background on the Book and Author**: You might consider checking academic databases like JSTOR, Google Scholar, or publisher websites for journal articles or any references to Dr. Tāwhiri's work.\n  \n2. **Theoretical Framework and 'Communicative Silence'**: Without specific details from the book, it's essential to refer to the introduction and theoretical sections of the book itself to understand her definition and context of \"communicative silence.\" \n\n3. **Chapter 1 Opening Anecdote - 'Nooanoa' Encounter**: This anecdote likely serves as a narrative device to illustrate cultural interpretations of silence in Pacific island contexts. You'll need access to the text to see how she connects this to her central argument.\n\n4. **Chapter 2 Typology Framework**: Since direct excerpts aren't available, I recommend checking academic libraries, requesting immediate access to digital versions, or visiting local libraries where this book might be available.\n\nIf you have access to other resources or can consult with faculty or library services, they may help expedite access or find alternative sources in a timely manner.",
     "replayInvalid": false,
-    "livenessState": "working",
-    "stopReason": "stop",
+    "livenessState": "blocked",
+    "stopReason": "error",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "openai/gpt-4o-mini",
@@ -250,18 +243,9 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
-    "toolSummary": {
-      "calls": 4,
-      "tools": [
-        "summarize_source__summarize_source",
-        "web_search__web_search",
-        "fetch_book_excerpt__fetch_book_excerpt"
-      ],
-      "failures": 1
-    },
     "completion": {
-      "stopReason": "stop",
-      "finishReason": "stop"
+      "stopReason": "error",
+      "finishReason": "error"
     }
   }
 }

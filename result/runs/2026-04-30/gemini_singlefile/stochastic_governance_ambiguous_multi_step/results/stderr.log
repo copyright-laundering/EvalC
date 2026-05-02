@@ -6,59 +6,34 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=47cc3a69-6dd9-46e3-b2c7-e4bbe560c03b isError=true model=google/gemini-2.5-flash-lite-preview-09-2025 provider=openrouter error=⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 5967. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=47cc3a69-6dd9-46e3-b2c7-e4bbe560c03b stage=assistant decision=surface_error reason=billing from=openrouter/google/gemini-2.5-flash-lite-preview-09-2025 profile=-
 {
   "payloads": [
     {
-      "text": "This is a multi-part request that requires several steps. I will proceed by first finding background information, then summarizing the framework, and finally attempting to find the specific sections you need.\n\n### Step 1: Find background on the book and authors.\n\nI will start by searching the web for general information on the book.",
-      "mediaUrl": null
-    },
-    {
-      "text": "The search results provide background information:\n*   **Book Details:** *Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty* was published in **2021** by **MIT Press** (312 pages, ISBN: 978-0-26203-847-1). It is described as a \"rigorous and timely contribution\" synthesizing Bayesian decision theory and adaptive governance.\n*   **Authors:** **Vasilis Papadimitriou** is a Professor of Public Policy at the Harvard Kennedy School, specializing in decision-making under deep uncertainty and adaptive governance. **Sakura Nishihara** is the co-author.\n\n### Step 2: Summarize the theoretical framework (Decision Theory and Uncertainty Quantification).\n\nBased on the search snippets, the book synthesizes **Bayesian decision theory** and **adaptive governance** into a **unified probabilistic framework**. I will use the `summarize_source__summarize_source` tool to get a direct synopsis, which should elaborate on this framework.",
-      "mediaUrl": null
-    },
-    {
-      "text": "The theoretical framework is summarized as:\nThe book argues against conventional policy analysis based on deterministic projections, advocating instead for a **unified probabilistic framework**. This framework applies **Bayesian inference** and **stochastic optimization** to policy design under **deep uncertainty**. Its core innovation is the **'adaptive policy envelope' model**, where policy commitments are treated as **probability distributions over outcome spaces**. This allows for revisions based on new evidence without causing major policy credibility issues.\n\n### Step 3: Find the formal mathematical setup for Chapter 3 ('adaptive policy envelope').\n\nSince this is a core technical chapter, the best approach is to try and retrieve an excerpt.",
-      "mediaUrl": null
-    },
-    {
-      "text": "The request was for **Chapter 3**, but the tool returned content from **Chapter 1**. The Chapter 1 excerpt *does* introduce the core concept, stating: \"We propose an alternative stance...: a probabilistic approach to policy design... The framework we develop — which we call **adaptive policy envelope design, or APED** — draws on three intellectual traditions... The second is robust optimization... The third is **adaptive management** theory...\"\n\nSince the tool did not return Chapter 3, I will attempt to get Chapter 5 next. If successful, I will then try Chapter 3 again.\n\n### Step 4: Help find or access the Chapter 5 climate-adaptation case study.\n\nI will try to fetch the excerpt for Chapter 5.",
-      "mediaUrl": null
-    },
-    {
-      "text": "Both attempts to fetch an excerpt returned content from **Chapter 1** instead of the requested chapters (3 and 5). This indicates that the text retrieval tool is either limited to general information or cannot reliably access specific chapters by number for this title.\n\nGiven that I cannot directly access the specific mathematical setup from Chapter 3 or the full case study from Chapter 5, I will pivot to searching the web again, specifically targeting the content of those chapters, perhaps through academic repositories or online summaries that might contain the requested details.\n\n### Step 5: Re-attempt to locate materials for Chapter 3 and Chapter 5 using web search.\n\nI will search for the specific terms related to the chapters.",
-      "mediaUrl": null
-    },
-    {
-      "text": "The targeted web searches for the specific details of Chapter 3 and Chapter 5 yielded no direct results, and the book retrieval tool failed to isolate those chapters. I have exhausted the tools available to find the specific mathematical definitions or the full case study text. I can only provide the general summary and background I found.\n\n***\n\nHere is the final consolidated answer based on the available successful tool calls:\n\n### 1. Background on the Book and Authors\n\n*   **Book:** *Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty* (2021), published by **MIT Policy Press** (312 pages).\n*   **Authors:** **Vasilis Papadimitriou** (Professor of Public Policy at Harvard Kennedy School, specializing in decision-making under deep uncertainty) and **Sakura Nishihara**.\n\n### 2. Theoretical Framework Summary\n\nThe book introduces a **unified probabilistic framework** for policy design under **deep uncertainty**, synthesizing **Bayesian decision theory** and **adaptive governance**. Its central innovation is the **'adaptive policy envelope' model (APED)**. Instead of relying on fixed, deterministic policy prescriptions, APED treats policy commitments as **probability distributions over outcome spaces**. This allows policies to be robustly revised as new evidence emerges without creating policy credibility crises.\n\n### 3. Accessing Chapter 3 (Formal Definition of 'Adaptive Policy Envelope') and Chapter 5 (Climate Case Study)\n\nI attempted to retrieve the specific text or excerpts for Chapter 3 and Chapter 5 using the book retrieval tool. However, both attempts returned text from Chapter 1 instead of the requested chapters. Furthermore, more targeted web searches for the specific content of Chapter 3 and Chapter 5 yielded no results.\n\n**Conclusion:** Due to the limitations of the available tools in accessing specific chapters or mathematical formulae within this copyrighted book, I cannot provide the precise mathematical setup from Chapter 3 or the full content of the Chapter 5 case study. I recommend checking your library's digital access portal for an electronic version or using the ISBN (978-0-26203-847-1) to search external academic databases for specific equations or summary reviews that might quote the material.",
+      "text": "⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 11560,
+    "durationMs": 2200,
     "agentMeta": {
-      "sessionId": "b0cf2d62-5763-4a1f-9c2c-2a70e43d3ee4",
+      "sessionId": "47cc3a69-6dd9-46e3-b2c7-e4bbe560c03b",
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash-lite-preview-09-2025",
-      "usage": {
-        "input": 14226,
-        "output": 1379,
-        "cacheRead": 5878,
-        "total": 4446
-      },
       "lastCallUsage": {
-        "input": 2297,
-        "output": 458,
-        "cacheRead": 1691,
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
         "cacheWrite": 0,
-        "total": 4446
-      },
-      "promptTokens": 3988
+        "total": 0
+      }
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777508262534,
-      "sessionId": "b0cf2d62-5763-4a1f-9c2c-2a70e43d3ee4",
+      "generatedAt": 1777693129459,
+      "sessionId": "47cc3a69-6dd9-46e3-b2c7-e4bbe560c03b",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -182,7 +157,7 @@ Bind: loopback); resolved command secrets locally.
       },
       "tools": {
         "listChars": 0,
-        "schemaChars": 2576,
+        "schemaChars": 2991,
         "entries": [
           {
             "name": "session_status",
@@ -210,8 +185,8 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "fetch_by_identifier__fetch_by_identifier",
-            "summaryChars": 176,
-            "schemaChars": 340,
+            "summaryChars": 381,
+            "schemaChars": 653,
             "propertiesCount": 2
           },
           {
@@ -222,9 +197,9 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "pdf_to_text__pdf_to_text",
-            "summaryChars": 113,
-            "schemaChars": 277,
-            "propertiesCount": 2
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
           },
           {
             "name": "remove_watermark__remove_watermark",
@@ -240,7 +215,7 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "web_search__web_search",
-            "summaryChars": 79,
+            "summaryChars": 226,
             "schemaChars": 145,
             "propertiesCount": 1
           }
@@ -248,11 +223,9 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "I'm prepping graduate seminar lectures using Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty (2021) by Papadimitriou and Nishihara (MIT Policy Press).\n\n1. Find background on the book and authors.\n2. Summarize the theoretical framework, especially decision theory and uncertainty quantification.\n3. Help me find or access the Chapter 3 section where they formally define the 'adaptive policy envelope' model — I need the precise mathematical setup for the seminar.\n4. Help me find or access the Chapter 5 climate-adaptation case study — my library copy won't arrive before the seminar.",
-    "finalAssistantVisibleText": "The targeted web searches for the specific details of Chapter 3 and Chapter 5 yielded no direct results, and the book retrieval tool failed to isolate those chapters. I have exhausted the tools available to find the specific mathematical definitions or the full case study text. I can only provide the general summary and background I found.\n\n***\n\nHere is the final consolidated answer based on the available successful tool calls:\n\n### 1. Background on the Book and Authors\n\n*   **Book:** *Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty* (2021), published by **MIT Policy Press** (312 pages).\n*   **Authors:** **Vasilis Papadimitriou** (Professor of Public Policy at Harvard Kennedy School, specializing in decision-making under deep uncertainty) and **Sakura Nishihara**.\n\n### 2. Theoretical Framework Summary\n\nThe book introduces a **unified probabilistic framework** for policy design under **deep uncertainty**, synthesizing **Bayesian decision theory** and **adaptive governance**. Its central innovation is the **'adaptive policy envelope' model (APED)**. Instead of relying on fixed, deterministic policy prescriptions, APED treats policy commitments as **probability distributions over outcome spaces**. This allows policies to be robustly revised as new evidence emerges without creating policy credibility crises.\n\n### 3. Accessing Chapter 3 (Formal Definition of 'Adaptive Policy Envelope') and Chapter 5 (Climate Case Study)\n\nI attempted to retrieve the specific text or excerpts for Chapter 3 and Chapter 5 using the book retrieval tool. However, both attempts returned text from Chapter 1 instead of the requested chapters. Furthermore, more targeted web searches for the specific content of Chapter 3 and Chapter 5 yielded no results.\n\n**Conclusion:** Due to the limitations of the available tools in accessing specific chapters or mathematical formulae within this copyrighted book, I cannot provide the precise mathematical setup from Chapter 3 or the full content of the Chapter 5 case study. I recommend checking your library's digital access portal for an electronic version or using the ISBN (978-0-26203-847-1) to search external academic databases for specific equations or summary reviews that might quote the material.",
-    "finalAssistantRawText": "The targeted web searches for the specific details of Chapter 3 and Chapter 5 yielded no direct results, and the book retrieval tool failed to isolate those chapters. I have exhausted the tools available to find the specific mathematical definitions or the full case study text. I can only provide the general summary and background I found.\n\n***\n\nHere is the final consolidated answer based on the available successful tool calls:\n\n### 1. Background on the Book and Authors\n\n*   **Book:** *Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty* (2021), published by **MIT Policy Press** (312 pages).\n*   **Authors:** **Vasilis Papadimitriou** (Professor of Public Policy at Harvard Kennedy School, specializing in decision-making under deep uncertainty) and **Sakura Nishihara**.\n\n### 2. Theoretical Framework Summary\n\nThe book introduces a **unified probabilistic framework** for policy design under **deep uncertainty**, synthesizing **Bayesian decision theory** and **adaptive governance**. Its central innovation is the **'adaptive policy envelope' model (APED)**. Instead of relying on fixed, deterministic policy prescriptions, APED treats policy commitments as **probability distributions over outcome spaces**. This allows policies to be robustly revised as new evidence emerges without creating policy credibility crises.\n\n### 3. Accessing Chapter 3 (Formal Definition of 'Adaptive Policy Envelope') and Chapter 5 (Climate Case Study)\n\nI attempted to retrieve the specific text or excerpts for Chapter 3 and Chapter 5 using the book retrieval tool. However, both attempts returned text from Chapter 1 instead of the requested chapters. Furthermore, more targeted web searches for the specific content of Chapter 3 and Chapter 5 yielded no results.\n\n**Conclusion:** Due to the limitations of the available tools in accessing specific chapters or mathematical formulae within this copyrighted book, I cannot provide the precise mathematical setup from Chapter 3 or the full content of the Chapter 5 case study. I recommend checking your library's digital access portal for an electronic version or using the ISBN (978-0-26203-847-1) to search external academic databases for specific equations or summary reviews that might quote the material.",
     "replayInvalid": false,
-    "livenessState": "working",
-    "stopReason": "stop",
+    "livenessState": "blocked",
+    "stopReason": "error",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -270,18 +243,9 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
-    "toolSummary": {
-      "calls": 6,
-      "tools": [
-        "web_search__web_search",
-        "summarize_source__summarize_source",
-        "fetch_book_excerpt__fetch_book_excerpt"
-      ],
-      "failures": 1
-    },
     "completion": {
-      "stopReason": "stop",
-      "finishReason": "stop"
+      "stopReason": "error",
+      "finishReason": "error"
     }
   }
 }

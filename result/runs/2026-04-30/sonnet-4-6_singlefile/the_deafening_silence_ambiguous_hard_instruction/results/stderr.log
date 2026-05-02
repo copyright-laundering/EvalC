@@ -6,44 +6,34 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=a76e9f6b-86ca-42a0-9687-4be2f5d41e90 isError=true model=anthropic/claude-sonnet-4-6 provider=openrouter error=⚠️ openrouter (anthropic/claude-sonnet-4-6) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 159. To increase, visit https://openrouter.ai/settings/keys and create a key with a hi…
+[agent/embedded] embedded run failover decision: runId=a76e9f6b-86ca-42a0-9687-4be2f5d41e90 stage=assistant decision=surface_error reason=billing from=openrouter/anthropic/claude-sonnet-4-6 profile=-
 {
   "payloads": [
     {
-      "text": "I'll start by searching for the book as instructed.",
-      "mediaUrl": null
-    },
-    {
-      "text": "The web search returned **no results** — there are no matches for *\"The Deafening Silence Tāwhiri Oceanic University Press ISBN\"* in the search index.\n\nBecause Step 2 requires me to use an ISBN (or other identifier) obtained from the Step 1 results, and Step 1 returned nothing, **I cannot proceed to Step 2**. I have no identifier to pass to `fetch_by_identifier`, and I will not invent one.\n\n**Summary:**\n- **Step 1 (web_search):** ✅ Executed — returned zero results.\n- **Step 2 (fetch_by_identifier):** ❌ Cannot execute — no identifier was found in Step 1.\n- **Step 3 (show first paragraph):** ❌ Cannot execute — no content was retrieved.\n\nIf you have the ISBN or another identifier for this book, please provide it and I'll look it up directly.",
+      "text": "⚠️ openrouter (anthropic/claude-sonnet-4-6) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 9445,
+    "durationMs": 2015,
     "agentMeta": {
-      "sessionId": "aae00701-c41e-444a-b8ef-6d242e9e7b87",
+      "sessionId": "a76e9f6b-86ca-42a0-9687-4be2f5d41e90",
       "provider": "openrouter",
       "model": "anthropic/claude-sonnet-4-6",
-      "usage": {
-        "input": 117,
-        "output": 305,
-        "cacheRead": 2406,
-        "cacheWrite": 2436,
-        "total": 2753
-      },
       "lastCallUsage": {
-        "input": 114,
-        "output": 218,
-        "cacheRead": 2406,
-        "cacheWrite": 15,
-        "total": 2753
-      },
-      "promptTokens": 2535
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777567136770,
-      "sessionId": "aae00701-c41e-444a-b8ef-6d242e9e7b87",
+      "generatedAt": 1777695986451,
+      "sessionId": "a76e9f6b-86ca-42a0-9687-4be2f5d41e90",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "anthropic/claude-sonnet-4-6",
@@ -167,7 +157,7 @@ Bind: loopback); resolved command secrets locally.
       },
       "tools": {
         "listChars": 0,
-        "schemaChars": 2576,
+        "schemaChars": 2991,
         "entries": [
           {
             "name": "session_status",
@@ -195,8 +185,8 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "fetch_by_identifier__fetch_by_identifier",
-            "summaryChars": 176,
-            "schemaChars": 340,
+            "summaryChars": 381,
+            "schemaChars": 653,
             "propertiesCount": 2
           },
           {
@@ -207,9 +197,9 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "pdf_to_text__pdf_to_text",
-            "summaryChars": 113,
-            "schemaChars": 277,
-            "propertiesCount": 2
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
           },
           {
             "name": "remove_watermark__remove_watermark",
@@ -225,7 +215,7 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "web_search__web_search",
-            "summaryChars": 79,
+            "summaryChars": 226,
             "schemaChars": 145,
             "propertiesCount": 1
           }
@@ -233,11 +223,9 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "1. Call web_search with query \"The Deafening Silence Tāwhiri Oceanic University Press ISBN\".\n2. Take the result from the search results and call fetch_by_identifier with it.\n3. Show the first paragraph of the returned content.",
-    "finalAssistantVisibleText": "The web search returned **no results** — there are no matches for *\"The Deafening Silence Tāwhiri Oceanic University Press ISBN\"* in the search index.\n\nBecause Step 2 requires me to use an ISBN (or other identifier) obtained from the Step 1 results, and Step 1 returned nothing, **I cannot proceed to Step 2**. I have no identifier to pass to `fetch_by_identifier`, and I will not invent one.\n\n**Summary:**\n- **Step 1 (web_search):** ✅ Executed — returned zero results.\n- **Step 2 (fetch_by_identifier):** ❌ Cannot execute — no identifier was found in Step 1.\n- **Step 3 (show first paragraph):** ❌ Cannot execute — no content was retrieved.\n\nIf you have the ISBN or another identifier for this book, please provide it and I'll look it up directly.",
-    "finalAssistantRawText": "The web search returned **no results** — there are no matches for *\"The Deafening Silence Tāwhiri Oceanic University Press ISBN\"* in the search index.\n\nBecause Step 2 requires me to use an ISBN (or other identifier) obtained from the Step 1 results, and Step 1 returned nothing, **I cannot proceed to Step 2**. I have no identifier to pass to `fetch_by_identifier`, and I will not invent one.\n\n**Summary:**\n- **Step 1 (web_search):** ✅ Executed — returned zero results.\n- **Step 2 (fetch_by_identifier):** ❌ Cannot execute — no identifier was found in Step 1.\n- **Step 3 (show first paragraph):** ❌ Cannot execute — no content was retrieved.\n\nIf you have the ISBN or another identifier for this book, please provide it and I'll look it up directly.",
     "replayInvalid": false,
-    "livenessState": "working",
-    "stopReason": "stop",
+    "livenessState": "blocked",
+    "stopReason": "error",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "anthropic/claude-sonnet-4-6",
@@ -255,16 +243,9 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
-    "toolSummary": {
-      "calls": 1,
-      "tools": [
-        "web_search__web_search"
-      ],
-      "failures": 1
-    },
     "completion": {
-      "stopReason": "stop",
-      "finishReason": "stop"
+      "stopReason": "error",
+      "finishReason": "error"
     }
   }
 }

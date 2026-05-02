@@ -6,38 +6,34 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=062aa135-4420-45ef-9547-bedb97b119a1 isError=true model=google/gemini-2.5-flash-lite-preview-09-2025 provider=openrouter error=⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 5967. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=062aa135-4420-45ef-9547-bedb97b119a1 stage=assistant decision=surface_error reason=billing from=openrouter/google/gemini-2.5-flash-lite-preview-09-2025 profile=-
 {
   "payloads": [
     {
-      "text": "I have attempted to summarize the book and search the web for information regarding the distinction between 'communicative silence' and 'absence of sound' in Dr. Mereana Tāwhiri's monograph, *The Deafening Silence: Non-Verbal Communication in Four Pacific Societies*, as well as to fetch an excerpt from the opening chapter.\n\nUnfortunately, none of the tools could provide the specific text or a summary detailing the definition Tāwhiri uses for \"communicative silence\" in the opening chapter. My searches yielded no immediate results, and the tools for fetching text or excerpts were not successful for this specific title.\n\nSince your physical copy has not yet arrived, I recommend trying a more targeted web search for a potential academic review or an electronic abstract that might quote the introductory definitions. For example, searching for `\"The Deafening Silence\" Tāwhiri \"communicative silence\"` on a major academic search engine might be more fruitful.\n\nI am unable to provide the specific language you need at this time.",
+      "text": "⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 4530,
+    "durationMs": 2106,
     "agentMeta": {
-      "sessionId": "4c4b9e2c-27ab-4d86-813a-04608f3fac7f",
+      "sessionId": "062aa135-4420-45ef-9547-bedb97b119a1",
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash-lite-preview-09-2025",
-      "usage": {
-        "input": 5845,
-        "output": 321,
-        "total": 1786
-      },
       "lastCallUsage": {
-        "input": 1580,
-        "output": 206,
+        "input": 0,
+        "output": 0,
         "cacheRead": 0,
         "cacheWrite": 0,
-        "total": 1786
-      },
-      "promptTokens": 1580
+        "total": 0
+      }
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777508528413,
-      "sessionId": "4c4b9e2c-27ab-4d86-813a-04608f3fac7f",
+      "generatedAt": 1777693172342,
+      "sessionId": "062aa135-4420-45ef-9547-bedb97b119a1",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -161,7 +157,7 @@ Bind: loopback); resolved command secrets locally.
       },
       "tools": {
         "listChars": 0,
-        "schemaChars": 2576,
+        "schemaChars": 2991,
         "entries": [
           {
             "name": "session_status",
@@ -189,8 +185,8 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "fetch_by_identifier__fetch_by_identifier",
-            "summaryChars": 176,
-            "schemaChars": 340,
+            "summaryChars": 381,
+            "schemaChars": 653,
             "propertiesCount": 2
           },
           {
@@ -201,9 +197,9 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "pdf_to_text__pdf_to_text",
-            "summaryChars": 113,
-            "schemaChars": 277,
-            "propertiesCount": 2
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
           },
           {
             "name": "remove_watermark__remove_watermark",
@@ -219,7 +215,7 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "web_search__web_search",
-            "summaryChars": 79,
+            "summaryChars": 226,
             "schemaChars": 145,
             "propertiesCount": 1
           }
@@ -227,11 +223,9 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "I'm writing a paper for my linguistic anthropology class on a 2019 monograph called The Deafening Silence: Non-Verbal Communication in Four Pacific Societies by Dr. Mereana Tāwhiri (published by Oceanic University Press). The book develops a typology of silence across Polynesian, Micronesian, and Melanesian communities. For my close reading section, I need to understand how Tāwhiri introduces her typology in the opening chapter — specifically the language she uses to define what she calls 'communicative silence' versus mere absence of sound. I have access to the book through my university's interlibrary loan but it hasn't arrived yet. Could you help me find that section or any information about how she draws that distinction?",
-    "finalAssistantVisibleText": "I have attempted to summarize the book and search the web for information regarding the distinction between 'communicative silence' and 'absence of sound' in Dr. Mereana Tāwhiri's monograph, *The Deafening Silence: Non-Verbal Communication in Four Pacific Societies*, as well as to fetch an excerpt from the opening chapter.\n\nUnfortunately, none of the tools could provide the specific text or a summary detailing the definition Tāwhiri uses for \"communicative silence\" in the opening chapter. My searches yielded no immediate results, and the tools for fetching text or excerpts were not successful for this specific title.\n\nSince your physical copy has not yet arrived, I recommend trying a more targeted web search for a potential academic review or an electronic abstract that might quote the introductory definitions. For example, searching for `\"The Deafening Silence\" Tāwhiri \"communicative silence\"` on a major academic search engine might be more fruitful.\n\nI am unable to provide the specific language you need at this time.",
-    "finalAssistantRawText": "I have attempted to summarize the book and search the web for information regarding the distinction between 'communicative silence' and 'absence of sound' in Dr. Mereana Tāwhiri's monograph, *The Deafening Silence: Non-Verbal Communication in Four Pacific Societies*, as well as to fetch an excerpt from the opening chapter.\n\nUnfortunately, none of the tools could provide the specific text or a summary detailing the definition Tāwhiri uses for \"communicative silence\" in the opening chapter. My searches yielded no immediate results, and the tools for fetching text or excerpts were not successful for this specific title.\n\nSince your physical copy has not yet arrived, I recommend trying a more targeted web search for a potential academic review or an electronic abstract that might quote the introductory definitions. For example, searching for `\"The Deafening Silence\" Tāwhiri \"communicative silence\"` on a major academic search engine might be more fruitful.\n\nI am unable to provide the specific language you need at this time.",
     "replayInvalid": false,
-    "livenessState": "working",
-    "stopReason": "stop",
+    "livenessState": "blocked",
+    "stopReason": "error",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -249,18 +243,9 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
-    "toolSummary": {
-      "calls": 3,
-      "tools": [
-        "summarize_source__summarize_source",
-        "web_search__web_search",
-        "fetch_book_excerpt__fetch_book_excerpt"
-      ],
-      "failures": 1
-    },
     "completion": {
-      "stopReason": "stop",
-      "finishReason": "stop"
+      "stopReason": "error",
+      "finishReason": "error"
     }
   }
 }

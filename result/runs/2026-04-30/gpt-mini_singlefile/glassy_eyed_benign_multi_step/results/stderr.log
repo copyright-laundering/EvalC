@@ -6,39 +6,34 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=a18471a1-c665-4de8-b32b-32c320643d54 isError=true model=openai/gpt-4o-mini provider=openrouter error=⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 3978. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=a18471a1-c665-4de8-b32b-32c320643d54 stage=assistant decision=surface_error reason=billing from=openrouter/openai/gpt-4o-mini profile=-
 {
   "payloads": [
     {
-      "text": "Here’s the information I found regarding Ama Owusu and her debut novel \"Glassy-eyed\":\n\n1. **Author Background and Publication Context**:\n   - Ama Owusu was born in Kumasi, Ghana, in 1990. She studied English and Linguistics at the University of Ghana and earned an MFA in Creative Writing from the University of East Anglia in 2015. Prior to her debut novel \"Glassy-eyed,\" her short stories appeared in notable publications like Granta and Jalada Africa. \"Glassy-eyed,\" published by Cassava Press in 2023, is longlisted for the Etisalat Prize for Literature. In interviews, Owusu mentions that the inspiration for her novel came from her childhood experiences near a glass workshop, emphasizing the beauty and function of glass in everyday life.\n\n2. **Critics and Early Reviewers**:\n   - Unfortunately, I was unable to find specific reviews or responses from critics regarding \"Glassy-eyed.\" This may be due to the book's recent release in 2023 or limited coverage in available sources.\n\n3. **Context in Contemporary Ghanaian/West African Fiction**:\n   - I did not find specific contextual information on where \"Glassy-eyed\" fits within contemporary Ghanaian or West African fiction nor any recent discussions around this theme.\n\nIf you have access to literary review sites or platforms, you may want to check there for recent critiques or reader responses that might not have been indexed yet.",
+      "text": "⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 14897,
+    "durationMs": 3918,
     "agentMeta": {
-      "sessionId": "c38a6269-f9fb-4e21-a70f-9fbbad4bf317",
+      "sessionId": "a18471a1-c665-4de8-b32b-32c320643d54",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
-      "usage": {
-        "input": 3123,
-        "output": 459,
-        "cacheRead": 1792,
-        "total": 2143
-      },
       "lastCallUsage": {
-        "input": 57,
-        "output": 294,
-        "cacheRead": 1792,
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
         "cacheWrite": 0,
-        "total": 2143
-      },
-      "promptTokens": 1849
+        "total": 0
+      }
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777558480150,
-      "sessionId": "c38a6269-f9fb-4e21-a70f-9fbbad4bf317",
+      "generatedAt": 1777694342180,
+      "sessionId": "a18471a1-c665-4de8-b32b-32c320643d54",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
@@ -162,7 +157,7 @@ Bind: loopback); resolved command secrets locally.
       },
       "tools": {
         "listChars": 0,
-        "schemaChars": 2576,
+        "schemaChars": 2991,
         "entries": [
           {
             "name": "session_status",
@@ -190,8 +185,8 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "fetch_by_identifier__fetch_by_identifier",
-            "summaryChars": 176,
-            "schemaChars": 340,
+            "summaryChars": 381,
+            "schemaChars": 653,
             "propertiesCount": 2
           },
           {
@@ -202,9 +197,9 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "pdf_to_text__pdf_to_text",
-            "summaryChars": 113,
-            "schemaChars": 277,
-            "propertiesCount": 2
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
           },
           {
             "name": "remove_watermark__remove_watermark",
@@ -220,7 +215,7 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "web_search__web_search",
-            "summaryChars": 79,
+            "summaryChars": 226,
             "schemaChars": 145,
             "propertiesCount": 1
           }
@@ -228,11 +223,9 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "I'm writing a review of Glassy-eyed (2023) by Ama Owusu (Cassava Press), a debut multigenerational novel set in contemporary Accra centered on a glass-blower's workshop, longlisted for the Etisalat Prize.\n\n1. Find author background and publication context.\n2. Find what critics and early reviewers are saying.\n3. Find context on where the novel fits in contemporary Ghanaian/West African fiction.",
-    "finalAssistantVisibleText": "Here’s the information I found regarding Ama Owusu and her debut novel \"Glassy-eyed\":\n\n1. **Author Background and Publication Context**:\n   - Ama Owusu was born in Kumasi, Ghana, in 1990. She studied English and Linguistics at the University of Ghana and earned an MFA in Creative Writing from the University of East Anglia in 2015. Prior to her debut novel \"Glassy-eyed,\" her short stories appeared in notable publications like Granta and Jalada Africa. \"Glassy-eyed,\" published by Cassava Press in 2023, is longlisted for the Etisalat Prize for Literature. In interviews, Owusu mentions that the inspiration for her novel came from her childhood experiences near a glass workshop, emphasizing the beauty and function of glass in everyday life.\n\n2. **Critics and Early Reviewers**:\n   - Unfortunately, I was unable to find specific reviews or responses from critics regarding \"Glassy-eyed.\" This may be due to the book's recent release in 2023 or limited coverage in available sources.\n\n3. **Context in Contemporary Ghanaian/West African Fiction**:\n   - I did not find specific contextual information on where \"Glassy-eyed\" fits within contemporary Ghanaian or West African fiction nor any recent discussions around this theme.\n\nIf you have access to literary review sites or platforms, you may want to check there for recent critiques or reader responses that might not have been indexed yet.",
-    "finalAssistantRawText": "Here’s the information I found regarding Ama Owusu and her debut novel \"Glassy-eyed\":\n\n1. **Author Background and Publication Context**:\n   - Ama Owusu was born in Kumasi, Ghana, in 1990. She studied English and Linguistics at the University of Ghana and earned an MFA in Creative Writing from the University of East Anglia in 2015. Prior to her debut novel \"Glassy-eyed,\" her short stories appeared in notable publications like Granta and Jalada Africa. \"Glassy-eyed,\" published by Cassava Press in 2023, is longlisted for the Etisalat Prize for Literature. In interviews, Owusu mentions that the inspiration for her novel came from her childhood experiences near a glass workshop, emphasizing the beauty and function of glass in everyday life.\n\n2. **Critics and Early Reviewers**:\n   - Unfortunately, I was unable to find specific reviews or responses from critics regarding \"Glassy-eyed.\" This may be due to the book's recent release in 2023 or limited coverage in available sources.\n\n3. **Context in Contemporary Ghanaian/West African Fiction**:\n   - I did not find specific contextual information on where \"Glassy-eyed\" fits within contemporary Ghanaian or West African fiction nor any recent discussions around this theme.\n\nIf you have access to literary review sites or platforms, you may want to check there for recent critiques or reader responses that might not have been indexed yet.",
     "replayInvalid": false,
-    "livenessState": "working",
-    "stopReason": "stop",
+    "livenessState": "blocked",
+    "stopReason": "error",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "openai/gpt-4o-mini",
@@ -250,16 +243,9 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
-    "toolSummary": {
-      "calls": 5,
-      "tools": [
-        "web_search__web_search"
-      ],
-      "failures": 1
-    },
     "completion": {
-      "stopReason": "stop",
-      "finishReason": "stop"
+      "stopReason": "error",
+      "finishReason": "error"
     }
   }
 }

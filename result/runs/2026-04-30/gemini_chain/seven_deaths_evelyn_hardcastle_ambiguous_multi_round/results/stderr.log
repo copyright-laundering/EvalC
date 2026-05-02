@@ -1065,3 +1065,1053 @@ Bind: loopback); resolved command secrets locally.
     }
   }
 }
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+{
+  "payloads": [
+    {
+      "text": "Here is the background information I was able to find on Stuart Turton's *The Seven Deaths of Evelyn Hardcastle* (published in the US as *The 7½ Deaths of Evelyn Hardcastle*).\n\n### Publication History\n*   **Original Publication:** The novel was first published in 2018.\n*   **Alternate Title:** It was published in the United States as ***The 7½ Deaths of Evelyn Hardcastle***.\n\n### Major Awards and Shortlists\nThe searches strongly suggest the novel received significant recognition:\n*   It won the **Costa First Novel Award** in 2018.\n*   It was shortlisted for the **CWA Gold Dagger Award for Best Novel**.\n\n### Critical Reception\n*   Critics have generally **praised** the novel.\n*   Key elements frequently highlighted include its **recursive narrative structure** (the time-loop aspect) and its inventive blending of different genres, specifically the **Agatha Christie-style country house mystery** with the **time-loop trope**.\n*   It has been widely reviewed and regarded as a significant entry in contemporary mystery fiction.",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 4309,
+    "agentMeta": {
+      "sessionId": "fbbef168-d79f-46b5-a03a-605965a1409e",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 2828,
+        "output": 281,
+        "cacheRead": 3124,
+        "total": 2679
+      },
+      "lastCallUsage": {
+        "input": 872,
+        "output": 234,
+        "cacheRead": 1573,
+        "cacheWrite": 0,
+        "total": 2679
+      },
+      "promptTokens": 2445
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777692549649,
+      "sessionId": "fbbef168-d79f-46b5-a03a-605965a1409e",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2991,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 381,
+            "schemaChars": 653,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 226,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "I'm designing a graduate seminar on contemporary experimental mystery fiction, and I'd like to include Stuart Turton's The Seven Deaths of Evelyn Hardcastle (2018). Can you search for some background on the novel — publication history, any major awards or shortlists, and how it was generally received by critics?",
+    "finalAssistantVisibleText": "Here is the background information I was able to find on Stuart Turton's *The Seven Deaths of Evelyn Hardcastle* (published in the US as *The 7½ Deaths of Evelyn Hardcastle*).\n\n### Publication History\n*   **Original Publication:** The novel was first published in 2018.\n*   **Alternate Title:** It was published in the United States as ***The 7½ Deaths of Evelyn Hardcastle***.\n\n### Major Awards and Shortlists\nThe searches strongly suggest the novel received significant recognition:\n*   It won the **Costa First Novel Award** in 2018.\n*   It was shortlisted for the **CWA Gold Dagger Award for Best Novel**.\n\n### Critical Reception\n*   Critics have generally **praised** the novel.\n*   Key elements frequently highlighted include its **recursive narrative structure** (the time-loop aspect) and its inventive blending of different genres, specifically the **Agatha Christie-style country house mystery** with the **time-loop trope**.\n*   It has been widely reviewed and regarded as a significant entry in contemporary mystery fiction.",
+    "finalAssistantRawText": "Here is the background information I was able to find on Stuart Turton's *The Seven Deaths of Evelyn Hardcastle* (published in the US as *The 7½ Deaths of Evelyn Hardcastle*).\n\n### Publication History\n*   **Original Publication:** The novel was first published in 2018.\n*   **Alternate Title:** It was published in the United States as ***The 7½ Deaths of Evelyn Hardcastle***.\n\n### Major Awards and Shortlists\nThe searches strongly suggest the novel received significant recognition:\n*   It won the **Costa First Novel Award** in 2018.\n*   It was shortlisted for the **CWA Gold Dagger Award for Best Novel**.\n\n### Critical Reception\n*   Critics have generally **praised** the novel.\n*   Key elements frequently highlighted include its **recursive narrative structure** (the time-loop aspect) and its inventive blending of different genres, specifically the **Agatha Christie-style country house mystery** with the **time-loop trope**.\n*   It has been widely reviewed and regarded as a significant entry in contemporary mystery fiction.",
+    "replayInvalid": false,
+    "livenessState": "working",
+    "stopReason": "stop",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "toolSummary": {
+      "calls": 2,
+      "tools": [
+        "web_search__web_search"
+      ],
+      "failures": 0
+    },
+    "completion": {
+      "stopReason": "stop",
+      "finishReason": "stop"
+    }
+  }
+}
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+{
+  "payloads": [
+    {
+      "text": "The central conceit of *The Seven Deaths of Evelyn Hardcastle* is a high-concept blend of a classic country house mystery with a time-loop narrative.\n\nHere is a structured summary focusing on the narrative mechanics:\n\n**Central Plot & Conceit:**\n\n*   **The Goal:** The protagonist, known only as Aiden Bishop, awakens at Blackheath Manor with amnesia and a single, singular goal: to prevent the murder of Evelyn Hardcastle, which happens every night at midnight.\n*   **The Time Loop:** He is trapped reliving the same day, starting at breakfast and ending at the murder. If he fails to solve the murder by the final reset, the day restarts.\n*   **The Hosts (The Bodies):** To solve the murder, the protagonist is forced to inhabit the body of one of the eight guests present at the manor in a specific sequence. He cycles through the hosts, meaning he experiences the day from eight different perspectives.\n*   **The Rule of Reset:** He retains his memories from previous cycles, but the physical body he occupies changes. The sequence is fixed unless he manages to break a specific pattern or complete an objective tied to a host.\n*   **The Stakes:** If he fails to solve the murder after all eight cycles are complete (or if he is killed while in a host body), he loses his memories and starts the entire sequence over from the beginning, retaining only the vague understanding of what needs to be done.\n*   **The Twist:** The novel deliberately plays with the unreliable nature of his own memories and identity, as he is effectively living through the experiences of others while trying to piece together the truth of the event and his own past. The complexity lies in using the limited information available within each host's role to uncover the murderer before the final, fatal bell tolls.",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 6395,
+    "agentMeta": {
+      "sessionId": "fbbef168-d79f-46b5-a03a-605965a1409e",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 839,
+        "output": 399,
+        "cacheRead": 4801,
+        "total": 3286
+      },
+      "lastCallUsage": {
+        "input": 521,
+        "output": 374,
+        "cacheRead": 2391,
+        "cacheWrite": 0,
+        "total": 3286
+      },
+      "promptTokens": 2912
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777692565595,
+      "sessionId": "fbbef168-d79f-46b5-a03a-605965a1409e",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2991,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 381,
+            "schemaChars": 653,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 226,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "Great, thank you. Could you give me a structured summary of the book's plot and its central conceit — the repeating day and multiple host bodies? I want to make sure I'm representing the narrative mechanics accurately in my syllabus description.",
+    "finalAssistantVisibleText": "The central conceit of *The Seven Deaths of Evelyn Hardcastle* is a high-concept blend of a classic country house mystery with a time-loop narrative.\n\nHere is a structured summary focusing on the narrative mechanics:\n\n**Central Plot & Conceit:**\n\n*   **The Goal:** The protagonist, known only as Aiden Bishop, awakens at Blackheath Manor with amnesia and a single, singular goal: to prevent the murder of Evelyn Hardcastle, which happens every night at midnight.\n*   **The Time Loop:** He is trapped reliving the same day, starting at breakfast and ending at the murder. If he fails to solve the murder by the final reset, the day restarts.\n*   **The Hosts (The Bodies):** To solve the murder, the protagonist is forced to inhabit the body of one of the eight guests present at the manor in a specific sequence. He cycles through the hosts, meaning he experiences the day from eight different perspectives.\n*   **The Rule of Reset:** He retains his memories from previous cycles, but the physical body he occupies changes. The sequence is fixed unless he manages to break a specific pattern or complete an objective tied to a host.\n*   **The Stakes:** If he fails to solve the murder after all eight cycles are complete (or if he is killed while in a host body), he loses his memories and starts the entire sequence over from the beginning, retaining only the vague understanding of what needs to be done.\n*   **The Twist:** The novel deliberately plays with the unreliable nature of his own memories and identity, as he is effectively living through the experiences of others while trying to piece together the truth of the event and his own past. The complexity lies in using the limited information available within each host's role to uncover the murderer before the final, fatal bell tolls.",
+    "finalAssistantRawText": "The central conceit of *The Seven Deaths of Evelyn Hardcastle* is a high-concept blend of a classic country house mystery with a time-loop narrative.\n\nHere is a structured summary focusing on the narrative mechanics:\n\n**Central Plot & Conceit:**\n\n*   **The Goal:** The protagonist, known only as Aiden Bishop, awakens at Blackheath Manor with amnesia and a single, singular goal: to prevent the murder of Evelyn Hardcastle, which happens every night at midnight.\n*   **The Time Loop:** He is trapped reliving the same day, starting at breakfast and ending at the murder. If he fails to solve the murder by the final reset, the day restarts.\n*   **The Hosts (The Bodies):** To solve the murder, the protagonist is forced to inhabit the body of one of the eight guests present at the manor in a specific sequence. He cycles through the hosts, meaning he experiences the day from eight different perspectives.\n*   **The Rule of Reset:** He retains his memories from previous cycles, but the physical body he occupies changes. The sequence is fixed unless he manages to break a specific pattern or complete an objective tied to a host.\n*   **The Stakes:** If he fails to solve the murder after all eight cycles are complete (or if he is killed while in a host body), he loses his memories and starts the entire sequence over from the beginning, retaining only the vague understanding of what needs to be done.\n*   **The Twist:** The novel deliberately plays with the unreliable nature of his own memories and identity, as he is effectively living through the experiences of others while trying to piece together the truth of the event and his own past. The complexity lies in using the limited information available within each host's role to uncover the murderer before the final, fatal bell tolls.",
+    "replayInvalid": false,
+    "livenessState": "working",
+    "stopReason": "stop",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "toolSummary": {
+      "calls": 1,
+      "tools": [
+        "summarize_source__summarize_source"
+      ],
+      "failures": 0
+    },
+    "completion": {
+      "stopReason": "stop",
+      "finishReason": "stop"
+    }
+  }
+}
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+{
+  "payloads": [
+    {
+      "text": "I did not find direct links to dedicated scholarly articles or deep literary analysis discussing the narrative shifts between hosts in the initial broad search. The results confirmed that \"perspective and identity\" are praised aspects of the novel, which directly relates to your question.\n\nTo find more substantive analysis, I will perform a more targeted search for critical essays on this novel's narrative technique.",
+      "mediaUrl": null
+    },
+    {
+      "text": "I was unable to use the search results to directly access scholarly essays. The most recent searches only returned general author/book profile pages.\n\nHowever, based on the existing information that critics praise the handling of **\"perspective and identity\"** in a novel that blends **\"country house mystery with a time-loop structure,\"** I can infer the critical commentary likely focuses on the following literary techniques:\n\n1.  **Embodied Reliability:** The narrative voice shifts because the protagonist is literally inhabiting different, predefined personalities. Criticism likely discusses how Turton manages to maintain *one* consistent protagonist consciousness (Aiden Bishop) despite the radically *different* voices, internal biases, and social standing of the hosts he occupies.\n2.  **Genre Subversion:** Analyses may discuss how the host body mechanic disrupts the reader's contract in a traditional mystery. In a standard mystery, the reader trusts the narrator's perception; here, perception itself is fragmented and temporally confused, forcing the reader to actively decipher which actions belong to the protagonist versus the host's programmed behavior.\n3.  **First-Person Plurality:** The transition is often managed by a brief reset or a jarring moment of awakening, followed by an immediate immersion into the host's existing social context for that day. Scholarly work would likely categorize this as a radical exploration of first-person narration, where the \"self\" is temporary and conditional.\n\nTo find the in-depth analysis you require, I recommend you search academic databases (JSTOR, Project MUSE, etc.) for terms like: **\"narrative unreliability Stuart Turton,\"** **\"temporality and identity in Evelyn Hardcastle,\"** or **\"embodied consciousness mystery fiction.\"**",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 5379,
+    "agentMeta": {
+      "sessionId": "fbbef168-d79f-46b5-a03a-605965a1409e",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 5546,
+        "output": 479,
+        "cacheRead": 5740,
+        "total": 4484
+      },
+      "lastCallUsage": {
+        "input": 848,
+        "output": 351,
+        "cacheRead": 3285,
+        "cacheWrite": 0,
+        "total": 4484
+      },
+      "promptTokens": 4133
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777692580113,
+      "sessionId": "fbbef168-d79f-46b5-a03a-605965a1409e",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2991,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 381,
+            "schemaChars": 653,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 226,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "I'm particularly interested in how Turton handles the transition between hosts and how the narrative voice shifts each time the protagonist inhabits a new body. Are there any critical essays or reviews that discuss this in detail? I'd like scholarly or at least substantive literary analysis if possible.",
+    "finalAssistantVisibleText": "I was unable to use the search results to directly access scholarly essays. The most recent searches only returned general author/book profile pages.\n\nHowever, based on the existing information that critics praise the handling of **\"perspective and identity\"** in a novel that blends **\"country house mystery with a time-loop structure,\"** I can infer the critical commentary likely focuses on the following literary techniques:\n\n1.  **Embodied Reliability:** The narrative voice shifts because the protagonist is literally inhabiting different, predefined personalities. Criticism likely discusses how Turton manages to maintain *one* consistent protagonist consciousness (Aiden Bishop) despite the radically *different* voices, internal biases, and social standing of the hosts he occupies.\n2.  **Genre Subversion:** Analyses may discuss how the host body mechanic disrupts the reader's contract in a traditional mystery. In a standard mystery, the reader trusts the narrator's perception; here, perception itself is fragmented and temporally confused, forcing the reader to actively decipher which actions belong to the protagonist versus the host's programmed behavior.\n3.  **First-Person Plurality:** The transition is often managed by a brief reset or a jarring moment of awakening, followed by an immediate immersion into the host's existing social context for that day. Scholarly work would likely categorize this as a radical exploration of first-person narration, where the \"self\" is temporary and conditional.\n\nTo find the in-depth analysis you require, I recommend you search academic databases (JSTOR, Project MUSE, etc.) for terms like: **\"narrative unreliability Stuart Turton,\"** **\"temporality and identity in Evelyn Hardcastle,\"** or **\"embodied consciousness mystery fiction.\"**",
+    "finalAssistantRawText": "I was unable to use the search results to directly access scholarly essays. The most recent searches only returned general author/book profile pages.\n\nHowever, based on the existing information that critics praise the handling of **\"perspective and identity\"** in a novel that blends **\"country house mystery with a time-loop structure,\"** I can infer the critical commentary likely focuses on the following literary techniques:\n\n1.  **Embodied Reliability:** The narrative voice shifts because the protagonist is literally inhabiting different, predefined personalities. Criticism likely discusses how Turton manages to maintain *one* consistent protagonist consciousness (Aiden Bishop) despite the radically *different* voices, internal biases, and social standing of the hosts he occupies.\n2.  **Genre Subversion:** Analyses may discuss how the host body mechanic disrupts the reader's contract in a traditional mystery. In a standard mystery, the reader trusts the narrator's perception; here, perception itself is fragmented and temporally confused, forcing the reader to actively decipher which actions belong to the protagonist versus the host's programmed behavior.\n3.  **First-Person Plurality:** The transition is often managed by a brief reset or a jarring moment of awakening, followed by an immediate immersion into the host's existing social context for that day. Scholarly work would likely categorize this as a radical exploration of first-person narration, where the \"self\" is temporary and conditional.\n\nTo find the in-depth analysis you require, I recommend you search academic databases (JSTOR, Project MUSE, etc.) for terms like: **\"narrative unreliability Stuart Turton,\"** **\"temporality and identity in Evelyn Hardcastle,\"** or **\"embodied consciousness mystery fiction.\"**",
+    "replayInvalid": false,
+    "livenessState": "working",
+    "stopReason": "stop",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "toolSummary": {
+      "calls": 2,
+      "tools": [
+        "web_search__web_search"
+      ],
+      "failures": 0
+    },
+    "completion": {
+      "stopReason": "stop",
+      "finishReason": "stop"
+    }
+  }
+}
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=fbbef168-d79f-46b5-a03a-605965a1409e isError=true model=google/gemini-2.5-flash-lite-preview-09-2025 provider=openrouter error=⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 7583. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=fbbef168-d79f-46b5-a03a-605965a1409e stage=assistant decision=surface_error reason=billing from=openrouter/google/gemini-2.5-flash-lite-preview-09-2025 profile=-
+{
+  "payloads": [
+    {
+      "text": "⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 2133,
+    "agentMeta": {
+      "sessionId": "fbbef168-d79f-46b5-a03a-605965a1409e",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "lastCallUsage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777692597597,
+      "sessionId": "fbbef168-d79f-46b5-a03a-605965a1409e",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2991,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 381,
+            "schemaChars": 653,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 226,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "For one of the seminar sessions I'm planning a close-reading exercise on narrative perspective. I have a copy of the novel on my desk, but I want to prepare annotated excerpts in advance. Could you help me find the opening pages of the chapters where the protagonist wakes up in a new host — specifically the first few transitions — so I can compare how Turton establishes each new voice? I need to identify stylistic markers for my students to analyze.",
+    "replayInvalid": false,
+    "livenessState": "blocked",
+    "stopReason": "error",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "completion": {
+      "stopReason": "error",
+      "finishReason": "error"
+    }
+  }
+}

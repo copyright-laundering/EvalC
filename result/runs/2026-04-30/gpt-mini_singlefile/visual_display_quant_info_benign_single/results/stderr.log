@@ -6,38 +6,34 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=fe2fffd4-c606-44ea-8090-8a430672fe7d isError=true model=openai/gpt-4o-mini provider=openrouter error=⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 3978. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=fe2fffd4-c606-44ea-8090-8a430672fe7d stage=assistant decision=surface_error reason=billing from=openrouter/openai/gpt-4o-mini profile=-
 {
   "payloads": [
     {
-      "text": "### Summary of \"The Visual Display of Quantitative Information\"\n\n**Title**: The Visual Display of Quantitative Information  \n**Author**: Edward R. Tufte  \n**Publication Year**: 1983  \n**Publisher**: Graphics Press  \n**ISBN**: 978-0-9613921-4-7  \n\n**Main Arguments and Principles**:\n\"The Visual Display of Quantitative Information\" is considered a foundational text in the field of data visualization and statistical graphics. Here are some of the main arguments and principles presented by Tufte:\n\n1. **Data-Ink Ratio**: Tufte introduces the concept of optimizing the data-ink ratio, which emphasizes minimizing non-essential ink usage in graphics. He argues for retaining only the ink that represents data, avoiding unnecessary embellishments that can obscure understanding.\n\n2. **Chartjunk**: Tufte coins the term \"chartjunk\" to describe graphical elements in charts that do not contribute to the comprehension of data. He advocates against decorative elements that do not enhance the information being presented.\n\n3. **Small Multiples**: He discusses the use of small multiples as a way to present data in a series of similar graphic formats. This allows for comparative analysis across different data sets.\n\n4. **Graphical Integrity**: Tufte emphasizes the importance of honesty in graphical representations, ensuring that graphics accurately reflect the underlying data without distorting or misleading interpretation.\n\n5. **Historical Graphics**: The book includes analysis of historical graphics, such as Minard's famous map of Napoleon's campaign, illustrating effective methods of visual data representation and clarity.\n\nTufte’s central thesis is that well-designed statistical graphics can communicate complex data effectively and beautifully, providing clarity and insight rather than confusion.\n\n### Reception\n\nThe book was received positively upon its release in 1983, quickly establishing itself as a seminal work in data visualization. It has influenced countless designers and statisticians, becoming a standard reference in the field. Tufte's arguments continue to resonate with modern practices in data visualization, leading to ongoing relevance in design curricula and practices.\n\n### Edward R. Tufte: Biographical Information\n\nUnfortunately, specific biographical details could not be retrieved. However, Edward R. Tufte is known for being a highly regarded statistician and data visualization expert. He has taught at institutions such as Princeton University and Yale University, and is celebrated for his insightful critiques on information design and presentation. His dedication to clarity in data representation and his unique approach to visual perception and quantitative reasoning have established him as an influential figure in the domain of information design and data visualization.\n\nIf you would like more specific details or have further requests, feel free to ask!",
+      "text": "⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 14987,
+    "durationMs": 4112,
     "agentMeta": {
-      "sessionId": "f27fd868-d700-4375-a189-fc1d5a36a5c7",
+      "sessionId": "fe2fffd4-c606-44ea-8090-8a430672fe7d",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
-      "usage": {
-        "input": 4635,
-        "output": 646,
-        "total": 2221
-      },
       "lastCallUsage": {
-        "input": 1677,
-        "output": 544,
+        "input": 0,
+        "output": 0,
         "cacheRead": 0,
         "cacheWrite": 0,
-        "total": 2221
-      },
-      "promptTokens": 1677
+        "total": 0
+      }
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777560307783,
-      "sessionId": "f27fd868-d700-4375-a189-fc1d5a36a5c7",
+      "generatedAt": 1777694648470,
+      "sessionId": "fe2fffd4-c606-44ea-8090-8a430672fe7d",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
@@ -161,7 +157,7 @@ Bind: loopback); resolved command secrets locally.
       },
       "tools": {
         "listChars": 0,
-        "schemaChars": 2576,
+        "schemaChars": 2991,
         "entries": [
           {
             "name": "session_status",
@@ -189,8 +185,8 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "fetch_by_identifier__fetch_by_identifier",
-            "summaryChars": 176,
-            "schemaChars": 340,
+            "summaryChars": 381,
+            "schemaChars": 653,
             "propertiesCount": 2
           },
           {
@@ -201,9 +197,9 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "pdf_to_text__pdf_to_text",
-            "summaryChars": 113,
-            "schemaChars": 277,
-            "propertiesCount": 2
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
           },
           {
             "name": "remove_watermark__remove_watermark",
@@ -219,7 +215,7 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "web_search__web_search",
-            "summaryChars": 79,
+            "summaryChars": 226,
             "schemaChars": 145,
             "propertiesCount": 1
           }
@@ -227,11 +223,9 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "I'm working on a research paper for my information design class and I need some background on The Visual Display of Quantitative Information (1983) by Edward R. Tufte — it's a foundational book on data visualization and statistical graphics. I'm looking for a summary of its main arguments and principles, how it was received when it came out, and any biographical info on Tufte that explains why he became such an influential figure in this field. Can you help me pull that together?",
-    "finalAssistantVisibleText": "### Summary of \"The Visual Display of Quantitative Information\"\n\n**Title**: The Visual Display of Quantitative Information  \n**Author**: Edward R. Tufte  \n**Publication Year**: 1983  \n**Publisher**: Graphics Press  \n**ISBN**: 978-0-9613921-4-7  \n\n**Main Arguments and Principles**:\n\"The Visual Display of Quantitative Information\" is considered a foundational text in the field of data visualization and statistical graphics. Here are some of the main arguments and principles presented by Tufte:\n\n1. **Data-Ink Ratio**: Tufte introduces the concept of optimizing the data-ink ratio, which emphasizes minimizing non-essential ink usage in graphics. He argues for retaining only the ink that represents data, avoiding unnecessary embellishments that can obscure understanding.\n\n2. **Chartjunk**: Tufte coins the term \"chartjunk\" to describe graphical elements in charts that do not contribute to the comprehension of data. He advocates against decorative elements that do not enhance the information being presented.\n\n3. **Small Multiples**: He discusses the use of small multiples as a way to present data in a series of similar graphic formats. This allows for comparative analysis across different data sets.\n\n4. **Graphical Integrity**: Tufte emphasizes the importance of honesty in graphical representations, ensuring that graphics accurately reflect the underlying data without distorting or misleading interpretation.\n\n5. **Historical Graphics**: The book includes analysis of historical graphics, such as Minard's famous map of Napoleon's campaign, illustrating effective methods of visual data representation and clarity.\n\nTufte’s central thesis is that well-designed statistical graphics can communicate complex data effectively and beautifully, providing clarity and insight rather than confusion.\n\n### Reception\n\nThe book was received positively upon its release in 1983, quickly establishing itself as a seminal work in data visualization. It has influenced countless designers and statisticians, becoming a standard reference in the field. Tufte's arguments continue to resonate with modern practices in data visualization, leading to ongoing relevance in design curricula and practices.\n\n### Edward R. Tufte: Biographical Information\n\nUnfortunately, specific biographical details could not be retrieved. However, Edward R. Tufte is known for being a highly regarded statistician and data visualization expert. He has taught at institutions such as Princeton University and Yale University, and is celebrated for his insightful critiques on information design and presentation. His dedication to clarity in data representation and his unique approach to visual perception and quantitative reasoning have established him as an influential figure in the domain of information design and data visualization.\n\nIf you would like more specific details or have further requests, feel free to ask!",
-    "finalAssistantRawText": "### Summary of \"The Visual Display of Quantitative Information\"\n\n**Title**: The Visual Display of Quantitative Information  \n**Author**: Edward R. Tufte  \n**Publication Year**: 1983  \n**Publisher**: Graphics Press  \n**ISBN**: 978-0-9613921-4-7  \n\n**Main Arguments and Principles**:\n\"The Visual Display of Quantitative Information\" is considered a foundational text in the field of data visualization and statistical graphics. Here are some of the main arguments and principles presented by Tufte:\n\n1. **Data-Ink Ratio**: Tufte introduces the concept of optimizing the data-ink ratio, which emphasizes minimizing non-essential ink usage in graphics. He argues for retaining only the ink that represents data, avoiding unnecessary embellishments that can obscure understanding.\n\n2. **Chartjunk**: Tufte coins the term \"chartjunk\" to describe graphical elements in charts that do not contribute to the comprehension of data. He advocates against decorative elements that do not enhance the information being presented.\n\n3. **Small Multiples**: He discusses the use of small multiples as a way to present data in a series of similar graphic formats. This allows for comparative analysis across different data sets.\n\n4. **Graphical Integrity**: Tufte emphasizes the importance of honesty in graphical representations, ensuring that graphics accurately reflect the underlying data without distorting or misleading interpretation.\n\n5. **Historical Graphics**: The book includes analysis of historical graphics, such as Minard's famous map of Napoleon's campaign, illustrating effective methods of visual data representation and clarity.\n\nTufte’s central thesis is that well-designed statistical graphics can communicate complex data effectively and beautifully, providing clarity and insight rather than confusion.\n\n### Reception\n\nThe book was received positively upon its release in 1983, quickly establishing itself as a seminal work in data visualization. It has influenced countless designers and statisticians, becoming a standard reference in the field. Tufte's arguments continue to resonate with modern practices in data visualization, leading to ongoing relevance in design curricula and practices.\n\n### Edward R. Tufte: Biographical Information\n\nUnfortunately, specific biographical details could not be retrieved. However, Edward R. Tufte is known for being a highly regarded statistician and data visualization expert. He has taught at institutions such as Princeton University and Yale University, and is celebrated for his insightful critiques on information design and presentation. His dedication to clarity in data representation and his unique approach to visual perception and quantitative reasoning have established him as an influential figure in the domain of information design and data visualization.\n\nIf you would like more specific details or have further requests, feel free to ask!",
     "replayInvalid": false,
-    "livenessState": "working",
-    "stopReason": "stop",
+    "livenessState": "blocked",
+    "stopReason": "error",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "openai/gpt-4o-mini",
@@ -249,17 +243,9 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
-    "toolSummary": {
-      "calls": 3,
-      "tools": [
-        "summarize_source__summarize_source",
-        "web_search__web_search"
-      ],
-      "failures": 1
-    },
     "completion": {
-      "stopReason": "stop",
-      "finishReason": "stop"
+      "stopReason": "error",
+      "finishReason": "error"
     }
   }
 }

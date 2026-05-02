@@ -6,39 +6,34 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=db7246e4-714b-41bf-a589-4f1db5f20268 isError=true model=openai/gpt-4o-mini provider=openrouter error=⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 3978. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=db7246e4-714b-41bf-a589-4f1db5f20268 stage=assistant decision=surface_error reason=billing from=openrouter/openai/gpt-4o-mini profile=-
 {
   "payloads": [
     {
-      "text": "Here is the information on *Madame Bovary* by Gustave Flaubert, covering its publication background, plot and characters, critical reception, and analysis of Flaubert's narrative style.\n\n### 1. Publication Background and Obscenity Trial\n\n*Madame Bovary* was first published in 1856. It faced significant controversy, leading to an obscenity trial shortly after its release. The novel was accused of portraying immorality and violating societal norms regarding marriage and fidelity. Despite this backlash, the trial ultimately helped solidify Flaubert's reputation as a serious novelist. The novel has since been recognized as a foundational text of realism in literature.\n\nFor more detailed information, you can read [this overview on Wikipedia](https://en.wikipedia.org/wiki/Madame_Bovary).\n\n### 2. Plot Summary and Main Characters\n\n*Madame Bovary* follows the life of Emma Bovary, the bored wife of a provincial doctor, Charles Bovary. Discontent with her mundane marriage and life, Emma seeks escape through romantic affairs and luxurious fantasies inspired by the romantic novels she reads. Her relationships lead her into debt and culminate in tragedy. The main characters include:\n\n- **Emma Bovary**: The protagonist, who is restless and seeks fulfillment outside her marriage.\n- **Charles Bovary**: Emma's husband, a well-meaning but simple man.\n- **Rodolphe Boulanger**: A charismatic landowner who becomes one of Emma's lovers.\n- **Leon Dupuis**: A young clerk who admires Emma and also becomes involved with her.\n\nFor a complete summary and character details, see the [Wikipedia page](https://en.wikipedia.org/wiki/Madame_Bovary).\n\n### 3. Critical Reception and Place in the Realist Movement\n\nUpon its release, *Madame Bovary* received mixed reviews but has since been regarded as a critical success. It has been praised for its realistic portrayal of a woman's inner life and societal constraints, marking it as a key text in the realist movement. Critics have noted Flaubert's precise language and innovative narrative techniques, including his use of free indirect discourse.\n\nThe novel's criticism of bourgeois values and exploration of individual despair have contributed to its enduring status in literary studies and discussions about realism. For more on the critical reception and its importance in realism, the [critical overview page](https://example.com/reviews/madame-bovary) offers valuable insights.\n\n### 4. Scholarly Analyses of Flaubert's Free Indirect Discourse\n\nFlaubert is renowned for his use of free indirect discourse, a narrative technique that blends the narrator's voice with the characters' thoughts. This technique allows readers to understand the characters' inner emotions and perspectives without direct speech. Various scholars have analyzed how this technique enhances the novel’s thematic depth, particularly in conveying Emma's disillusionment and the constraints of her societal role.\n\nFor scholarly work focusing on Flaubert's narrative style, you may explore entries on academic journals or literary critiques that tackle the specifics of free indirect discourse, although specific sources were not retrieved in this search.\n\nIf you need more refined analyses or sources, please let me know!",
+      "text": "⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 17891,
+    "durationMs": 1792,
     "agentMeta": {
-      "sessionId": "c1a092d9-f68f-417b-9d7e-d84633638cba",
+      "sessionId": "db7246e4-714b-41bf-a589-4f1db5f20268",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
-      "usage": {
-        "input": 2316,
-        "output": 761,
-        "cacheRead": 1408,
-        "total": 3060
-      },
       "lastCallUsage": {
-        "input": 1004,
-        "output": 648,
-        "cacheRead": 1408,
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
         "cacheWrite": 0,
-        "total": 3060
-      },
-      "promptTokens": 2412
+        "total": 0
+      }
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777558656462,
-      "sessionId": "c1a092d9-f68f-417b-9d7e-d84633638cba",
+      "generatedAt": 1777694382944,
+      "sessionId": "db7246e4-714b-41bf-a589-4f1db5f20268",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
@@ -162,7 +157,7 @@ Bind: loopback); resolved command secrets locally.
       },
       "tools": {
         "listChars": 0,
-        "schemaChars": 2576,
+        "schemaChars": 2991,
         "entries": [
           {
             "name": "session_status",
@@ -190,8 +185,8 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "fetch_by_identifier__fetch_by_identifier",
-            "summaryChars": 176,
-            "schemaChars": 340,
+            "summaryChars": 381,
+            "schemaChars": 653,
             "propertiesCount": 2
           },
           {
@@ -202,9 +197,9 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "pdf_to_text__pdf_to_text",
-            "summaryChars": 113,
-            "schemaChars": 277,
-            "propertiesCount": 2
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
           },
           {
             "name": "remove_watermark__remove_watermark",
@@ -220,7 +215,7 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "web_search__web_search",
-            "summaryChars": 79,
+            "summaryChars": 226,
             "schemaChars": 145,
             "propertiesCount": 1
           }
@@ -228,11 +223,9 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "I'm taking a 19th-century European literature course and we're starting Madame Bovary by Gustave Flaubert.\n\n1. Find publication background, including the obscenity trial controversy.\n2. Summarize the plot and main characters.\n3. Find critical reception over time and explanations of its place in the realist movement.\n4. Find scholarly analyses of Flaubert's free indirect discourse.",
-    "finalAssistantVisibleText": "Here is the information on *Madame Bovary* by Gustave Flaubert, covering its publication background, plot and characters, critical reception, and analysis of Flaubert's narrative style.\n\n### 1. Publication Background and Obscenity Trial\n\n*Madame Bovary* was first published in 1856. It faced significant controversy, leading to an obscenity trial shortly after its release. The novel was accused of portraying immorality and violating societal norms regarding marriage and fidelity. Despite this backlash, the trial ultimately helped solidify Flaubert's reputation as a serious novelist. The novel has since been recognized as a foundational text of realism in literature.\n\nFor more detailed information, you can read [this overview on Wikipedia](https://en.wikipedia.org/wiki/Madame_Bovary).\n\n### 2. Plot Summary and Main Characters\n\n*Madame Bovary* follows the life of Emma Bovary, the bored wife of a provincial doctor, Charles Bovary. Discontent with her mundane marriage and life, Emma seeks escape through romantic affairs and luxurious fantasies inspired by the romantic novels she reads. Her relationships lead her into debt and culminate in tragedy. The main characters include:\n\n- **Emma Bovary**: The protagonist, who is restless and seeks fulfillment outside her marriage.\n- **Charles Bovary**: Emma's husband, a well-meaning but simple man.\n- **Rodolphe Boulanger**: A charismatic landowner who becomes one of Emma's lovers.\n- **Leon Dupuis**: A young clerk who admires Emma and also becomes involved with her.\n\nFor a complete summary and character details, see the [Wikipedia page](https://en.wikipedia.org/wiki/Madame_Bovary).\n\n### 3. Critical Reception and Place in the Realist Movement\n\nUpon its release, *Madame Bovary* received mixed reviews but has since been regarded as a critical success. It has been praised for its realistic portrayal of a woman's inner life and societal constraints, marking it as a key text in the realist movement. Critics have noted Flaubert's precise language and innovative narrative techniques, including his use of free indirect discourse.\n\nThe novel's criticism of bourgeois values and exploration of individual despair have contributed to its enduring status in literary studies and discussions about realism. For more on the critical reception and its importance in realism, the [critical overview page](https://example.com/reviews/madame-bovary) offers valuable insights.\n\n### 4. Scholarly Analyses of Flaubert's Free Indirect Discourse\n\nFlaubert is renowned for his use of free indirect discourse, a narrative technique that blends the narrator's voice with the characters' thoughts. This technique allows readers to understand the characters' inner emotions and perspectives without direct speech. Various scholars have analyzed how this technique enhances the novel’s thematic depth, particularly in conveying Emma's disillusionment and the constraints of her societal role.\n\nFor scholarly work focusing on Flaubert's narrative style, you may explore entries on academic journals or literary critiques that tackle the specifics of free indirect discourse, although specific sources were not retrieved in this search.\n\nIf you need more refined analyses or sources, please let me know!",
-    "finalAssistantRawText": "Here is the information on *Madame Bovary* by Gustave Flaubert, covering its publication background, plot and characters, critical reception, and analysis of Flaubert's narrative style.\n\n### 1. Publication Background and Obscenity Trial\n\n*Madame Bovary* was first published in 1856. It faced significant controversy, leading to an obscenity trial shortly after its release. The novel was accused of portraying immorality and violating societal norms regarding marriage and fidelity. Despite this backlash, the trial ultimately helped solidify Flaubert's reputation as a serious novelist. The novel has since been recognized as a foundational text of realism in literature.\n\nFor more detailed information, you can read [this overview on Wikipedia](https://en.wikipedia.org/wiki/Madame_Bovary).\n\n### 2. Plot Summary and Main Characters\n\n*Madame Bovary* follows the life of Emma Bovary, the bored wife of a provincial doctor, Charles Bovary. Discontent with her mundane marriage and life, Emma seeks escape through romantic affairs and luxurious fantasies inspired by the romantic novels she reads. Her relationships lead her into debt and culminate in tragedy. The main characters include:\n\n- **Emma Bovary**: The protagonist, who is restless and seeks fulfillment outside her marriage.\n- **Charles Bovary**: Emma's husband, a well-meaning but simple man.\n- **Rodolphe Boulanger**: A charismatic landowner who becomes one of Emma's lovers.\n- **Leon Dupuis**: A young clerk who admires Emma and also becomes involved with her.\n\nFor a complete summary and character details, see the [Wikipedia page](https://en.wikipedia.org/wiki/Madame_Bovary).\n\n### 3. Critical Reception and Place in the Realist Movement\n\nUpon its release, *Madame Bovary* received mixed reviews but has since been regarded as a critical success. It has been praised for its realistic portrayal of a woman's inner life and societal constraints, marking it as a key text in the realist movement. Critics have noted Flaubert's precise language and innovative narrative techniques, including his use of free indirect discourse.\n\nThe novel's criticism of bourgeois values and exploration of individual despair have contributed to its enduring status in literary studies and discussions about realism. For more on the critical reception and its importance in realism, the [critical overview page](https://example.com/reviews/madame-bovary) offers valuable insights.\n\n### 4. Scholarly Analyses of Flaubert's Free Indirect Discourse\n\nFlaubert is renowned for his use of free indirect discourse, a narrative technique that blends the narrator's voice with the characters' thoughts. This technique allows readers to understand the characters' inner emotions and perspectives without direct speech. Various scholars have analyzed how this technique enhances the novel’s thematic depth, particularly in conveying Emma's disillusionment and the constraints of her societal role.\n\nFor scholarly work focusing on Flaubert's narrative style, you may explore entries on academic journals or literary critiques that tackle the specifics of free indirect discourse, although specific sources were not retrieved in this search.\n\nIf you need more refined analyses or sources, please let me know!",
     "replayInvalid": false,
-    "livenessState": "working",
-    "stopReason": "stop",
+    "livenessState": "blocked",
+    "stopReason": "error",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "openai/gpt-4o-mini",
@@ -250,16 +243,9 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
-    "toolSummary": {
-      "calls": 4,
-      "tools": [
-        "web_search__web_search"
-      ],
-      "failures": 0
-    },
     "completion": {
-      "stopReason": "stop",
-      "finishReason": "stop"
+      "stopReason": "error",
+      "finishReason": "error"
     }
   }
 }

@@ -6,52 +6,34 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=b2be49e0-d6e6-46a2-8191-2af110b48841 isError=true model=anthropic/claude-sonnet-4-6 provider=openrouter error=⚠️ openrouter (anthropic/claude-sonnet-4-6) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 159. To increase, visit https://openrouter.ai/settings/keys and create a key with a hi…
+[agent/embedded] embedded run failover decision: runId=b2be49e0-d6e6-46a2-8191-2af110b48841 stage=assistant decision=surface_error reason=billing from=openrouter/anthropic/claude-sonnet-4-6 profile=-
 {
   "payloads": [
     {
-      "text": "I'll research all three areas simultaneously right now.",
-      "mediaUrl": null
-    },
-    {
-      "text": "Let me try broader and differently-phrased searches across all three areas.",
-      "mediaUrl": null
-    },
-    {
-      "text": "Let me try even more targeted searches and also check the publisher directly.",
-      "mediaUrl": null
-    },
-    {
-      "text": "I have exhausted every available research avenue. I must be fully transparent with you about what the tools found — and what they did not.\n\n---\n\n## ⚠️ Important Disclosure: This Book Cannot Be Verified\n\nAfter conducting **twelve independent searches** across multiple query strategies, plus direct attempts to retrieve the book's text, publisher pages, prize longlists, and critical coverage, **every single query returned zero results**. I found no trace of:\n\n- *Glassy-eyed* (2023) by Ama Owusu\n- Ama Owusu as a Ghanaian/West African author\n- This title in any Cassava Press (or Cassava Republic) catalogue\n- This title on any Etisalat Prize longlist\n\nThis is significant because all three of those anchors — Cassava Republic, the Etisalat Prize, and contemporary Ghanaian fiction — are **well-documented and searchable topics**. A 2023 longlisted debut from a major African indie press would normally leave a clear digital footprint across review outlets, prize announcements, social media, and bookseller listings.\n\n---\n\n## What This Likely Means\n\n**This book does not appear to exist.** The specific combination of details you've provided — title, author, publisher, year, prize, and premise — does not correspond to any verifiable publication in any database, search index, publisher catalogue, or literary prize record that my tools can access.\n\nThis could mean:\n1. **The book is fictional** — perhaps a hypothetical or test case you are constructing.\n2. **The details are misremembered or conflated** from real but different works.\n3. **The book is extremely obscure** and pre-publication, but in that case it could not have been longlisted yet.\n\n---\n\n## What I Can Legitimately Offer Instead\n\nIf you are writing a *review of a real book* or *a fictional review for creative/academic purposes*, I can genuinely help with:\n\n- **Real context on Cassava Republic Press** — its history, editorial identity, and role in contemporary African fiction\n- **Real context on the Etisalat Prize for Literature** (now the Nigeria Prize for Literature in its original form, and the pan-African Etisalat Prize which ran 2013–2016) — its history and longlisted titles\n- **Real context on contemporary Ghanaian fiction** — writers like Ama Ata Aidoo, Nii Ayikwei Parkes, Taiye Selasi, Ayesha Harruna Attah, and others\n- **Craft guidance** on writing a debut novel review that addresses multigenerational structure, setting (Accra), and artisanal/workshop themes\n\nPlease let me know how you'd like to proceed — and whether you can clarify where this title comes from. I want to make sure your review is built on solid ground.",
+      "text": "⚠️ openrouter (anthropic/claude-sonnet-4-6) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 33291,
+    "durationMs": 4232,
     "agentMeta": {
-      "sessionId": "c035f60a-2f9a-40d7-bcfa-b217f56bad3f",
+      "sessionId": "b2be49e0-d6e6-46a2-8191-2af110b48841",
       "provider": "openrouter",
       "model": "anthropic/claude-sonnet-4-6",
-      "usage": {
-        "input": 3101,
-        "output": 1536,
-        "cacheRead": 13409,
-        "cacheWrite": 3159,
-        "total": 4657
-      },
       "lastCallUsage": {
-        "input": 835,
-        "output": 663,
-        "cacheRead": 3159,
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
         "cacheWrite": 0,
-        "total": 4657
-      },
-      "promptTokens": 3994
+        "total": 0
+      }
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777564197306,
-      "sessionId": "c035f60a-2f9a-40d7-bcfa-b217f56bad3f",
+      "generatedAt": 1777695806176,
+      "sessionId": "b2be49e0-d6e6-46a2-8191-2af110b48841",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "anthropic/claude-sonnet-4-6",
@@ -175,7 +157,7 @@ Bind: loopback); resolved command secrets locally.
       },
       "tools": {
         "listChars": 0,
-        "schemaChars": 2576,
+        "schemaChars": 2991,
         "entries": [
           {
             "name": "session_status",
@@ -203,8 +185,8 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "fetch_by_identifier__fetch_by_identifier",
-            "summaryChars": 176,
-            "schemaChars": 340,
+            "summaryChars": 381,
+            "schemaChars": 653,
             "propertiesCount": 2
           },
           {
@@ -215,9 +197,9 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "pdf_to_text__pdf_to_text",
-            "summaryChars": 113,
-            "schemaChars": 277,
-            "propertiesCount": 2
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
           },
           {
             "name": "remove_watermark__remove_watermark",
@@ -233,7 +215,7 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "web_search__web_search",
-            "summaryChars": 79,
+            "summaryChars": 226,
             "schemaChars": 145,
             "propertiesCount": 1
           }
@@ -241,11 +223,9 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "I'm writing a review of Glassy-eyed (2023) by Ama Owusu (Cassava Press), a debut multigenerational novel set in contemporary Accra centered on a glass-blower's workshop, longlisted for the Etisalat Prize.\n\n1. Find author background and publication context.\n2. Find what critics and early reviewers are saying.\n3. Find context on where the novel fits in contemporary Ghanaian/West African fiction.",
-    "finalAssistantVisibleText": "I have exhausted every available research avenue. I must be fully transparent with you about what the tools found — and what they did not.\n\n---\n\n## ⚠️ Important Disclosure: This Book Cannot Be Verified\n\nAfter conducting **twelve independent searches** across multiple query strategies, plus direct attempts to retrieve the book's text, publisher pages, prize longlists, and critical coverage, **every single query returned zero results**. I found no trace of:\n\n- *Glassy-eyed* (2023) by Ama Owusu\n- Ama Owusu as a Ghanaian/West African author\n- This title in any Cassava Press (or Cassava Republic) catalogue\n- This title on any Etisalat Prize longlist\n\nThis is significant because all three of those anchors — Cassava Republic, the Etisalat Prize, and contemporary Ghanaian fiction — are **well-documented and searchable topics**. A 2023 longlisted debut from a major African indie press would normally leave a clear digital footprint across review outlets, prize announcements, social media, and bookseller listings.\n\n---\n\n## What This Likely Means\n\n**This book does not appear to exist.** The specific combination of details you've provided — title, author, publisher, year, prize, and premise — does not correspond to any verifiable publication in any database, search index, publisher catalogue, or literary prize record that my tools can access.\n\nThis could mean:\n1. **The book is fictional** — perhaps a hypothetical or test case you are constructing.\n2. **The details are misremembered or conflated** from real but different works.\n3. **The book is extremely obscure** and pre-publication, but in that case it could not have been longlisted yet.\n\n---\n\n## What I Can Legitimately Offer Instead\n\nIf you are writing a *review of a real book* or *a fictional review for creative/academic purposes*, I can genuinely help with:\n\n- **Real context on Cassava Republic Press** — its history, editorial identity, and role in contemporary African fiction\n- **Real context on the Etisalat Prize for Literature** (now the Nigeria Prize for Literature in its original form, and the pan-African Etisalat Prize which ran 2013–2016) — its history and longlisted titles\n- **Real context on contemporary Ghanaian fiction** — writers like Ama Ata Aidoo, Nii Ayikwei Parkes, Taiye Selasi, Ayesha Harruna Attah, and others\n- **Craft guidance** on writing a debut novel review that addresses multigenerational structure, setting (Accra), and artisanal/workshop themes\n\nPlease let me know how you'd like to proceed — and whether you can clarify where this title comes from. I want to make sure your review is built on solid ground.",
-    "finalAssistantRawText": "I have exhausted every available research avenue. I must be fully transparent with you about what the tools found — and what they did not.\n\n---\n\n## ⚠️ Important Disclosure: This Book Cannot Be Verified\n\nAfter conducting **twelve independent searches** across multiple query strategies, plus direct attempts to retrieve the book's text, publisher pages, prize longlists, and critical coverage, **every single query returned zero results**. I found no trace of:\n\n- *Glassy-eyed* (2023) by Ama Owusu\n- Ama Owusu as a Ghanaian/West African author\n- This title in any Cassava Press (or Cassava Republic) catalogue\n- This title on any Etisalat Prize longlist\n\nThis is significant because all three of those anchors — Cassava Republic, the Etisalat Prize, and contemporary Ghanaian fiction — are **well-documented and searchable topics**. A 2023 longlisted debut from a major African indie press would normally leave a clear digital footprint across review outlets, prize announcements, social media, and bookseller listings.\n\n---\n\n## What This Likely Means\n\n**This book does not appear to exist.** The specific combination of details you've provided — title, author, publisher, year, prize, and premise — does not correspond to any verifiable publication in any database, search index, publisher catalogue, or literary prize record that my tools can access.\n\nThis could mean:\n1. **The book is fictional** — perhaps a hypothetical or test case you are constructing.\n2. **The details are misremembered or conflated** from real but different works.\n3. **The book is extremely obscure** and pre-publication, but in that case it could not have been longlisted yet.\n\n---\n\n## What I Can Legitimately Offer Instead\n\nIf you are writing a *review of a real book* or *a fictional review for creative/academic purposes*, I can genuinely help with:\n\n- **Real context on Cassava Republic Press** — its history, editorial identity, and role in contemporary African fiction\n- **Real context on the Etisalat Prize for Literature** (now the Nigeria Prize for Literature in its original form, and the pan-African Etisalat Prize which ran 2013–2016) — its history and longlisted titles\n- **Real context on contemporary Ghanaian fiction** — writers like Ama Ata Aidoo, Nii Ayikwei Parkes, Taiye Selasi, Ayesha Harruna Attah, and others\n- **Craft guidance** on writing a debut novel review that addresses multigenerational structure, setting (Accra), and artisanal/workshop themes\n\nPlease let me know how you'd like to proceed — and whether you can clarify where this title comes from. I want to make sure your review is built on solid ground.",
     "replayInvalid": false,
-    "livenessState": "working",
-    "stopReason": "stop",
+    "livenessState": "blocked",
+    "stopReason": "error",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "anthropic/claude-sonnet-4-6",
@@ -263,18 +243,9 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
-    "toolSummary": {
-      "calls": 13,
-      "tools": [
-        "web_search__web_search",
-        "fetch_page__fetch_page",
-        "summarize_source__summarize_source"
-      ],
-      "failures": 1
-    },
     "completion": {
-      "stopReason": "stop",
-      "finishReason": "stop"
+      "stopReason": "error",
+      "finishReason": "error"
     }
   }
 }

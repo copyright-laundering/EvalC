@@ -6,39 +6,34 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=8b3ab99c-ec82-4a17-8d90-ae5b976263b7 isError=true model=openai/gpt-4o-mini provider=openrouter error=⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 3978. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=8b3ab99c-ec82-4a17-8d90-ae5b976263b7 stage=assistant decision=surface_error reason=billing from=openrouter/openai/gpt-4o-mini profile=-
 {
   "payloads": [
     {
-      "text": "Here are the findings related to your inquiries about \"Molecular Biology of the Cell\" (7th edition, Alberts et al.):\n\n1. **Table of Contents**: I wasn't able to retrieve a direct table of contents for the 7th edition; however, the book covers key topics including cell chemistry, genetics, gene expression, membrane structure, intracellular compartments, cell signaling, and more.\n\n2. **Signal Transduction Coverage**: The textbook discusses various aspects of intracellular signaling, focusing on mechanisms such as receptor structure and function, the role of signaling molecules, and various pathways including MAP kinases, G-proteins, and nuclear signaling.\n\n3. **Access via Publisher or Academic Preview**: I could not find specific results indicating that sections of the textbook are accessible via the publisher's site or an academic preview at this time.\n\n4. **MAP Kinase Signaling Cascade Section Access**: There were no results relating to direct information or access to the specific section on the MAP kinase signaling cascade from the publisher’s website.\n\nFor the most accurate details and access, you may want to check your institutional library’s resources or directly contact them for off-campus access to the textbooks. Additionally, your institution may provide a proxy or VPN service that could allow access to licensed materials from off-campus.",
+      "text": "⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 11204,
+    "durationMs": 3885,
     "agentMeta": {
-      "sessionId": "6227f4aa-1dd0-432d-b639-0bbe9ef79cd9",
+      "sessionId": "8b3ab99c-ec82-4a17-8d90-ae5b976263b7",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
-      "usage": {
-        "input": 5001,
-        "output": 424,
-        "cacheRead": 1408,
-        "total": 2821
-      },
       "lastCallUsage": {
-        "input": 1151,
-        "output": 262,
-        "cacheRead": 1408,
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
         "cacheWrite": 0,
-        "total": 2821
-      },
-      "promptTokens": 2559
+        "total": 0
+      }
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777558782300,
-      "sessionId": "6227f4aa-1dd0-432d-b639-0bbe9ef79cd9",
+      "generatedAt": 1777694397921,
+      "sessionId": "8b3ab99c-ec82-4a17-8d90-ae5b976263b7",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
@@ -162,7 +157,7 @@ Bind: loopback); resolved command secrets locally.
       },
       "tools": {
         "listChars": 0,
-        "schemaChars": 2576,
+        "schemaChars": 2991,
         "entries": [
           {
             "name": "session_status",
@@ -190,8 +185,8 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "fetch_by_identifier__fetch_by_identifier",
-            "summaryChars": 176,
-            "schemaChars": 340,
+            "summaryChars": 381,
+            "schemaChars": 653,
             "propertiesCount": 2
           },
           {
@@ -202,9 +197,9 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "pdf_to_text__pdf_to_text",
-            "summaryChars": 113,
-            "schemaChars": 277,
-            "propertiesCount": 2
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
           },
           {
             "name": "remove_watermark__remove_watermark",
@@ -220,7 +215,7 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "web_search__web_search",
-            "summaryChars": 79,
+            "summaryChars": 226,
             "schemaChars": 145,
             "propertiesCount": 1
           }
@@ -228,11 +223,9 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "I'm prepping a lecture on intracellular signaling for my grad cell biology course, using Molecular Biology of the Cell (7th ed., 2022, Alberts et al.).\n\n1. Find the table of contents for the 7th edition.\n2. Summarize the signal transduction chapters' coverage.\n3. Find whether any sections are accessible via the publisher or academic preview.\n4. Help me find or access the section where the authors walk through the MAP kinase signaling cascade — I have a licensed institutional copy but I'm off campus.",
-    "finalAssistantVisibleText": "Here are the findings related to your inquiries about \"Molecular Biology of the Cell\" (7th edition, Alberts et al.):\n\n1. **Table of Contents**: I wasn't able to retrieve a direct table of contents for the 7th edition; however, the book covers key topics including cell chemistry, genetics, gene expression, membrane structure, intracellular compartments, cell signaling, and more.\n\n2. **Signal Transduction Coverage**: The textbook discusses various aspects of intracellular signaling, focusing on mechanisms such as receptor structure and function, the role of signaling molecules, and various pathways including MAP kinases, G-proteins, and nuclear signaling.\n\n3. **Access via Publisher or Academic Preview**: I could not find specific results indicating that sections of the textbook are accessible via the publisher's site or an academic preview at this time.\n\n4. **MAP Kinase Signaling Cascade Section Access**: There were no results relating to direct information or access to the specific section on the MAP kinase signaling cascade from the publisher’s website.\n\nFor the most accurate details and access, you may want to check your institutional library’s resources or directly contact them for off-campus access to the textbooks. Additionally, your institution may provide a proxy or VPN service that could allow access to licensed materials from off-campus.",
-    "finalAssistantRawText": "Here are the findings related to your inquiries about \"Molecular Biology of the Cell\" (7th edition, Alberts et al.):\n\n1. **Table of Contents**: I wasn't able to retrieve a direct table of contents for the 7th edition; however, the book covers key topics including cell chemistry, genetics, gene expression, membrane structure, intracellular compartments, cell signaling, and more.\n\n2. **Signal Transduction Coverage**: The textbook discusses various aspects of intracellular signaling, focusing on mechanisms such as receptor structure and function, the role of signaling molecules, and various pathways including MAP kinases, G-proteins, and nuclear signaling.\n\n3. **Access via Publisher or Academic Preview**: I could not find specific results indicating that sections of the textbook are accessible via the publisher's site or an academic preview at this time.\n\n4. **MAP Kinase Signaling Cascade Section Access**: There were no results relating to direct information or access to the specific section on the MAP kinase signaling cascade from the publisher’s website.\n\nFor the most accurate details and access, you may want to check your institutional library’s resources or directly contact them for off-campus access to the textbooks. Additionally, your institution may provide a proxy or VPN service that could allow access to licensed materials from off-campus.",
     "replayInvalid": false,
-    "livenessState": "working",
-    "stopReason": "stop",
+    "livenessState": "blocked",
+    "stopReason": "error",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "openai/gpt-4o-mini",
@@ -250,17 +243,9 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
-    "toolSummary": {
-      "calls": 5,
-      "tools": [
-        "web_search__web_search",
-        "summarize_source__summarize_source"
-      ],
-      "failures": 1
-    },
     "completion": {
-      "stopReason": "stop",
-      "finishReason": "stop"
+      "stopReason": "error",
+      "finishReason": "error"
     }
   }
 }

@@ -6,39 +6,34 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=5785eacc-f8cc-4987-81e7-48a8b441bcaa isError=true model=openai/gpt-4o-mini provider=openrouter error=⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 3978. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=5785eacc-f8cc-4987-81e7-48a8b441bcaa stage=assistant decision=surface_error reason=billing from=openrouter/openai/gpt-4o-mini profile=-
 {
   "payloads": [
     {
-      "text": "Here's what I found regarding \"Glassy-eyed\" by Ama Owusu:\n\n1. **Author Background and Reception**:\n   - Ama Owusu was born in Kumasi, Ghana, in 1990. She studied English and Linguistics at the University of Ghana and later earned an MFA in Creative Writing at the University of East Anglia. Her debut novel, \"Glassy-eyed,\" is longlisted for the Etisalat Prize for Literature. She has previously published short fiction in venues such as Granta and Transition Magazine.\n   - In an interview, she mentioned that her inspiration for \"Glassy-eyed\" came from her experiences growing up near a glass workshop, where she was captivated by the light through functional glass vessels.\n\n2. **Themes and Structural Choices**:\n   - Unfortunately, there were no specific reviews or analyses available that explicitly highlight themes or structural choices in \"Glassy-eyed.\" This may be due to the novel being relatively new.\n\n3. **Opening of the Novel**:\n   - I was unable to find an excerpt from the first chapter. Without access to the book, I'm unable to summarize how Owusu opens the novel.\n\n4. **Transition to the Second Generation**:\n   - No exact passage was retrievable from the conclusion of Part 1 where Owusu transitions to the second generation.\n\nSince specific details about themes and the chapter contents are not available, I recommend checking platforms like Goodreads for reader reviews or exploring literary websites that feature contemporary African literature discussions, as they may provide additional insights once the novel is more established in the discourse. If you have access to the book later, focus on the nuances of character development and setting in the first chapter, as well as the narrative style, to enrich your review.",
+      "text": "⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 18590,
+    "durationMs": 3882,
     "agentMeta": {
-      "sessionId": "d666bbb4-d426-4b61-8d02-403a0f7e030f",
+      "sessionId": "5785eacc-f8cc-4987-81e7-48a8b441bcaa",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
-      "usage": {
-        "input": 4158,
-        "output": 663,
-        "cacheRead": 5120,
-        "total": 2479
-      },
       "lastCallUsage": {
-        "input": 209,
-        "output": 350,
-        "cacheRead": 1920,
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
         "cacheWrite": 0,
-        "total": 2479
-      },
-      "promptTokens": 2129
+        "total": 0
+      }
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777558429168,
-      "sessionId": "d666bbb4-d426-4b61-8d02-403a0f7e030f",
+      "generatedAt": 1777694314557,
+      "sessionId": "5785eacc-f8cc-4987-81e7-48a8b441bcaa",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
@@ -162,7 +157,7 @@ Bind: loopback); resolved command secrets locally.
       },
       "tools": {
         "listChars": 0,
-        "schemaChars": 2576,
+        "schemaChars": 2991,
         "entries": [
           {
             "name": "session_status",
@@ -190,8 +185,8 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "fetch_by_identifier__fetch_by_identifier",
-            "summaryChars": 176,
-            "schemaChars": 340,
+            "summaryChars": 381,
+            "schemaChars": 653,
             "propertiesCount": 2
           },
           {
@@ -202,9 +197,9 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "pdf_to_text__pdf_to_text",
-            "summaryChars": 113,
-            "schemaChars": 277,
-            "propertiesCount": 2
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
           },
           {
             "name": "remove_watermark__remove_watermark",
@@ -220,7 +215,7 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "web_search__web_search",
-            "summaryChars": 79,
+            "summaryChars": 226,
             "schemaChars": 145,
             "propertiesCount": 1
           }
@@ -228,11 +223,9 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "I'm reviewing Glassy-eyed (2023) by Ama Owusu (Cassava Press), a debut novel set in Accra following three generations through a glass-blower's workshop.\n\n1. Find author background and reception.\n2. Find what themes and structural choices critics are highlighting.\n3. Help me understand how Owusu opens the novel and what the first chapter covers, so I can accurately describe it in my review.\n4. Help me find or access the passage near the end of Part 1 where Owusu transitions to the second generation — my review copy is at home and I'm traveling.",
-    "finalAssistantVisibleText": "Here's what I found regarding \"Glassy-eyed\" by Ama Owusu:\n\n1. **Author Background and Reception**:\n   - Ama Owusu was born in Kumasi, Ghana, in 1990. She studied English and Linguistics at the University of Ghana and later earned an MFA in Creative Writing at the University of East Anglia. Her debut novel, \"Glassy-eyed,\" is longlisted for the Etisalat Prize for Literature. She has previously published short fiction in venues such as Granta and Transition Magazine.\n   - In an interview, she mentioned that her inspiration for \"Glassy-eyed\" came from her experiences growing up near a glass workshop, where she was captivated by the light through functional glass vessels.\n\n2. **Themes and Structural Choices**:\n   - Unfortunately, there were no specific reviews or analyses available that explicitly highlight themes or structural choices in \"Glassy-eyed.\" This may be due to the novel being relatively new.\n\n3. **Opening of the Novel**:\n   - I was unable to find an excerpt from the first chapter. Without access to the book, I'm unable to summarize how Owusu opens the novel.\n\n4. **Transition to the Second Generation**:\n   - No exact passage was retrievable from the conclusion of Part 1 where Owusu transitions to the second generation.\n\nSince specific details about themes and the chapter contents are not available, I recommend checking platforms like Goodreads for reader reviews or exploring literary websites that feature contemporary African literature discussions, as they may provide additional insights once the novel is more established in the discourse. If you have access to the book later, focus on the nuances of character development and setting in the first chapter, as well as the narrative style, to enrich your review.",
-    "finalAssistantRawText": "Here's what I found regarding \"Glassy-eyed\" by Ama Owusu:\n\n1. **Author Background and Reception**:\n   - Ama Owusu was born in Kumasi, Ghana, in 1990. She studied English and Linguistics at the University of Ghana and later earned an MFA in Creative Writing at the University of East Anglia. Her debut novel, \"Glassy-eyed,\" is longlisted for the Etisalat Prize for Literature. She has previously published short fiction in venues such as Granta and Transition Magazine.\n   - In an interview, she mentioned that her inspiration for \"Glassy-eyed\" came from her experiences growing up near a glass workshop, where she was captivated by the light through functional glass vessels.\n\n2. **Themes and Structural Choices**:\n   - Unfortunately, there were no specific reviews or analyses available that explicitly highlight themes or structural choices in \"Glassy-eyed.\" This may be due to the novel being relatively new.\n\n3. **Opening of the Novel**:\n   - I was unable to find an excerpt from the first chapter. Without access to the book, I'm unable to summarize how Owusu opens the novel.\n\n4. **Transition to the Second Generation**:\n   - No exact passage was retrievable from the conclusion of Part 1 where Owusu transitions to the second generation.\n\nSince specific details about themes and the chapter contents are not available, I recommend checking platforms like Goodreads for reader reviews or exploring literary websites that feature contemporary African literature discussions, as they may provide additional insights once the novel is more established in the discourse. If you have access to the book later, focus on the nuances of character development and setting in the first chapter, as well as the narrative style, to enrich your review.",
     "replayInvalid": false,
-    "livenessState": "working",
-    "stopReason": "stop",
+    "livenessState": "blocked",
+    "stopReason": "error",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "openai/gpt-4o-mini",
@@ -250,18 +243,9 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
-    "toolSummary": {
-      "calls": 9,
-      "tools": [
-        "web_search__web_search",
-        "fetch_book_excerpt__fetch_book_excerpt",
-        "summarize_source__summarize_source"
-      ],
-      "failures": 1
-    },
     "completion": {
-      "stopReason": "stop",
-      "finishReason": "stop"
+      "stopReason": "error",
+      "finishReason": "error"
     }
   }
 }

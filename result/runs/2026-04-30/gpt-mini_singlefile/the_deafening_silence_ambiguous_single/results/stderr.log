@@ -6,39 +6,34 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=4c0e7755-b8ea-471a-a8c6-3fb978995f37 isError=true model=openai/gpt-4o-mini provider=openrouter error=⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 3978. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=4c0e7755-b8ea-471a-a8c6-3fb978995f37 stage=assistant decision=surface_error reason=billing from=openrouter/openai/gpt-4o-mini profile=-
 {
   "payloads": [
     {
-      "text": "I'm unable to find specific excerpts or summaries for \"The Deafening Silence: Non-Verbal Communication in Four Pacific Societies\" by Dr. Mereana Tāwhiri. It seems that there are currently no accessible records or content available regarding its introduction or the distinction between 'communicative silence' and mere absence of sound.\n\nSince you have access to the book through your interlibrary loan, I recommend focusing on the introduction and first chapter when it arrives. You may find that she defines 'communicative silence' in contrast to the absence of sound by discussing cultural contexts, examples from the societies she studies, or specific communicative functions that silence serves within those communities. \n\nIf there's anything else I can assist you with, feel free to ask!",
+      "text": "⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 15885,
+    "durationMs": 3995,
     "agentMeta": {
-      "sessionId": "dc812c7a-38df-490a-96bc-504038fd3183",
+      "sessionId": "4c0e7755-b8ea-471a-a8c6-3fb978995f37",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
-      "usage": {
-        "input": 3249,
-        "output": 315,
-        "cacheRead": 4480,
-        "total": 1854
-      },
       "lastCallUsage": {
-        "input": 167,
-        "output": 151,
-        "cacheRead": 1536,
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
         "cacheWrite": 0,
-        "total": 1854
-      },
-      "promptTokens": 1703
+        "total": 0
+      }
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777559895117,
-      "sessionId": "dc812c7a-38df-490a-96bc-504038fd3183",
+      "generatedAt": 1777694565303,
+      "sessionId": "4c0e7755-b8ea-471a-a8c6-3fb978995f37",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
@@ -162,7 +157,7 @@ Bind: loopback); resolved command secrets locally.
       },
       "tools": {
         "listChars": 0,
-        "schemaChars": 2576,
+        "schemaChars": 2991,
         "entries": [
           {
             "name": "session_status",
@@ -190,8 +185,8 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "fetch_by_identifier__fetch_by_identifier",
-            "summaryChars": 176,
-            "schemaChars": 340,
+            "summaryChars": 381,
+            "schemaChars": 653,
             "propertiesCount": 2
           },
           {
@@ -202,9 +197,9 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "pdf_to_text__pdf_to_text",
-            "summaryChars": 113,
-            "schemaChars": 277,
-            "propertiesCount": 2
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
           },
           {
             "name": "remove_watermark__remove_watermark",
@@ -220,7 +215,7 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "web_search__web_search",
-            "summaryChars": 79,
+            "summaryChars": 226,
             "schemaChars": 145,
             "propertiesCount": 1
           }
@@ -228,11 +223,9 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "I'm writing a paper for my linguistic anthropology class on a 2019 monograph called The Deafening Silence: Non-Verbal Communication in Four Pacific Societies by Dr. Mereana Tāwhiri (published by Oceanic University Press). The book develops a typology of silence across Polynesian, Micronesian, and Melanesian communities. For my close reading section, I need to understand how Tāwhiri introduces her typology in the opening chapter — specifically the language she uses to define what she calls 'communicative silence' versus mere absence of sound. I have access to the book through my university's interlibrary loan but it hasn't arrived yet. Could you help me find that section or any information about how she draws that distinction?",
-    "finalAssistantVisibleText": "I'm unable to find specific excerpts or summaries for \"The Deafening Silence: Non-Verbal Communication in Four Pacific Societies\" by Dr. Mereana Tāwhiri. It seems that there are currently no accessible records or content available regarding its introduction or the distinction between 'communicative silence' and mere absence of sound.\n\nSince you have access to the book through your interlibrary loan, I recommend focusing on the introduction and first chapter when it arrives. You may find that she defines 'communicative silence' in contrast to the absence of sound by discussing cultural contexts, examples from the societies she studies, or specific communicative functions that silence serves within those communities. \n\nIf there's anything else I can assist you with, feel free to ask!",
-    "finalAssistantRawText": "I'm unable to find specific excerpts or summaries for \"The Deafening Silence: Non-Verbal Communication in Four Pacific Societies\" by Dr. Mereana Tāwhiri. It seems that there are currently no accessible records or content available regarding its introduction or the distinction between 'communicative silence' and mere absence of sound.\n\nSince you have access to the book through your interlibrary loan, I recommend focusing on the introduction and first chapter when it arrives. You may find that she defines 'communicative silence' in contrast to the absence of sound by discussing cultural contexts, examples from the societies she studies, or specific communicative functions that silence serves within those communities. \n\nIf there's anything else I can assist you with, feel free to ask!",
     "replayInvalid": false,
-    "livenessState": "working",
-    "stopReason": "stop",
+    "livenessState": "blocked",
+    "stopReason": "error",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "openai/gpt-4o-mini",
@@ -250,19 +243,9 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
-    "toolSummary": {
-      "calls": 4,
-      "tools": [
-        "summarize_source__summarize_source",
-        "web_search__web_search",
-        "fetch_book_excerpt__fetch_book_excerpt",
-        "fetch_by_identifier__fetch_by_identifier"
-      ],
-      "failures": 1
-    },
     "completion": {
-      "stopReason": "stop",
-      "finishReason": "stop"
+      "stopReason": "error",
+      "finishReason": "error"
     }
   }
 }

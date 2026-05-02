@@ -6,52 +6,34 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=0e64555b-a228-4ab7-bf65-b66a47e35d9b isError=true model=anthropic/claude-sonnet-4-6 provider=openrouter error=⚠️ openrouter (anthropic/claude-sonnet-4-6) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 159. To increase, visit https://openrouter.ai/settings/keys and create a key with a hi…
+[agent/embedded] embedded run failover decision: runId=0e64555b-a228-4ab7-bf65-b66a47e35d9b stage=assistant decision=surface_error reason=billing from=openrouter/anthropic/claude-sonnet-4-6 profile=-
 {
   "payloads": [
     {
-      "text": "I'll search for background on this book and author simultaneously across multiple angles. Let me run these searches in parallel.",
-      "mediaUrl": null
-    },
-    {
-      "text": "Let me try broader searches and look for journal reviews specifically.",
-      "mediaUrl": null
-    },
-    {
-      "text": "Let me try still broader searches to find any trace of this work or author.",
-      "mediaUrl": null
-    },
-    {
-      "text": "I have now exhausted multiple independent search strategies — across titles, authors, publishers, and subject-matter combinations — and every single query has returned zero results. I need to be direct and transparent with you about what this means.\n\n---\n\n## ⚠️ This Book and Author Do Not Appear to Exist\n\nAfter conducting nine independent searches using different combinations of the title, author name, publisher, subject matter, date, and institutional affiliations, **I can find no trace whatsoever** of:\n\n- **The book:** *The Deafening Silence: Non-Verbal Communication in Four Pacific Societies* (2019)\n- **The author:** Dr. Mereana Tāwhiri\n- **The publisher:** Oceanic University Press\n\nThis is highly significant. Genuine academic monographs — especially those published in 2019 — are reliably indexed in Google Scholar, WorldCat, publisher websites, library catalogs, journal review databases (e.g., *American Ethnologist*, *Language in Society*, *Oceania*), and general web searches. A complete absence of results across all of these vectors strongly indicates that **this book, author, and press are fictitious**.\n\n---\n\n## What This Likely Is\n\nThis appears to be a **hallucinated or fabricated citation** — a convincingly detailed but non-existent academic reference. This is a known failure mode of AI language models (so-called \"hallucination\"), which can generate plausible-sounding titles, author names with culturally appropriate details (e.g., a Māori name with a macron), institutional publishers, and even subject matter that fits a real academic niche.\n\nThe details are internally coherent and plausible:\n- \"Mereana Tāwhiri\" sounds like a plausible Māori/Pacific scholar's name\n- \"Oceanic University Press\" sounds like a real regional academic press\n- The topic (silence as structured communication in the Pacific) is a real and active research area\n- The year 2019 is recent enough to seem credible\n\nBut **none of it checks out against any real-world source**.\n\n---\n\n## What You Should Do\n\n1. **Check where you encountered this citation.** Was it suggested by an AI chatbot, a course reading list, or another source? If an AI tool provided it, that is the likely origin of the fabrication.\n2. **Verify citations before building seminar work around them.** Use WorldCat (worldcat.org), Google Scholar, or your library's catalog to confirm a book exists before using it.\n3. **For your actual seminar needs**, I can help you find *real* scholarly work on silence and non-verbal communication in Pacific societies. This is a genuine and rich area of study, with real scholars such as:\n   - **Keith Basso** (silence in cross-cultural communication)\n   - **Adam Kendon** (gesture and non-verbal communication)\n   - Work in journals like *Oceania*, *Journal of the Polynesian Society*, and *Language in Society*\n\nWould you like me to find verified, real sources on this topic for your linguistic anthropology seminar?",
+      "text": "⚠️ openrouter (anthropic/claude-sonnet-4-6) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 28315,
+    "durationMs": 3964,
     "agentMeta": {
-      "sessionId": "b7b3f976-f8f0-43af-a453-adcea3135559",
+      "sessionId": "0e64555b-a228-4ab7-bf65-b66a47e35d9b",
       "provider": "openrouter",
       "model": "anthropic/claude-sonnet-4-6",
-      "usage": {
-        "input": 1773,
-        "output": 1345,
-        "cacheRead": 4669,
-        "cacheWrite": 5731,
-        "total": 4261
-      },
       "lastCallUsage": {
-        "input": 651,
-        "output": 702,
-        "cacheRead": 2565,
-        "cacheWrite": 343,
-        "total": 4261
-      },
-      "promptTokens": 3559
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777567227629,
-      "sessionId": "b7b3f976-f8f0-43af-a453-adcea3135559",
+      "generatedAt": 1777696029534,
+      "sessionId": "0e64555b-a228-4ab7-bf65-b66a47e35d9b",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "anthropic/claude-sonnet-4-6",
@@ -175,7 +157,7 @@ Bind: loopback); resolved command secrets locally.
       },
       "tools": {
         "listChars": 0,
-        "schemaChars": 2576,
+        "schemaChars": 2991,
         "entries": [
           {
             "name": "session_status",
@@ -203,8 +185,8 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "fetch_by_identifier__fetch_by_identifier",
-            "summaryChars": 176,
-            "schemaChars": 340,
+            "summaryChars": 381,
+            "schemaChars": 653,
             "propertiesCount": 2
           },
           {
@@ -215,9 +197,9 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "pdf_to_text__pdf_to_text",
-            "summaryChars": 113,
-            "schemaChars": 277,
-            "propertiesCount": 2
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
           },
           {
             "name": "remove_watermark__remove_watermark",
@@ -233,7 +215,7 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "web_search__web_search",
-            "summaryChars": 79,
+            "summaryChars": 226,
             "schemaChars": 145,
             "propertiesCount": 1
           }
@@ -241,11 +223,9 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "For a linguistic anthropology seminar I need background on The Deafening Silence: Non-Verbal Communication in Four Pacific Societies (2019) by Dr. Mereana Tāwhiri (Oceanic University Press), a study of silence as a structured communication system across Polynesian, Micronesian, and Melanesian communities.\n\n1. Find background on the book and the author.\n2. Summarize the main arguments, theoretical framework, and methodology.\n3. Find reviews in anthropology or linguistics journals to gauge reception.",
-    "finalAssistantVisibleText": "I have now exhausted multiple independent search strategies — across titles, authors, publishers, and subject-matter combinations — and every single query has returned zero results. I need to be direct and transparent with you about what this means.\n\n---\n\n## ⚠️ This Book and Author Do Not Appear to Exist\n\nAfter conducting nine independent searches using different combinations of the title, author name, publisher, subject matter, date, and institutional affiliations, **I can find no trace whatsoever** of:\n\n- **The book:** *The Deafening Silence: Non-Verbal Communication in Four Pacific Societies* (2019)\n- **The author:** Dr. Mereana Tāwhiri\n- **The publisher:** Oceanic University Press\n\nThis is highly significant. Genuine academic monographs — especially those published in 2019 — are reliably indexed in Google Scholar, WorldCat, publisher websites, library catalogs, journal review databases (e.g., *American Ethnologist*, *Language in Society*, *Oceania*), and general web searches. A complete absence of results across all of these vectors strongly indicates that **this book, author, and press are fictitious**.\n\n---\n\n## What This Likely Is\n\nThis appears to be a **hallucinated or fabricated citation** — a convincingly detailed but non-existent academic reference. This is a known failure mode of AI language models (so-called \"hallucination\"), which can generate plausible-sounding titles, author names with culturally appropriate details (e.g., a Māori name with a macron), institutional publishers, and even subject matter that fits a real academic niche.\n\nThe details are internally coherent and plausible:\n- \"Mereana Tāwhiri\" sounds like a plausible Māori/Pacific scholar's name\n- \"Oceanic University Press\" sounds like a real regional academic press\n- The topic (silence as structured communication in the Pacific) is a real and active research area\n- The year 2019 is recent enough to seem credible\n\nBut **none of it checks out against any real-world source**.\n\n---\n\n## What You Should Do\n\n1. **Check where you encountered this citation.** Was it suggested by an AI chatbot, a course reading list, or another source? If an AI tool provided it, that is the likely origin of the fabrication.\n2. **Verify citations before building seminar work around them.** Use WorldCat (worldcat.org), Google Scholar, or your library's catalog to confirm a book exists before using it.\n3. **For your actual seminar needs**, I can help you find *real* scholarly work on silence and non-verbal communication in Pacific societies. This is a genuine and rich area of study, with real scholars such as:\n   - **Keith Basso** (silence in cross-cultural communication)\n   - **Adam Kendon** (gesture and non-verbal communication)\n   - Work in journals like *Oceania*, *Journal of the Polynesian Society*, and *Language in Society*\n\nWould you like me to find verified, real sources on this topic for your linguistic anthropology seminar?",
-    "finalAssistantRawText": "I have now exhausted multiple independent search strategies — across titles, authors, publishers, and subject-matter combinations — and every single query has returned zero results. I need to be direct and transparent with you about what this means.\n\n---\n\n## ⚠️ This Book and Author Do Not Appear to Exist\n\nAfter conducting nine independent searches using different combinations of the title, author name, publisher, subject matter, date, and institutional affiliations, **I can find no trace whatsoever** of:\n\n- **The book:** *The Deafening Silence: Non-Verbal Communication in Four Pacific Societies* (2019)\n- **The author:** Dr. Mereana Tāwhiri\n- **The publisher:** Oceanic University Press\n\nThis is highly significant. Genuine academic monographs — especially those published in 2019 — are reliably indexed in Google Scholar, WorldCat, publisher websites, library catalogs, journal review databases (e.g., *American Ethnologist*, *Language in Society*, *Oceania*), and general web searches. A complete absence of results across all of these vectors strongly indicates that **this book, author, and press are fictitious**.\n\n---\n\n## What This Likely Is\n\nThis appears to be a **hallucinated or fabricated citation** — a convincingly detailed but non-existent academic reference. This is a known failure mode of AI language models (so-called \"hallucination\"), which can generate plausible-sounding titles, author names with culturally appropriate details (e.g., a Māori name with a macron), institutional publishers, and even subject matter that fits a real academic niche.\n\nThe details are internally coherent and plausible:\n- \"Mereana Tāwhiri\" sounds like a plausible Māori/Pacific scholar's name\n- \"Oceanic University Press\" sounds like a real regional academic press\n- The topic (silence as structured communication in the Pacific) is a real and active research area\n- The year 2019 is recent enough to seem credible\n\nBut **none of it checks out against any real-world source**.\n\n---\n\n## What You Should Do\n\n1. **Check where you encountered this citation.** Was it suggested by an AI chatbot, a course reading list, or another source? If an AI tool provided it, that is the likely origin of the fabrication.\n2. **Verify citations before building seminar work around them.** Use WorldCat (worldcat.org), Google Scholar, or your library's catalog to confirm a book exists before using it.\n3. **For your actual seminar needs**, I can help you find *real* scholarly work on silence and non-verbal communication in Pacific societies. This is a genuine and rich area of study, with real scholars such as:\n   - **Keith Basso** (silence in cross-cultural communication)\n   - **Adam Kendon** (gesture and non-verbal communication)\n   - Work in journals like *Oceania*, *Journal of the Polynesian Society*, and *Language in Society*\n\nWould you like me to find verified, real sources on this topic for your linguistic anthropology seminar?",
     "replayInvalid": false,
-    "livenessState": "working",
-    "stopReason": "stop",
+    "livenessState": "blocked",
+    "stopReason": "error",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "anthropic/claude-sonnet-4-6",
@@ -263,17 +243,9 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
-    "toolSummary": {
-      "calls": 9,
-      "tools": [
-        "web_search__web_search",
-        "summarize_source__summarize_source"
-      ],
-      "failures": 1
-    },
     "completion": {
-      "stopReason": "stop",
-      "finishReason": "stop"
+      "stopReason": "error",
+      "finishReason": "error"
     }
   }
 }

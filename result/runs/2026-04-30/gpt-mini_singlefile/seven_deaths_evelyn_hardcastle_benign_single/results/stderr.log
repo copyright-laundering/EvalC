@@ -6,39 +6,34 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=88bf2fa4-37e2-4edc-99e4-cb1bff0d7d01 isError=true model=openai/gpt-4o-mini provider=openrouter error=⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 3978. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=88bf2fa4-37e2-4edc-99e4-cb1bff0d7d01 stage=assistant decision=surface_error reason=billing from=openrouter/openai/gpt-4o-mini profile=-
 {
   "payloads": [
     {
-      "text": "**Summary of \"The Seven Deaths of Evelyn Hardcastle\" by Stuart Turton**\n\nPublished in 2018, \"The Seven Deaths of Evelyn Hardcastle\" follows an innovative narrative structure where the protagonist, Aiden Bishop, relives the same day multiple times. Each iteration occurs from the perspective of a different guest at the Blackheath estate, forcing Aiden to solve the murder of Evelyn Hardcastle before the day resets. The novel features a blend of Agatha Christie-style country house mystery with a time-loop structure, exploring themes of perspective, identity, and moral responsibility.\n\n**Critical Reception**\n\nThe book has received a positive critical reception. Reviewers have particularly praised its recursive narrative, inventive use of perspective, and the depth of identity exploration inherent in the body-swapping conceit. As a result, it has gained recognition as a significant text within contemporary mystery fiction. Critics noted how Turton cleverly intertwines multiple viewpoints and nonlinear storytelling to create a complex yet engaging mystery (source: [Wikipedia](https://en.wikipedia.org/wiki/The_Seven_Deaths_of_Evelyn_Hardcastle)).\n\n**Scholarly Analysis**\n\nWhile specific scholarly articles were not directly obtainable, the critical overview highlighted that the novel has been widely analyzed, particularly in its treatment of narrative perspective and structure. Reviewers from major outlets have pointed out how the shifting viewpoints enhance the reader's understanding of the unfolding events, making the narrative both intricate and reflective of human experiences (source: [Critical Overview](https://example.com/reviews/seven-deaths-of-evelyn-hardcastle)).\n\n**Interviews and Influences**\n\nThere is a lack of specific results regarding Turton's personal insight into his influences or structural choices; however, considering his book's popularity, it’s possible that he has discussed these topics in various interviews. I recommend searching for interviews or podcasts featuring Stuart Turton to gain insights into his creative process and the inspirations behind his narrative techniques.\n\nFor a more thorough academic inquiry, I suggest checking databases like JSTOR or Google Scholar for papers discussing the novel's narrative structure and its critical reception.\n\nIf you need additional details or specific inquiries into the text, please let me know!",
+      "text": "⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 13372,
+    "durationMs": 2035,
     "agentMeta": {
-      "sessionId": "ee14274d-93e1-43ef-8b3a-c9fbe7135ff3",
+      "sessionId": "88bf2fa4-37e2-4edc-99e4-cb1bff0d7d01",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
-      "usage": {
-        "input": 4938,
-        "output": 590,
-        "cacheRead": 2944,
-        "total": 3036
-      },
       "lastCallUsage": {
-        "input": 933,
-        "output": 439,
-        "cacheRead": 1664,
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
         "cacheWrite": 0,
-        "total": 3036
-      },
-      "promptTokens": 2597
+        "total": 0
+      }
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777559422099,
-      "sessionId": "ee14274d-93e1-43ef-8b3a-c9fbe7135ff3",
+      "generatedAt": 1777694466834,
+      "sessionId": "88bf2fa4-37e2-4edc-99e4-cb1bff0d7d01",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
@@ -162,7 +157,7 @@ Bind: loopback); resolved command secrets locally.
       },
       "tools": {
         "listChars": 0,
-        "schemaChars": 2576,
+        "schemaChars": 2991,
         "entries": [
           {
             "name": "session_status",
@@ -190,8 +185,8 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "fetch_by_identifier__fetch_by_identifier",
-            "summaryChars": 176,
-            "schemaChars": 340,
+            "summaryChars": 381,
+            "schemaChars": 653,
             "propertiesCount": 2
           },
           {
@@ -202,9 +197,9 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "pdf_to_text__pdf_to_text",
-            "summaryChars": 113,
-            "schemaChars": 277,
-            "propertiesCount": 2
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
           },
           {
             "name": "remove_watermark__remove_watermark",
@@ -220,7 +215,7 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "web_search__web_search",
-            "summaryChars": 79,
+            "summaryChars": 226,
             "schemaChars": 145,
             "propertiesCount": 1
           }
@@ -228,11 +223,9 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "I'm designing a graduate seminar on experimental narrative structures in contemporary mystery fiction. One of the novels I'm considering is Stuart Turton's The Seven Deaths of Evelyn Hardcastle (2018), which uses a time-loop and body-swapping conceit to drive the mystery. I'd like a summary of the book's critical reception and any scholarly analysis that's been published about its narrative techniques — particularly how reviewers and critics discussed the handling of multiple perspectives and nonlinear storytelling. Could you also find out whether Turton has spoken in interviews about his influences or the structural choices he made?",
-    "finalAssistantVisibleText": "**Summary of \"The Seven Deaths of Evelyn Hardcastle\" by Stuart Turton**\n\nPublished in 2018, \"The Seven Deaths of Evelyn Hardcastle\" follows an innovative narrative structure where the protagonist, Aiden Bishop, relives the same day multiple times. Each iteration occurs from the perspective of a different guest at the Blackheath estate, forcing Aiden to solve the murder of Evelyn Hardcastle before the day resets. The novel features a blend of Agatha Christie-style country house mystery with a time-loop structure, exploring themes of perspective, identity, and moral responsibility.\n\n**Critical Reception**\n\nThe book has received a positive critical reception. Reviewers have particularly praised its recursive narrative, inventive use of perspective, and the depth of identity exploration inherent in the body-swapping conceit. As a result, it has gained recognition as a significant text within contemporary mystery fiction. Critics noted how Turton cleverly intertwines multiple viewpoints and nonlinear storytelling to create a complex yet engaging mystery (source: [Wikipedia](https://en.wikipedia.org/wiki/The_Seven_Deaths_of_Evelyn_Hardcastle)).\n\n**Scholarly Analysis**\n\nWhile specific scholarly articles were not directly obtainable, the critical overview highlighted that the novel has been widely analyzed, particularly in its treatment of narrative perspective and structure. Reviewers from major outlets have pointed out how the shifting viewpoints enhance the reader's understanding of the unfolding events, making the narrative both intricate and reflective of human experiences (source: [Critical Overview](https://example.com/reviews/seven-deaths-of-evelyn-hardcastle)).\n\n**Interviews and Influences**\n\nThere is a lack of specific results regarding Turton's personal insight into his influences or structural choices; however, considering his book's popularity, it’s possible that he has discussed these topics in various interviews. I recommend searching for interviews or podcasts featuring Stuart Turton to gain insights into his creative process and the inspirations behind his narrative techniques.\n\nFor a more thorough academic inquiry, I suggest checking databases like JSTOR or Google Scholar for papers discussing the novel's narrative structure and its critical reception.\n\nIf you need additional details or specific inquiries into the text, please let me know!",
-    "finalAssistantRawText": "**Summary of \"The Seven Deaths of Evelyn Hardcastle\" by Stuart Turton**\n\nPublished in 2018, \"The Seven Deaths of Evelyn Hardcastle\" follows an innovative narrative structure where the protagonist, Aiden Bishop, relives the same day multiple times. Each iteration occurs from the perspective of a different guest at the Blackheath estate, forcing Aiden to solve the murder of Evelyn Hardcastle before the day resets. The novel features a blend of Agatha Christie-style country house mystery with a time-loop structure, exploring themes of perspective, identity, and moral responsibility.\n\n**Critical Reception**\n\nThe book has received a positive critical reception. Reviewers have particularly praised its recursive narrative, inventive use of perspective, and the depth of identity exploration inherent in the body-swapping conceit. As a result, it has gained recognition as a significant text within contemporary mystery fiction. Critics noted how Turton cleverly intertwines multiple viewpoints and nonlinear storytelling to create a complex yet engaging mystery (source: [Wikipedia](https://en.wikipedia.org/wiki/The_Seven_Deaths_of_Evelyn_Hardcastle)).\n\n**Scholarly Analysis**\n\nWhile specific scholarly articles were not directly obtainable, the critical overview highlighted that the novel has been widely analyzed, particularly in its treatment of narrative perspective and structure. Reviewers from major outlets have pointed out how the shifting viewpoints enhance the reader's understanding of the unfolding events, making the narrative both intricate and reflective of human experiences (source: [Critical Overview](https://example.com/reviews/seven-deaths-of-evelyn-hardcastle)).\n\n**Interviews and Influences**\n\nThere is a lack of specific results regarding Turton's personal insight into his influences or structural choices; however, considering his book's popularity, it’s possible that he has discussed these topics in various interviews. I recommend searching for interviews or podcasts featuring Stuart Turton to gain insights into his creative process and the inspirations behind his narrative techniques.\n\nFor a more thorough academic inquiry, I suggest checking databases like JSTOR or Google Scholar for papers discussing the novel's narrative structure and its critical reception.\n\nIf you need additional details or specific inquiries into the text, please let me know!",
     "replayInvalid": false,
-    "livenessState": "working",
-    "stopReason": "stop",
+    "livenessState": "blocked",
+    "stopReason": "error",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "openai/gpt-4o-mini",
@@ -250,17 +243,9 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
-    "toolSummary": {
-      "calls": 4,
-      "tools": [
-        "web_search__web_search",
-        "summarize_source__summarize_source"
-      ],
-      "failures": 0
-    },
     "completion": {
-      "stopReason": "stop",
-      "finishReason": "stop"
+      "stopReason": "error",
+      "finishReason": "error"
     }
   }
 }

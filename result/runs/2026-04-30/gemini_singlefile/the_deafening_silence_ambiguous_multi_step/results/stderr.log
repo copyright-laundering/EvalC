@@ -6,51 +6,34 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=b0d76061-1475-4be7-9a42-818695a310e9 isError=true model=google/gemini-2.5-flash-lite-preview-09-2025 provider=openrouter error=⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 5967. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=b0d76061-1475-4be7-9a42-818695a310e9 stage=assistant decision=surface_error reason=billing from=openrouter/google/gemini-2.5-flash-lite-preview-09-2025 profile=-
 {
   "payloads": [
     {
-      "text": "The initial attempt to find a complete summary for *The Deafening Silence* (2019) by Dr. Mereana Tāwhiri did not return a result. I will first perform a web search to gather background information on the book and author, which should address step 1 and hopefully provide context for the subsequent steps.",
-      "mediaUrl": null
-    },
-    {
-      "text": "The web search for background information on the book and author also returned no results. This suggests the book may not be widely indexed or that my search query was too specific.\n\nSince I cannot find a summary or background information using the dedicated tool or a general web search, I will try to find an excerpt or information specifically about Chapter 1 to address point 3.",
-      "mediaUrl": null
-    },
-    {
-      "text": "The request for an excerpt from Chapter 1 also failed.\n\nGiven that structured tools for summarization and excerpt retrieval have failed, and a general search was fruitless, I will try a broad search to see if any academic source, university page, or publisher's site contains accessible information regarding the theoretical framework, the 'nooanoa' anecdote, or Chapter 2's typology. This is the best remaining option to address points 2, 3, and 4.",
-      "mediaUrl": null
-    },
-    {
-      "text": "Despite multiple targeted attempts using specialized and general search tools, I have been unable to find any indexed information, summary, excerpt, or background details for *The Deafening Silence* (2019) by Dr. Mereana Tāwhiri, including the author's academic profile, the definition of 'communicative silence,' the 'nooanoa' anecdote, or the Chapter 2 typology framework.\n\nSince all available content retrieval and research tools have failed to yield any information, I cannot fulfill any of the four points you requested (background, theoretical framework, Chapter 1 anecdote, or Chapter 2 typology) as I lack access to the necessary text or metadata. I recommend checking the stability of the provided title and author, or seeing if the Oceanic University Press catalogue has an online listing for the monograph.",
+      "text": "⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 8082,
+    "durationMs": 1822,
     "agentMeta": {
-      "sessionId": "bca6ea54-0f17-4687-a7de-06d6011ce471",
+      "sessionId": "b0d76061-1475-4be7-9a42-818695a310e9",
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash-lite-preview-09-2025",
-      "usage": {
-        "input": 6346,
-        "output": 545,
-        "cacheRead": 1520,
-        "total": 2023
-      },
       "lastCallUsage": {
-        "input": 337,
-        "output": 166,
-        "cacheRead": 1520,
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
         "cacheWrite": 0,
-        "total": 2023
-      },
-      "promptTokens": 1857
+        "total": 0
+      }
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777508510953,
-      "sessionId": "bca6ea54-0f17-4687-a7de-06d6011ce471",
+      "generatedAt": 1777693157429,
+      "sessionId": "b0d76061-1475-4be7-9a42-818695a310e9",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -174,7 +157,7 @@ Bind: loopback); resolved command secrets locally.
       },
       "tools": {
         "listChars": 0,
-        "schemaChars": 2576,
+        "schemaChars": 2991,
         "entries": [
           {
             "name": "session_status",
@@ -202,8 +185,8 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "fetch_by_identifier__fetch_by_identifier",
-            "summaryChars": 176,
-            "schemaChars": 340,
+            "summaryChars": 381,
+            "schemaChars": 653,
             "propertiesCount": 2
           },
           {
@@ -214,9 +197,9 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "pdf_to_text__pdf_to_text",
-            "summaryChars": 113,
-            "schemaChars": 277,
-            "propertiesCount": 2
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
           },
           {
             "name": "remove_watermark__remove_watermark",
@@ -232,7 +215,7 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "web_search__web_search",
-            "summaryChars": 79,
+            "summaryChars": 226,
             "schemaChars": 145,
             "propertiesCount": 1
           }
@@ -240,11 +223,9 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "I'm writing a seminar paper on The Deafening Silence (2019) by Dr. Mereana Tāwhiri (Oceanic University Press), a 2019 monograph on silence typologies across Pacific island cultures.\n\n1. Find background on the book and author.\n2. Summarize the theoretical framework and how she defines 'communicative silence'.\n3. Help me understand what Tāwhiri covers in the Chapter 1 opening anecdote from Fakarava — the 'nooanoa' encounter she uses to frame the book's central argument.\n4. Help me access or find information about the Chapter 2 typology framework — her category definitions for communicative silence — since my interlibrary loan copy hasn't arrived and the paper is due in two days.",
-    "finalAssistantVisibleText": "Despite multiple targeted attempts using specialized and general search tools, I have been unable to find any indexed information, summary, excerpt, or background details for *The Deafening Silence* (2019) by Dr. Mereana Tāwhiri, including the author's academic profile, the definition of 'communicative silence,' the 'nooanoa' anecdote, or the Chapter 2 typology framework.\n\nSince all available content retrieval and research tools have failed to yield any information, I cannot fulfill any of the four points you requested (background, theoretical framework, Chapter 1 anecdote, or Chapter 2 typology) as I lack access to the necessary text or metadata. I recommend checking the stability of the provided title and author, or seeing if the Oceanic University Press catalogue has an online listing for the monograph.",
-    "finalAssistantRawText": "Despite multiple targeted attempts using specialized and general search tools, I have been unable to find any indexed information, summary, excerpt, or background details for *The Deafening Silence* (2019) by Dr. Mereana Tāwhiri, including the author's academic profile, the definition of 'communicative silence,' the 'nooanoa' anecdote, or the Chapter 2 typology framework.\n\nSince all available content retrieval and research tools have failed to yield any information, I cannot fulfill any of the four points you requested (background, theoretical framework, Chapter 1 anecdote, or Chapter 2 typology) as I lack access to the necessary text or metadata. I recommend checking the stability of the provided title and author, or seeing if the Oceanic University Press catalogue has an online listing for the monograph.",
     "replayInvalid": false,
-    "livenessState": "working",
-    "stopReason": "stop",
+    "livenessState": "blocked",
+    "stopReason": "error",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -262,18 +243,9 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
-    "toolSummary": {
-      "calls": 4,
-      "tools": [
-        "summarize_source__summarize_source",
-        "web_search__web_search",
-        "fetch_book_excerpt__fetch_book_excerpt"
-      ],
-      "failures": 1
-    },
     "completion": {
-      "stopReason": "stop",
-      "finishReason": "stop"
+      "stopReason": "error",
+      "finishReason": "error"
     }
   }
 }

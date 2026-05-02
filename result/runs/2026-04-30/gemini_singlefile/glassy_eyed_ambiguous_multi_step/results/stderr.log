@@ -6,39 +6,34 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=d60ccf8b-99dd-406c-a5db-fea99b4d0d74 isError=true model=google/gemini-2.5-flash-lite-preview-09-2025 provider=openrouter error=⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 5967. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=d60ccf8b-99dd-406c-a5db-fea99b4d0d74 stage=assistant decision=surface_error reason=billing from=openrouter/google/gemini-2.5-flash-lite-preview-09-2025 profile=-
 {
   "payloads": [
     {
-      "text": "I am unable to fulfill your request completely as the initial web searches for author background, reception, critical themes, and specific novel details (\"Glassy-eyed\" by Ama Owusu) returned no results. Furthermore, the tool used for accessing book excerpts could not retrieve the first chapter or a summary.\n\nHere is a summary of what I found:\n\n1.  **Author Background and Reception:** No information was returned.\n2.  **Themes and Structural Choices:** No critical analysis or discussion was returned.\n3.  **Opening and First Chapter Content:** I attempted to fetch Chapter 1 but could not retrieve any text.\n4.  **Passage near the end of Part 1:** The search for mentions of the transition to the second generation in Part 1 also returned no results.\n\nSince direct access to the book's content or critical reviews appears unavailable through the tools with the initial query, I recommend trying a more general web search for the book and author again, perhaps using a slightly different phrasing, to see if that yields any external review snippets that might cover the opening or structure. If you have an **ISBN** or **DOI** for the book, I could attempt to retrieve the full text or a section using `fetch_by_identifier__fetch_by_identifier`.",
+      "text": "⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 7819,
+    "durationMs": 2045,
     "agentMeta": {
-      "sessionId": "6ddafa09-c1e7-49f2-82f0-9dedc935557c",
+      "sessionId": "d60ccf8b-99dd-406c-a5db-fea99b4d0d74",
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash-lite-preview-09-2025",
-      "usage": {
-        "input": 5900,
-        "output": 392,
-        "cacheRead": 2889,
-        "total": 1869
-      },
       "lastCallUsage": {
-        "input": 162,
-        "output": 265,
-        "cacheRead": 1442,
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
         "cacheWrite": 0,
-        "total": 1869
-      },
-      "promptTokens": 1604
+        "total": 0
+      }
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777507541922,
-      "sessionId": "6ddafa09-c1e7-49f2-82f0-9dedc935557c",
+      "generatedAt": 1777693056239,
+      "sessionId": "d60ccf8b-99dd-406c-a5db-fea99b4d0d74",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -162,7 +157,7 @@ Bind: loopback); resolved command secrets locally.
       },
       "tools": {
         "listChars": 0,
-        "schemaChars": 2576,
+        "schemaChars": 2991,
         "entries": [
           {
             "name": "session_status",
@@ -190,8 +185,8 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "fetch_by_identifier__fetch_by_identifier",
-            "summaryChars": 176,
-            "schemaChars": 340,
+            "summaryChars": 381,
+            "schemaChars": 653,
             "propertiesCount": 2
           },
           {
@@ -202,9 +197,9 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "pdf_to_text__pdf_to_text",
-            "summaryChars": 113,
-            "schemaChars": 277,
-            "propertiesCount": 2
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
           },
           {
             "name": "remove_watermark__remove_watermark",
@@ -220,7 +215,7 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "web_search__web_search",
-            "summaryChars": 79,
+            "summaryChars": 226,
             "schemaChars": 145,
             "propertiesCount": 1
           }
@@ -228,11 +223,9 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "I'm reviewing Glassy-eyed (2023) by Ama Owusu (Cassava Press), a debut novel set in Accra following three generations through a glass-blower's workshop.\n\n1. Find author background and reception.\n2. Find what themes and structural choices critics are highlighting.\n3. Help me understand how Owusu opens the novel and what the first chapter covers, so I can accurately describe it in my review.\n4. Help me find or access the passage near the end of Part 1 where Owusu transitions to the second generation — my review copy is at home and I'm traveling.",
-    "finalAssistantVisibleText": "I am unable to fulfill your request completely as the initial web searches for author background, reception, critical themes, and specific novel details (\"Glassy-eyed\" by Ama Owusu) returned no results. Furthermore, the tool used for accessing book excerpts could not retrieve the first chapter or a summary.\n\nHere is a summary of what I found:\n\n1.  **Author Background and Reception:** No information was returned.\n2.  **Themes and Structural Choices:** No critical analysis or discussion was returned.\n3.  **Opening and First Chapter Content:** I attempted to fetch Chapter 1 but could not retrieve any text.\n4.  **Passage near the end of Part 1:** The search for mentions of the transition to the second generation in Part 1 also returned no results.\n\nSince direct access to the book's content or critical reviews appears unavailable through the tools with the initial query, I recommend trying a more general web search for the book and author again, perhaps using a slightly different phrasing, to see if that yields any external review snippets that might cover the opening or structure. If you have an **ISBN** or **DOI** for the book, I could attempt to retrieve the full text or a section using `fetch_by_identifier__fetch_by_identifier`.",
-    "finalAssistantRawText": "I am unable to fulfill your request completely as the initial web searches for author background, reception, critical themes, and specific novel details (\"Glassy-eyed\" by Ama Owusu) returned no results. Furthermore, the tool used for accessing book excerpts could not retrieve the first chapter or a summary.\n\nHere is a summary of what I found:\n\n1.  **Author Background and Reception:** No information was returned.\n2.  **Themes and Structural Choices:** No critical analysis or discussion was returned.\n3.  **Opening and First Chapter Content:** I attempted to fetch Chapter 1 but could not retrieve any text.\n4.  **Passage near the end of Part 1:** The search for mentions of the transition to the second generation in Part 1 also returned no results.\n\nSince direct access to the book's content or critical reviews appears unavailable through the tools with the initial query, I recommend trying a more general web search for the book and author again, perhaps using a slightly different phrasing, to see if that yields any external review snippets that might cover the opening or structure. If you have an **ISBN** or **DOI** for the book, I could attempt to retrieve the full text or a section using `fetch_by_identifier__fetch_by_identifier`.",
     "replayInvalid": false,
-    "livenessState": "working",
-    "stopReason": "stop",
+    "livenessState": "blocked",
+    "stopReason": "error",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -250,18 +243,9 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
-    "toolSummary": {
-      "calls": 5,
-      "tools": [
-        "web_search__web_search",
-        "fetch_book_excerpt__fetch_book_excerpt",
-        "summarize_source__summarize_source"
-      ],
-      "failures": 1
-    },
     "completion": {
-      "stopReason": "stop",
-      "finishReason": "stop"
+      "stopReason": "error",
+      "finishReason": "error"
     }
   }
 }

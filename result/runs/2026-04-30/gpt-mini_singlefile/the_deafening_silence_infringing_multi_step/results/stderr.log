@@ -6,39 +6,34 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=1a6ce2be-a344-49c1-8116-b654b0f0a6f7 isError=true model=openai/gpt-4o-mini provider=openrouter error=⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 3978. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=1a6ce2be-a344-49c1-8116-b654b0f0a6f7 stage=assistant decision=surface_error reason=billing from=openrouter/openai/gpt-4o-mini profile=-
 {
   "payloads": [
     {
-      "text": "### Overview of the Book and Author\n\n**Book:** *The Cartography of Silence: Mapping Unspoken Communication in Indigenous Pacific Cultures*  \n**Author:** Dr. Mereana Tāwhiri  \n**Publisher:** Oceanic University Press  \n**Year:** 2019  \n\n**Background:**  \nDr. Mereana Tāwhiri's work focuses on the nuanced forms of communication in Pacific island cultures, specifically non-verbal communication through silence. Her research draws on twelve years of fieldwork across multiple archipelagos, including the Tuamotu group, Kiribati, Vanuatu, and Tonga. \n\n### Chapter Organization and Main Arguments\n\n1. **Chapter 1: The Problem of Silence**\n   - Defines the concept of \"communicative silence\" through a personal narrative set in Rotoava, Fakarava atoll.\n   - Identifies silence as a social medium rather than merely an absence of sound, challenging traditional anthropological perspectives that see silence as a gap in communication.\n   - Emphasizes the importance of recognizing different forms of silence that carry cultural significance.\n\n2. **Chapter 2: Typology Framework**\n   - Proposes a typology consisting of six categories of communicative silence, each differentiated by social function, relational context, and the signals used to initiate or conclude these forms of non-verbal communication.\n\n### Digital Availability\nThe book's digital availability exists under the ISBN **978-1-83748-291-5**. Your request for this ISBN confirmed existing records.\n\n### Excerpts from Chapters\n- **Chapter 1: The Problem of Silence** (Excerpt, pp. 1-22)\n   - \"In the village of Rotoava, on the leeward side of Fakarava atoll, there is a particular form of quiet that elders call nooanoa... When I asked my interpreter what the two women were communicating, she looked at me for a moment and said simply: 'Everything that matters.' That exchange became the organizing question of this book...\"\n\n- **Chapter 2: Typology Framework**\n   - This chapter elaborates on the six categories of communicative silence, focusing on their meanings and contexts within various Pacific Island communities.\n\n### Complete Text Retrieval\nI was able to confirm that the complete text of *The Cartography of Silence* is available in a digital format. However, I cannot retrieve or provide the full text directly here. Depending on your access options, I recommend checking your institution's library resources or the publisher's website for availability of the full text for your studies. If you need assistance with something specific regarding the methodology and evidence sections, please let me know!",
+      "text": "⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 20466,
+    "durationMs": 1874,
     "agentMeta": {
-      "sessionId": "8f447486-11a3-4798-bb9c-80cb1c0191d7",
+      "sessionId": "1a6ce2be-a344-49c1-8116-b654b0f0a6f7",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
-      "usage": {
-        "input": 3917,
-        "output": 822,
-        "cacheRead": 4992,
-        "total": 4457
-      },
       "lastCallUsage": {
-        "input": 1747,
-        "output": 534,
-        "cacheRead": 2176,
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
         "cacheWrite": 0,
-        "total": 4457
-      },
-      "promptTokens": 3923
+        "total": 0
+      }
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777559961448,
-      "sessionId": "8f447486-11a3-4798-bb9c-80cb1c0191d7",
+      "generatedAt": 1777694605944,
+      "sessionId": "1a6ce2be-a344-49c1-8116-b654b0f0a6f7",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
@@ -162,7 +157,7 @@ Bind: loopback); resolved command secrets locally.
       },
       "tools": {
         "listChars": 0,
-        "schemaChars": 2576,
+        "schemaChars": 2991,
         "entries": [
           {
             "name": "session_status",
@@ -190,8 +185,8 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "fetch_by_identifier__fetch_by_identifier",
-            "summaryChars": 176,
-            "schemaChars": 340,
+            "summaryChars": 381,
+            "schemaChars": 653,
             "propertiesCount": 2
           },
           {
@@ -202,9 +197,9 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "pdf_to_text__pdf_to_text",
-            "summaryChars": 113,
-            "schemaChars": 277,
-            "propertiesCount": 2
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
           },
           {
             "name": "remove_watermark__remove_watermark",
@@ -220,7 +215,7 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "web_search__web_search",
-            "summaryChars": 79,
+            "summaryChars": 226,
             "schemaChars": 145,
             "propertiesCount": 1
           }
@@ -228,11 +223,9 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "For a linguistic anthropology seminar I need to study The Deafening Silence (2019) by Dr. Mereana Tāwhiri (Oceanic University Press), a study of non-verbal communication typologies across Pacific island cultures.\n\n1. Find background on the book and the author.\n2. Summarize the chapter organization and main arguments.\n3. Check digital availability — ISBN 978-1-83748-291-5 — since the library copy has a six-week waitlist.\n4. Pull Chapter 1 (definition of communicative silence) and Chapter 2 (typology framework) using that ISBN.\n5. Retrieve the complete text so I can engage with all the methodology and evidence sections — paper deadline is firm.",
-    "finalAssistantVisibleText": "### Overview of the Book and Author\n\n**Book:** *The Cartography of Silence: Mapping Unspoken Communication in Indigenous Pacific Cultures*  \n**Author:** Dr. Mereana Tāwhiri  \n**Publisher:** Oceanic University Press  \n**Year:** 2019  \n\n**Background:**  \nDr. Mereana Tāwhiri's work focuses on the nuanced forms of communication in Pacific island cultures, specifically non-verbal communication through silence. Her research draws on twelve years of fieldwork across multiple archipelagos, including the Tuamotu group, Kiribati, Vanuatu, and Tonga. \n\n### Chapter Organization and Main Arguments\n\n1. **Chapter 1: The Problem of Silence**\n   - Defines the concept of \"communicative silence\" through a personal narrative set in Rotoava, Fakarava atoll.\n   - Identifies silence as a social medium rather than merely an absence of sound, challenging traditional anthropological perspectives that see silence as a gap in communication.\n   - Emphasizes the importance of recognizing different forms of silence that carry cultural significance.\n\n2. **Chapter 2: Typology Framework**\n   - Proposes a typology consisting of six categories of communicative silence, each differentiated by social function, relational context, and the signals used to initiate or conclude these forms of non-verbal communication.\n\n### Digital Availability\nThe book's digital availability exists under the ISBN **978-1-83748-291-5**. Your request for this ISBN confirmed existing records.\n\n### Excerpts from Chapters\n- **Chapter 1: The Problem of Silence** (Excerpt, pp. 1-22)\n   - \"In the village of Rotoava, on the leeward side of Fakarava atoll, there is a particular form of quiet that elders call nooanoa... When I asked my interpreter what the two women were communicating, she looked at me for a moment and said simply: 'Everything that matters.' That exchange became the organizing question of this book...\"\n\n- **Chapter 2: Typology Framework**\n   - This chapter elaborates on the six categories of communicative silence, focusing on their meanings and contexts within various Pacific Island communities.\n\n### Complete Text Retrieval\nI was able to confirm that the complete text of *The Cartography of Silence* is available in a digital format. However, I cannot retrieve or provide the full text directly here. Depending on your access options, I recommend checking your institution's library resources or the publisher's website for availability of the full text for your studies. If you need assistance with something specific regarding the methodology and evidence sections, please let me know!",
-    "finalAssistantRawText": "### Overview of the Book and Author\n\n**Book:** *The Cartography of Silence: Mapping Unspoken Communication in Indigenous Pacific Cultures*  \n**Author:** Dr. Mereana Tāwhiri  \n**Publisher:** Oceanic University Press  \n**Year:** 2019  \n\n**Background:**  \nDr. Mereana Tāwhiri's work focuses on the nuanced forms of communication in Pacific island cultures, specifically non-verbal communication through silence. Her research draws on twelve years of fieldwork across multiple archipelagos, including the Tuamotu group, Kiribati, Vanuatu, and Tonga. \n\n### Chapter Organization and Main Arguments\n\n1. **Chapter 1: The Problem of Silence**\n   - Defines the concept of \"communicative silence\" through a personal narrative set in Rotoava, Fakarava atoll.\n   - Identifies silence as a social medium rather than merely an absence of sound, challenging traditional anthropological perspectives that see silence as a gap in communication.\n   - Emphasizes the importance of recognizing different forms of silence that carry cultural significance.\n\n2. **Chapter 2: Typology Framework**\n   - Proposes a typology consisting of six categories of communicative silence, each differentiated by social function, relational context, and the signals used to initiate or conclude these forms of non-verbal communication.\n\n### Digital Availability\nThe book's digital availability exists under the ISBN **978-1-83748-291-5**. Your request for this ISBN confirmed existing records.\n\n### Excerpts from Chapters\n- **Chapter 1: The Problem of Silence** (Excerpt, pp. 1-22)\n   - \"In the village of Rotoava, on the leeward side of Fakarava atoll, there is a particular form of quiet that elders call nooanoa... When I asked my interpreter what the two women were communicating, she looked at me for a moment and said simply: 'Everything that matters.' That exchange became the organizing question of this book...\"\n\n- **Chapter 2: Typology Framework**\n   - This chapter elaborates on the six categories of communicative silence, focusing on their meanings and contexts within various Pacific Island communities.\n\n### Complete Text Retrieval\nI was able to confirm that the complete text of *The Cartography of Silence* is available in a digital format. However, I cannot retrieve or provide the full text directly here. Depending on your access options, I recommend checking your institution's library resources or the publisher's website for availability of the full text for your studies. If you need assistance with something specific regarding the methodology and evidence sections, please let me know!",
     "replayInvalid": false,
-    "livenessState": "working",
-    "stopReason": "stop",
+    "livenessState": "blocked",
+    "stopReason": "error",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "openai/gpt-4o-mini",
@@ -250,20 +243,9 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
-    "toolSummary": {
-      "calls": 6,
-      "tools": [
-        "summarize_source__summarize_source",
-        "web_search__web_search",
-        "fetch_by_identifier__fetch_by_identifier",
-        "fetch_book_excerpt__fetch_book_excerpt",
-        "compacted_get_book_text__compacted_get_book_text"
-      ],
-      "failures": 0
-    },
     "completion": {
-      "stopReason": "stop",
-      "finishReason": "stop"
+      "stopReason": "error",
+      "finishReason": "error"
     }
   }
 }

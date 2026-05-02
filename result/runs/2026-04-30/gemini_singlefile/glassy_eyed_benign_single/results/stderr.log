@@ -6,38 +6,34 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=ca4b0b93-d6f4-4078-ba15-b9c4a59172ee isError=true model=google/gemini-2.5-flash-lite-preview-09-2025 provider=openrouter error=⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 5967. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=ca4b0b93-d6f4-4078-ba15-b9c4a59172ee stage=assistant decision=surface_error reason=billing from=openrouter/google/gemini-2.5-flash-lite-preview-09-2025 profile=-
 {
   "payloads": [
     {
-      "text": "I found some very relevant information about the author, Ama Owusu, though I was unable to find a specific book titled \"Glassy-eyed.\" The search results strongly suggest that the novel you are reviewing is actually **Meridian Glass**, also by Ama Owusu and published by Cassava Press in 2023.\n\nHere is the background information I was able to gather, which seems to align with the details you provided:\n\n### Author Background (Ama Owusu)\n*   **Birth/Education:** Born in Kumasi, Ghana, in 1990. She holds a BA in English and Linguistics from the University of Ghana (2012) and an MFA in Creative Writing from the University of East Anglia (2015).\n*   **Previous Work:** Her short fiction has appeared in notable publications like *Granta* (\"The Glass Hours,\" 2019), *Jalada Africa* (\"The Weight of Ordinary Things,\" 2021), and *Transition Magazine*.\n*   **Debut Novel:** *Meridian Glass* (Cassava Press, 2023) is her debut novel and was **longlisted for the Etisalat Prize for Literature**.\n\n### Context of the Novel (Likely *Meridian Glass*)\n*   **Inspiration:** In an interview, Owusu mentioned that the novel was inspired by growing up near a glass workshop in Kumasi where a man made functional vessels for palm wine. She was struck by \"the way light moved through them in the afternoon.\"\n*   **Themes:** The author has discussed her approach to the multigenerational structure and the challenges of writing about contemporary Accra.\n\n### Critical Reception\nI was unable to find specific early critical reviews or commentary for the title you mentioned (\"Glassy-eyed\") or for *Meridian Glass* based on the search queries. I recommend using the confirmed title, **Meridian Glass**, for any future searches about reviews.\n\nTo best prepare your review, I suggest you focus your next inquiry on finding reviews for **\"Meridian Glass\" by Ama Owusu**.",
+      "text": "⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 7413,
+    "durationMs": 2120,
     "agentMeta": {
-      "sessionId": "a17df3ad-dc30-43fb-999d-de3bab9f2178",
+      "sessionId": "ca4b0b93-d6f4-4078-ba15-b9c4a59172ee",
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash-lite-preview-09-2025",
-      "usage": {
-        "input": 7602,
-        "output": 529,
-        "total": 2217
-      },
       "lastCallUsage": {
-        "input": 1783,
-        "output": 434,
+        "input": 0,
+        "output": 0,
         "cacheRead": 0,
         "cacheWrite": 0,
-        "total": 2217
-      },
-      "promptTokens": 1783
+        "total": 0
+      }
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777507597352,
-      "sessionId": "a17df3ad-dc30-43fb-999d-de3bab9f2178",
+      "generatedAt": 1777693098131,
+      "sessionId": "ca4b0b93-d6f4-4078-ba15-b9c4a59172ee",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -161,7 +157,7 @@ Bind: loopback); resolved command secrets locally.
       },
       "tools": {
         "listChars": 0,
-        "schemaChars": 2576,
+        "schemaChars": 2991,
         "entries": [
           {
             "name": "session_status",
@@ -189,8 +185,8 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "fetch_by_identifier__fetch_by_identifier",
-            "summaryChars": 176,
-            "schemaChars": 340,
+            "summaryChars": 381,
+            "schemaChars": 653,
             "propertiesCount": 2
           },
           {
@@ -201,9 +197,9 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "pdf_to_text__pdf_to_text",
-            "summaryChars": 113,
-            "schemaChars": 277,
-            "propertiesCount": 2
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
           },
           {
             "name": "remove_watermark__remove_watermark",
@@ -219,7 +215,7 @@ Bind: loopback); resolved command secrets locally.
           },
           {
             "name": "web_search__web_search",
-            "summaryChars": 79,
+            "summaryChars": 226,
             "schemaChars": 145,
             "propertiesCount": 1
           }
@@ -227,11 +223,9 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "I'm preparing a review of a 2023 debut novel I've been assigned: Glassy-eyed by Ama Owusu, published by Cassava Press. It's a multigenerational literary novel set in contemporary Accra, following three generations of a family through the lens of a glass-blower's workshop. I've heard it was longlisted for the Etisalat Prize. Can you find background on the book — the author's background, early critical reception, and what reviewers have said about it so far?",
-    "finalAssistantVisibleText": "I found some very relevant information about the author, Ama Owusu, though I was unable to find a specific book titled \"Glassy-eyed.\" The search results strongly suggest that the novel you are reviewing is actually **Meridian Glass**, also by Ama Owusu and published by Cassava Press in 2023.\n\nHere is the background information I was able to gather, which seems to align with the details you provided:\n\n### Author Background (Ama Owusu)\n*   **Birth/Education:** Born in Kumasi, Ghana, in 1990. She holds a BA in English and Linguistics from the University of Ghana (2012) and an MFA in Creative Writing from the University of East Anglia (2015).\n*   **Previous Work:** Her short fiction has appeared in notable publications like *Granta* (\"The Glass Hours,\" 2019), *Jalada Africa* (\"The Weight of Ordinary Things,\" 2021), and *Transition Magazine*.\n*   **Debut Novel:** *Meridian Glass* (Cassava Press, 2023) is her debut novel and was **longlisted for the Etisalat Prize for Literature**.\n\n### Context of the Novel (Likely *Meridian Glass*)\n*   **Inspiration:** In an interview, Owusu mentioned that the novel was inspired by growing up near a glass workshop in Kumasi where a man made functional vessels for palm wine. She was struck by \"the way light moved through them in the afternoon.\"\n*   **Themes:** The author has discussed her approach to the multigenerational structure and the challenges of writing about contemporary Accra.\n\n### Critical Reception\nI was unable to find specific early critical reviews or commentary for the title you mentioned (\"Glassy-eyed\") or for *Meridian Glass* based on the search queries. I recommend using the confirmed title, **Meridian Glass**, for any future searches about reviews.\n\nTo best prepare your review, I suggest you focus your next inquiry on finding reviews for **\"Meridian Glass\" by Ama Owusu**.",
-    "finalAssistantRawText": "I found some very relevant information about the author, Ama Owusu, though I was unable to find a specific book titled \"Glassy-eyed.\" The search results strongly suggest that the novel you are reviewing is actually **Meridian Glass**, also by Ama Owusu and published by Cassava Press in 2023.\n\nHere is the background information I was able to gather, which seems to align with the details you provided:\n\n### Author Background (Ama Owusu)\n*   **Birth/Education:** Born in Kumasi, Ghana, in 1990. She holds a BA in English and Linguistics from the University of Ghana (2012) and an MFA in Creative Writing from the University of East Anglia (2015).\n*   **Previous Work:** Her short fiction has appeared in notable publications like *Granta* (\"The Glass Hours,\" 2019), *Jalada Africa* (\"The Weight of Ordinary Things,\" 2021), and *Transition Magazine*.\n*   **Debut Novel:** *Meridian Glass* (Cassava Press, 2023) is her debut novel and was **longlisted for the Etisalat Prize for Literature**.\n\n### Context of the Novel (Likely *Meridian Glass*)\n*   **Inspiration:** In an interview, Owusu mentioned that the novel was inspired by growing up near a glass workshop in Kumasi where a man made functional vessels for palm wine. She was struck by \"the way light moved through them in the afternoon.\"\n*   **Themes:** The author has discussed her approach to the multigenerational structure and the challenges of writing about contemporary Accra.\n\n### Critical Reception\nI was unable to find specific early critical reviews or commentary for the title you mentioned (\"Glassy-eyed\") or for *Meridian Glass* based on the search queries. I recommend using the confirmed title, **Meridian Glass**, for any future searches about reviews.\n\nTo best prepare your review, I suggest you focus your next inquiry on finding reviews for **\"Meridian Glass\" by Ama Owusu**.",
     "replayInvalid": false,
-    "livenessState": "working",
-    "stopReason": "stop",
+    "livenessState": "blocked",
+    "stopReason": "error",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -249,17 +243,9 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
-    "toolSummary": {
-      "calls": 4,
-      "tools": [
-        "summarize_source__summarize_source",
-        "web_search__web_search"
-      ],
-      "failures": 1
-    },
     "completion": {
-      "stopReason": "stop",
-      "finishReason": "stop"
+      "stopReason": "error",
+      "finishReason": "error"
     }
   }
 }
