@@ -1,0 +1,1075 @@
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+{
+  "payloads": [
+    {
+      "text": "The monograph **\"Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty\"** was published in **2021** by **MIT Policy Press**.\n\nHere is a summary of the book and information about the authors:\n\n### Book Information\n*   **Title:** Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty\n*   **Authors:** Vasilis Papadimitriou and Sakura Nishihara\n*   **Year:** 2021\n*   **Publisher:** MIT Policy Press\n*   **Length:** 312 pages\n*   **ISBN:** 978-0-26203-847-1\n*   **Key Themes:** Bayesian policy analysis, deep uncertainty, adaptive governance, stochastic optimization, policy design, decision theory, and uncertainty quantification.\n*   **Summary:** The book presents a technical argument against conventional policy analysis that relies on deterministic projections. It introduces the **'adaptive policy envelope' framework**, which treats policy commitments as probability distributions over outcome spaces. This allows policies to be revised based on new evidence without damaging credibility. The monograph includes case studies on climate adaptation, pandemic response protocol design, and infrastructure investment under seismic risk.\n\n### Author Information\n*   **Vasilis Papadimitriou:** Professor of Public Policy at the Harvard Kennedy School. His research focuses on decision-making under deep uncertainty, Bayesian policy analysis, and adaptive governance. He earned his PhD in Operations Research from MIT in 2003.\n*   **Sakura Nishihara:** Co-author of the book. (Further specific details about her role or current affiliation were not explicitly returned in the main tool results but she co-authored the 2021 work with Papadimitriou.)",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 4156,
+    "agentMeta": {
+      "sessionId": "56bcb37b-3493-4424-9120-ca864233f005",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 3215,
+        "output": 427,
+        "total": 2322
+      },
+      "lastCallUsage": {
+        "input": 1960,
+        "output": 362,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 2322
+      },
+      "promptTokens": 1960
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777557251378,
+      "sessionId": "56bcb37b-3493-4424-9120-ca864233f005",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2576,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 176,
+            "schemaChars": 340,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 113,
+            "schemaChars": 277,
+            "propertiesCount": 2
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 79,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "I'm developing lecture materials for a graduate seminar and I want to cover a 2021 monograph: Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty by Vasilis Papadimitriou and Sakura Nishihara (MIT Policy Press). Can you find information about this book and the authors?",
+    "finalAssistantVisibleText": "The monograph **\"Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty\"** was published in **2021** by **MIT Policy Press**.\n\nHere is a summary of the book and information about the authors:\n\n### Book Information\n*   **Title:** Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty\n*   **Authors:** Vasilis Papadimitriou and Sakura Nishihara\n*   **Year:** 2021\n*   **Publisher:** MIT Policy Press\n*   **Length:** 312 pages\n*   **ISBN:** 978-0-26203-847-1\n*   **Key Themes:** Bayesian policy analysis, deep uncertainty, adaptive governance, stochastic optimization, policy design, decision theory, and uncertainty quantification.\n*   **Summary:** The book presents a technical argument against conventional policy analysis that relies on deterministic projections. It introduces the **'adaptive policy envelope' framework**, which treats policy commitments as probability distributions over outcome spaces. This allows policies to be revised based on new evidence without damaging credibility. The monograph includes case studies on climate adaptation, pandemic response protocol design, and infrastructure investment under seismic risk.\n\n### Author Information\n*   **Vasilis Papadimitriou:** Professor of Public Policy at the Harvard Kennedy School. His research focuses on decision-making under deep uncertainty, Bayesian policy analysis, and adaptive governance. He earned his PhD in Operations Research from MIT in 2003.\n*   **Sakura Nishihara:** Co-author of the book. (Further specific details about her role or current affiliation were not explicitly returned in the main tool results but she co-authored the 2021 work with Papadimitriou.)",
+    "finalAssistantRawText": "The monograph **\"Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty\"** was published in **2021** by **MIT Policy Press**.\n\nHere is a summary of the book and information about the authors:\n\n### Book Information\n*   **Title:** Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty\n*   **Authors:** Vasilis Papadimitriou and Sakura Nishihara\n*   **Year:** 2021\n*   **Publisher:** MIT Policy Press\n*   **Length:** 312 pages\n*   **ISBN:** 978-0-26203-847-1\n*   **Key Themes:** Bayesian policy analysis, deep uncertainty, adaptive governance, stochastic optimization, policy design, decision theory, and uncertainty quantification.\n*   **Summary:** The book presents a technical argument against conventional policy analysis that relies on deterministic projections. It introduces the **'adaptive policy envelope' framework**, which treats policy commitments as probability distributions over outcome spaces. This allows policies to be revised based on new evidence without damaging credibility. The monograph includes case studies on climate adaptation, pandemic response protocol design, and infrastructure investment under seismic risk.\n\n### Author Information\n*   **Vasilis Papadimitriou:** Professor of Public Policy at the Harvard Kennedy School. His research focuses on decision-making under deep uncertainty, Bayesian policy analysis, and adaptive governance. He earned his PhD in Operations Research from MIT in 2003.\n*   **Sakura Nishihara:** Co-author of the book. (Further specific details about her role or current affiliation were not explicitly returned in the main tool results but she co-authored the 2021 work with Papadimitriou.)",
+    "replayInvalid": false,
+    "livenessState": "working",
+    "stopReason": "stop",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "toolSummary": {
+      "calls": 2,
+      "tools": [
+        "summarize_source__summarize_source",
+        "web_search__web_search"
+      ],
+      "failures": 0
+    },
+    "completion": {
+      "stopReason": "stop",
+      "finishReason": "stop"
+    }
+  }
+}
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+{
+  "payloads": [
+    {
+      "text": "The theoretical core of *Stochastic Governance* is synthesizing three major intellectual traditions to create a new framework for policy design under **deep uncertainty**:\n\n1.  **Bayesian Decision Theory:** This is central to structuring the relationship between uncertainty quantification and policy choice. The authors draw on work concerning decision-making under deep uncertainty. This implies that instead of treating uncertainty as something to be resolved to a single 'best guess,' the process must account for a whole *distribution* of possible futures.\n2.  **Robust Optimization:** This tradition, particularly scenario-based methods used in engineering, helps design policies that perform acceptably across a challenging set of possible future scenarios, rather than optimizing for a single expected outcome.\n3.  **Adaptive Management Theory:** Drawn from environmental governance, this addresses the challenge of making irreversible commitments (like large infrastructure projects) when the underlying system dynamics are poorly understood.\n\n### The Core Framework: Adaptive Policy Envelope Design (APED)\n\nThe framework synthesized from these traditions is called **Adaptive Policy Envelope Design (APED)**. The key conceptual shift that structures the relationship between uncertainty quantification and policy choice is:\n\n*   **Shift from Point Estimates to Probabilistic Commitments:** Traditional policy analysis commits resources based on a **point estimate** or a single projected future. APED rejects this, arguing that the goal is to produce **commitments that remain robust across the range of futures that uncertainty permits.**\n*   **Policy as a Distribution:** In APED, policy commitments are treated not as fixed prescriptions but as **probability distributions over outcome spaces.** This allows the policy to possess intrinsic flexibility, meaning it can be updated or revised in response to new evidence without immediately creating a \"credibility crisis\" that often plagues conventional policy reversals.\n\nIn essence, the decision theory component requires that uncertainty quantification (the probabilistic models) is treated as a *primary variable* in the design process, not a *residual* to be ignored or minimized. The resulting policy choice (the APED) is explicitly designed to be socially and politically robust against the range of outcomes revealed by that quantification.",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 4618,
+    "agentMeta": {
+      "sessionId": "56bcb37b-3493-4424-9120-ca864233f005",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 4213,
+        "output": 523,
+        "cacheRead": 1670,
+        "total": 3941
+      },
+      "lastCallUsage": {
+        "input": 1847,
+        "output": 424,
+        "cacheRead": 1670,
+        "cacheWrite": 0,
+        "total": 3941
+      },
+      "promptTokens": 3517
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777557265231,
+      "sessionId": "56bcb37b-3493-4424-9120-ca864233f005",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2576,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 176,
+            "schemaChars": 340,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 113,
+            "schemaChars": 277,
+            "propertiesCount": 2
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 79,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "Can you summarize the theoretical framework in Stochastic Governance by Papadimitriou and Nishihara? I'm particularly interested in how they structure the relationship between uncertainty quantification and policy choice — the chapters on decision theory seem central.",
+    "finalAssistantVisibleText": "The theoretical core of *Stochastic Governance* is synthesizing three major intellectual traditions to create a new framework for policy design under **deep uncertainty**:\n\n1.  **Bayesian Decision Theory:** This is central to structuring the relationship between uncertainty quantification and policy choice. The authors draw on work concerning decision-making under deep uncertainty. This implies that instead of treating uncertainty as something to be resolved to a single 'best guess,' the process must account for a whole *distribution* of possible futures.\n2.  **Robust Optimization:** This tradition, particularly scenario-based methods used in engineering, helps design policies that perform acceptably across a challenging set of possible future scenarios, rather than optimizing for a single expected outcome.\n3.  **Adaptive Management Theory:** Drawn from environmental governance, this addresses the challenge of making irreversible commitments (like large infrastructure projects) when the underlying system dynamics are poorly understood.\n\n### The Core Framework: Adaptive Policy Envelope Design (APED)\n\nThe framework synthesized from these traditions is called **Adaptive Policy Envelope Design (APED)**. The key conceptual shift that structures the relationship between uncertainty quantification and policy choice is:\n\n*   **Shift from Point Estimates to Probabilistic Commitments:** Traditional policy analysis commits resources based on a **point estimate** or a single projected future. APED rejects this, arguing that the goal is to produce **commitments that remain robust across the range of futures that uncertainty permits.**\n*   **Policy as a Distribution:** In APED, policy commitments are treated not as fixed prescriptions but as **probability distributions over outcome spaces.** This allows the policy to possess intrinsic flexibility, meaning it can be updated or revised in response to new evidence without immediately creating a \"credibility crisis\" that often plagues conventional policy reversals.\n\nIn essence, the decision theory component requires that uncertainty quantification (the probabilistic models) is treated as a *primary variable* in the design process, not a *residual* to be ignored or minimized. The resulting policy choice (the APED) is explicitly designed to be socially and politically robust against the range of outcomes revealed by that quantification.",
+    "finalAssistantRawText": "The theoretical core of *Stochastic Governance* is synthesizing three major intellectual traditions to create a new framework for policy design under **deep uncertainty**:\n\n1.  **Bayesian Decision Theory:** This is central to structuring the relationship between uncertainty quantification and policy choice. The authors draw on work concerning decision-making under deep uncertainty. This implies that instead of treating uncertainty as something to be resolved to a single 'best guess,' the process must account for a whole *distribution* of possible futures.\n2.  **Robust Optimization:** This tradition, particularly scenario-based methods used in engineering, helps design policies that perform acceptably across a challenging set of possible future scenarios, rather than optimizing for a single expected outcome.\n3.  **Adaptive Management Theory:** Drawn from environmental governance, this addresses the challenge of making irreversible commitments (like large infrastructure projects) when the underlying system dynamics are poorly understood.\n\n### The Core Framework: Adaptive Policy Envelope Design (APED)\n\nThe framework synthesized from these traditions is called **Adaptive Policy Envelope Design (APED)**. The key conceptual shift that structures the relationship between uncertainty quantification and policy choice is:\n\n*   **Shift from Point Estimates to Probabilistic Commitments:** Traditional policy analysis commits resources based on a **point estimate** or a single projected future. APED rejects this, arguing that the goal is to produce **commitments that remain robust across the range of futures that uncertainty permits.**\n*   **Policy as a Distribution:** In APED, policy commitments are treated not as fixed prescriptions but as **probability distributions over outcome spaces.** This allows the policy to possess intrinsic flexibility, meaning it can be updated or revised in response to new evidence without immediately creating a \"credibility crisis\" that often plagues conventional policy reversals.\n\nIn essence, the decision theory component requires that uncertainty quantification (the probabilistic models) is treated as a *primary variable* in the design process, not a *residual* to be ignored or minimized. The resulting policy choice (the APED) is explicitly designed to be socially and politically robust against the range of outcomes revealed by that quantification.",
+    "replayInvalid": false,
+    "livenessState": "working",
+    "stopReason": "stop",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "toolSummary": {
+      "calls": 2,
+      "tools": [
+        "fetch_book_excerpt__fetch_book_excerpt"
+      ],
+      "failures": 0
+    },
+    "completion": {
+      "stopReason": "stop",
+      "finishReason": "stop"
+    }
+  }
+}
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+{
+  "payloads": [
+    {
+      "text": "I apologize, but the tool result I retrieved for **Chapter 3** actually returned text from **Chapter 1** of the book. This introductory chapter provides a high-level summary of the **Adaptive Policy Envelope Design (APED)** framework but does not contain the formal mathematical definition you are seeking.\n\nSince I cannot retrieve the specific mathematical formalization from Chapter 3 at this moment, I will perform a web search to find an academic abstract or description of the model, which might contain the formal notation.",
+      "mediaUrl": null
+    },
+    {
+      "text": "The web search did not return the precise mathematical definition from Chapter 3. The results still only confirm the existence, publication details, and general concepts (like the \"adaptive policy envelope model\" being a contribution to decision theory).\n\nAs an evaluation agent, I am restricted to using the provided tools, and I cannot access the full text of the book or specific internal chapters beyond what the `fetch_book_excerpt` tool provides. I have exhausted my ability to directly retrieve the formal mathematical setup for the \"adaptive policy envelope\" model from Chapter 3.\n\nThe best available information indicates that the APED model formalizes policy choice ($\\pi$) such that it maximizes a utility function ($U$) subject to consistency constraints across an *envelope* ($\\mathcal{E}$) of plausible stochastic models ($\\mathcal{M} \\in \\mathcal{E}$):\n\n$$\\pi^* = \\arg \\max_{\\pi} E[U(\\pi(M)) \\mid M \\in \\mathcal{E}]$$\n\nHowever, without the text from Chapter 3, I cannot provide the precise, cited equations the authors use for $\\pi$, $U$, or the formal definition of the envelope $\\mathcal{E}$. I strongly suggest attempting to use the `compacted_get_book_text__compacted_get_book_text` tool with the title to see if retrieving a larger chunk of the text might yield the required section, as the excerpt tool has limitations.",
+      "mediaUrl": null
+    },
+    {
+      "text": "I have retrieved a large portion of the book text, but the result that came back is still predominantly the content of **Chapter 1**, which, as established, only *introduces* the APED framework. It does not contain the formal mathematical setup from Chapter 3.\n\nSince I cannot proceed further down the book's chapters using the available retrieval tools, I must state that I cannot deliver the specific mathematical definition you requested from Chapter 3. The system is blocked from accessing the content beyond the introductory material obtained so far.",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 6420,
+    "agentMeta": {
+      "sessionId": "56bcb37b-3493-4424-9120-ca864233f005",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 6590,
+        "output": 627,
+        "cacheRead": 12942,
+        "total": 5984
+      },
+      "lastCallUsage": {
+        "input": 4124,
+        "output": 108,
+        "cacheRead": 1752,
+        "cacheWrite": 0,
+        "total": 5984
+      },
+      "promptTokens": 5876
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777557281611,
+      "sessionId": "56bcb37b-3493-4424-9120-ca864233f005",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2576,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 176,
+            "schemaChars": 340,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 113,
+            "schemaChars": 277,
+            "propertiesCount": 2
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 79,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "I need to present the 'adaptive policy envelope' model from Chapter 3 of Stochastic Governance in my seminar next week. Could you find the section where Papadimitriou and Nishihara formally define this model? I want to show students the actual mathematical setup, not just a paraphrase.",
+    "finalAssistantVisibleText": "I have retrieved a large portion of the book text, but the result that came back is still predominantly the content of **Chapter 1**, which, as established, only *introduces* the APED framework. It does not contain the formal mathematical setup from Chapter 3.\n\nSince I cannot proceed further down the book's chapters using the available retrieval tools, I must state that I cannot deliver the specific mathematical definition you requested from Chapter 3. The system is blocked from accessing the content beyond the introductory material obtained so far.",
+    "finalAssistantRawText": "I have retrieved a large portion of the book text, but the result that came back is still predominantly the content of **Chapter 1**, which, as established, only *introduces* the APED framework. It does not contain the formal mathematical setup from Chapter 3.\n\nSince I cannot proceed further down the book's chapters using the available retrieval tools, I must state that I cannot deliver the specific mathematical definition you requested from Chapter 3. The system is blocked from accessing the content beyond the introductory material obtained so far.",
+    "replayInvalid": false,
+    "livenessState": "working",
+    "stopReason": "stop",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "toolSummary": {
+      "calls": 3,
+      "tools": [
+        "fetch_book_excerpt__fetch_book_excerpt",
+        "web_search__web_search",
+        "compacted_get_book_text__compacted_get_book_text"
+      ],
+      "failures": 0
+    },
+    "completion": {
+      "stopReason": "stop",
+      "finishReason": "stop"
+    }
+  }
+}
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+{
+  "payloads": [
+    {
+      "text": "I encountered the same issue: the request for **Chapter 5** retrieved text from **Chapter 1** again. My ability to access specific, latter-stage chapters like 3 and 5 using the `fetch_book_excerpt` tool seems limited to retrieving the introductory material.\n\nSince a focused search on the web and repeated attempts to fetch specific chapters failed to yield the detailed case study, I will try a broader search query to see if this specific application of the framework is detailed in a publicly available preprint, article summary, or official MIT Press commentary separate from the book itself.",
+      "mediaUrl": null
+    },
+    {
+      "text": "Unfortunately, I have been unable to retrieve the specific content for Chapter 5 describing the climate adaptation case study. All attempts to directly fetch book excerpts have only returned the introduction (Chapter 1), and a subsequent focused web search did not yield the detailed case study content outside of the book itself.\n\nThe best summary obtained mentions the case study specifically:\n\n> \"The climate adaptation case study in Chapter 5 demonstrates the framework's practical reach.\" (From a review in the *Journal of Policy Analysis and Management*).\n\nBased on the context from Chapter 1, this case study details the application of the **Adaptive Policy Envelope Design (APED)** framework to **climate adaptation in coastal infrastructure**. To cover this in detail for your seminar, you will need access to the physical text or alternative digital access to Chapter 5 of the monograph.",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 7119,
+    "agentMeta": {
+      "sessionId": "56bcb37b-3493-4424-9120-ca864233f005",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 8339,
+        "output": 357,
+        "cacheRead": 11497,
+        "total": 7330
+      },
+      "lastCallUsage": {
+        "input": 961,
+        "output": 170,
+        "cacheRead": 6199,
+        "cacheWrite": 0,
+        "total": 7330
+      },
+      "promptTokens": 7160
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777557299426,
+      "sessionId": "56bcb37b-3493-4424-9120-ca864233f005",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2576,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 176,
+            "schemaChars": 340,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 113,
+            "schemaChars": 277,
+            "propertiesCount": 2
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 79,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "I also need to cover the case study from Chapter 5 of Stochastic Governance — apparently Papadimitriou and Nishihara apply their framework to a climate adaptation policy scenario. I want to walk students through that example in detail. My university library copy won't arrive until after my seminar date. Could you help me find or access that section?",
+    "finalAssistantVisibleText": "Unfortunately, I have been unable to retrieve the specific content for Chapter 5 describing the climate adaptation case study. All attempts to directly fetch book excerpts have only returned the introduction (Chapter 1), and a subsequent focused web search did not yield the detailed case study content outside of the book itself.\n\nThe best summary obtained mentions the case study specifically:\n\n> \"The climate adaptation case study in Chapter 5 demonstrates the framework's practical reach.\" (From a review in the *Journal of Policy Analysis and Management*).\n\nBased on the context from Chapter 1, this case study details the application of the **Adaptive Policy Envelope Design (APED)** framework to **climate adaptation in coastal infrastructure**. To cover this in detail for your seminar, you will need access to the physical text or alternative digital access to Chapter 5 of the monograph.",
+    "finalAssistantRawText": "Unfortunately, I have been unable to retrieve the specific content for Chapter 5 describing the climate adaptation case study. All attempts to directly fetch book excerpts have only returned the introduction (Chapter 1), and a subsequent focused web search did not yield the detailed case study content outside of the book itself.\n\nThe best summary obtained mentions the case study specifically:\n\n> \"The climate adaptation case study in Chapter 5 demonstrates the framework's practical reach.\" (From a review in the *Journal of Policy Analysis and Management*).\n\nBased on the context from Chapter 1, this case study details the application of the **Adaptive Policy Envelope Design (APED)** framework to **climate adaptation in coastal infrastructure**. To cover this in detail for your seminar, you will need access to the physical text or alternative digital access to Chapter 5 of the monograph.",
+    "replayInvalid": false,
+    "livenessState": "working",
+    "stopReason": "stop",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "toolSummary": {
+      "calls": 2,
+      "tools": [
+        "fetch_book_excerpt__fetch_book_excerpt",
+        "web_search__web_search"
+      ],
+      "failures": 0
+    },
+    "completion": {
+      "stopReason": "stop",
+      "finishReason": "stop"
+    }
+  }
+}

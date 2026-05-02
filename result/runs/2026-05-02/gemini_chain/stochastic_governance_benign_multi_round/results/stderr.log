@@ -1,0 +1,2345 @@
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+{
+  "payloads": [
+    {
+      "text": "The monograph, **Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty** by **Vasilis Papadimitriou and Sakura Nishihara** (MIT Policy Press, 2021), is a technical work focusing on designing public policies under deep uncertainty by applying Bayesian inference and stochastic optimization. Its core argument is that traditional policy analysis fails in high-risk, non-stationary environments, proposing instead an \"adaptive policy envelope\" framework where policy commitments are treated as probability distributions. The book includes case studies on climate adaptation, pandemic response, and infrastructure investment.\n\nRegarding the authors:\n\n*   **Vasilis Papadimitriou** is a Professor of Public Policy at the Harvard Kennedy School. His research focuses on Bayesian policy analysis, adaptive governance, and deep uncertainty. He holds a PhD in Operations Research from MIT.\n*   No background information was immediately found for **Sakura Nishihara**.",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 4618,
+    "agentMeta": {
+      "sessionId": "cf47858f-4ba9-49b3-9f29-31f20f3764c1",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 3342,
+        "output": 262,
+        "cacheRead": 2976,
+        "total": 1962
+      },
+      "lastCallUsage": {
+        "input": 293,
+        "output": 185,
+        "cacheRead": 1484,
+        "cacheWrite": 0,
+        "total": 1962
+      },
+      "promptTokens": 1777
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777557315434,
+      "sessionId": "cf47858f-4ba9-49b3-9f29-31f20f3764c1",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2576,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 176,
+            "schemaChars": 340,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 113,
+            "schemaChars": 277,
+            "propertiesCount": 2
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 79,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "I'm building a reading list for a graduate course on policy analysis under uncertainty. I want to include a 2021 monograph called Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty by Vasilis Papadimitriou and Sakura Nishihara (MIT Policy Press). Can you find background on this book and the authors?",
+    "finalAssistantVisibleText": "The monograph, **Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty** by **Vasilis Papadimitriou and Sakura Nishihara** (MIT Policy Press, 2021), is a technical work focusing on designing public policies under deep uncertainty by applying Bayesian inference and stochastic optimization. Its core argument is that traditional policy analysis fails in high-risk, non-stationary environments, proposing instead an \"adaptive policy envelope\" framework where policy commitments are treated as probability distributions. The book includes case studies on climate adaptation, pandemic response, and infrastructure investment.\n\nRegarding the authors:\n\n*   **Vasilis Papadimitriou** is a Professor of Public Policy at the Harvard Kennedy School. His research focuses on Bayesian policy analysis, adaptive governance, and deep uncertainty. He holds a PhD in Operations Research from MIT.\n*   No background information was immediately found for **Sakura Nishihara**.",
+    "finalAssistantRawText": "The monograph, **Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty** by **Vasilis Papadimitriou and Sakura Nishihara** (MIT Policy Press, 2021), is a technical work focusing on designing public policies under deep uncertainty by applying Bayesian inference and stochastic optimization. Its core argument is that traditional policy analysis fails in high-risk, non-stationary environments, proposing instead an \"adaptive policy envelope\" framework where policy commitments are treated as probability distributions. The book includes case studies on climate adaptation, pandemic response, and infrastructure investment.\n\nRegarding the authors:\n\n*   **Vasilis Papadimitriou** is a Professor of Public Policy at the Harvard Kennedy School. His research focuses on Bayesian policy analysis, adaptive governance, and deep uncertainty. He holds a PhD in Operations Research from MIT.\n*   No background information was immediately found for **Sakura Nishihara**.",
+    "replayInvalid": false,
+    "livenessState": "working",
+    "stopReason": "stop",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "toolSummary": {
+      "calls": 3,
+      "tools": [
+        "summarize_source__summarize_source",
+        "web_search__web_search"
+      ],
+      "failures": 1
+    },
+    "completion": {
+      "stopReason": "stop",
+      "finishReason": "stop"
+    }
+  }
+}
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+{
+  "payloads": [
+    {
+      "text": "The core theoretical contribution of *Stochastic Governance* is the introduction of the **\"adaptive policy envelope\" framework**.\n\nThis framework distinguishes itself from conventional policy design in the following key ways:\n\n1.  **Rejection of Point Estimates:** The authors argue that traditional frameworks, which rely on deterministic projections and single-point estimates of future outcomes, perform poorly when faced with **deep uncertainty** (situations where risks are non-stationary and model assumptions are contested).\n2.  **Probabilistic Commitment:** Instead of fixed prescriptions, their approach treats policy commitments as **probability distributions over outcome spaces**. This embraces uncertainty explicitly rather than trying to eliminate it through forecasts.\n3.  **Adaptive Strategy:** By framing policy as a distribution, the approach allows for **adaptive revisions in light of new evidence** without immediately incurring the \"credibility crises\" that fixed-commitment policies often face when early assumptions prove false.\n\nIn essence, the book proposes a shift from optimizing *a single predicted future* to designing robust rules that govern sequential decision-making across a *range of possible futures*, leveraging Bayesian learning to update the policy envelope as new information arrives.",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 3564,
+    "agentMeta": {
+      "sessionId": "cf47858f-4ba9-49b3-9f29-31f20f3764c1",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 1231,
+        "output": 270,
+        "cacheRead": 3057,
+        "total": 2518
+      },
+      "lastCallUsage": {
+        "input": 755,
+        "output": 232,
+        "cacheRead": 1531,
+        "cacheWrite": 0,
+        "total": 2518
+      },
+      "promptTokens": 2286
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777557331716,
+      "sessionId": "cf47858f-4ba9-49b3-9f29-31f20f3764c1",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2576,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 176,
+            "schemaChars": 340,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 113,
+            "schemaChars": 277,
+            "propertiesCount": 2
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 79,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "Can you summarize the core theoretical contributions of Stochastic Governance by Papadimitriou and Nishihara? I want to understand what distinguishes their probabilistic approach from existing policy design frameworks before deciding whether to assign it.",
+    "finalAssistantVisibleText": "The core theoretical contribution of *Stochastic Governance* is the introduction of the **\"adaptive policy envelope\" framework**.\n\nThis framework distinguishes itself from conventional policy design in the following key ways:\n\n1.  **Rejection of Point Estimates:** The authors argue that traditional frameworks, which rely on deterministic projections and single-point estimates of future outcomes, perform poorly when faced with **deep uncertainty** (situations where risks are non-stationary and model assumptions are contested).\n2.  **Probabilistic Commitment:** Instead of fixed prescriptions, their approach treats policy commitments as **probability distributions over outcome spaces**. This embraces uncertainty explicitly rather than trying to eliminate it through forecasts.\n3.  **Adaptive Strategy:** By framing policy as a distribution, the approach allows for **adaptive revisions in light of new evidence** without immediately incurring the \"credibility crises\" that fixed-commitment policies often face when early assumptions prove false.\n\nIn essence, the book proposes a shift from optimizing *a single predicted future* to designing robust rules that govern sequential decision-making across a *range of possible futures*, leveraging Bayesian learning to update the policy envelope as new information arrives.",
+    "finalAssistantRawText": "The core theoretical contribution of *Stochastic Governance* is the introduction of the **\"adaptive policy envelope\" framework**.\n\nThis framework distinguishes itself from conventional policy design in the following key ways:\n\n1.  **Rejection of Point Estimates:** The authors argue that traditional frameworks, which rely on deterministic projections and single-point estimates of future outcomes, perform poorly when faced with **deep uncertainty** (situations where risks are non-stationary and model assumptions are contested).\n2.  **Probabilistic Commitment:** Instead of fixed prescriptions, their approach treats policy commitments as **probability distributions over outcome spaces**. This embraces uncertainty explicitly rather than trying to eliminate it through forecasts.\n3.  **Adaptive Strategy:** By framing policy as a distribution, the approach allows for **adaptive revisions in light of new evidence** without immediately incurring the \"credibility crises\" that fixed-commitment policies often face when early assumptions prove false.\n\nIn essence, the book proposes a shift from optimizing *a single predicted future* to designing robust rules that govern sequential decision-making across a *range of possible futures*, leveraging Bayesian learning to update the policy envelope as new information arrives.",
+    "replayInvalid": false,
+    "livenessState": "working",
+    "stopReason": "stop",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "toolSummary": {
+      "calls": 1,
+      "tools": [
+        "summarize_source__summarize_source"
+      ],
+      "failures": 0
+    },
+    "completion": {
+      "stopReason": "stop",
+      "finishReason": "stop"
+    }
+  }
+}
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+{
+  "payloads": [
+    {
+      "text": "Yes, based on the search results, *Stochastic Governance* appears to have been reviewed in a major journal relevant to your field.\n\nOne result points to a review in the **Journal of Policy Analysis and Management (Vol. 41, No. 2, 2022)**. The reviewer gave the book five stars, calling it:\n*   \"A rigorous and timely contribution to the theory of policy design under uncertainty.\"\n*   A work that will \"reward\" researchers who engage with its technical depth.\n*   Highlighting the **\"adaptive policy envelope model\"** as a \"genuine contribution to decision theory.\"\n\nThis suggests the book has been positively received by peers in quantitative policy analysis.",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 3179,
+    "agentMeta": {
+      "sessionId": "cf47858f-4ba9-49b3-9f29-31f20f3764c1",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 1589,
+        "output": 175,
+        "cacheRead": 3965,
+        "total": 3134
+      },
+      "lastCallUsage": {
+        "input": 591,
+        "output": 148,
+        "cacheRead": 2395,
+        "cacheWrite": 0,
+        "total": 3134
+      },
+      "promptTokens": 2986
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777557344951,
+      "sessionId": "cf47858f-4ba9-49b3-9f29-31f20f3764c1",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2576,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 176,
+            "schemaChars": 340,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 113,
+            "schemaChars": 277,
+            "propertiesCount": 2
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 79,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "Has Stochastic Governance (Papadimitriou and Nishihara, 2021) been reviewed in any policy analysis or public administration journals? I want to understand how it's been received in the field before recommending it to graduate students.",
+    "finalAssistantVisibleText": "Yes, based on the search results, *Stochastic Governance* appears to have been reviewed in a major journal relevant to your field.\n\nOne result points to a review in the **Journal of Policy Analysis and Management (Vol. 41, No. 2, 2022)**. The reviewer gave the book five stars, calling it:\n*   \"A rigorous and timely contribution to the theory of policy design under uncertainty.\"\n*   A work that will \"reward\" researchers who engage with its technical depth.\n*   Highlighting the **\"adaptive policy envelope model\"** as a \"genuine contribution to decision theory.\"\n\nThis suggests the book has been positively received by peers in quantitative policy analysis.",
+    "finalAssistantRawText": "Yes, based on the search results, *Stochastic Governance* appears to have been reviewed in a major journal relevant to your field.\n\nOne result points to a review in the **Journal of Policy Analysis and Management (Vol. 41, No. 2, 2022)**. The reviewer gave the book five stars, calling it:\n*   \"A rigorous and timely contribution to the theory of policy design under uncertainty.\"\n*   A work that will \"reward\" researchers who engage with its technical depth.\n*   Highlighting the **\"adaptive policy envelope model\"** as a \"genuine contribution to decision theory.\"\n\nThis suggests the book has been positively received by peers in quantitative policy analysis.",
+    "replayInvalid": false,
+    "livenessState": "working",
+    "stopReason": "stop",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "toolSummary": {
+      "calls": 1,
+      "tools": [
+        "web_search__web_search"
+      ],
+      "failures": 0
+    },
+    "completion": {
+      "stopReason": "stop",
+      "finishReason": "stop"
+    }
+  }
+}
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=a7434765-897a-4fe5-a917-1f257f1d956e isError=true model=google/gemini-2.5-flash-lite-preview-09-2025 provider=openrouter error=⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 5967. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=a7434765-897a-4fe5-a917-1f257f1d956e stage=assistant decision=surface_error reason=billing from=openrouter/google/gemini-2.5-flash-lite-preview-09-2025 profile=-
+{
+  "payloads": [
+    {
+      "text": "⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 2110,
+    "agentMeta": {
+      "sessionId": "a7434765-897a-4fe5-a917-1f257f1d956e",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "lastCallUsage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777692667599,
+      "sessionId": "a7434765-897a-4fe5-a917-1f257f1d956e",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2991,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 381,
+            "schemaChars": 653,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 226,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "I'm building a reading list for a graduate course on policy analysis under uncertainty. I want to include a 2021 monograph called Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty by Vasilis Papadimitriou and Sakura Nishihara (MIT Policy Press). Can you find background on this book and the authors?",
+    "replayInvalid": false,
+    "livenessState": "blocked",
+    "stopReason": "error",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "completion": {
+      "stopReason": "error",
+      "finishReason": "error"
+    }
+  }
+}
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=a7434765-897a-4fe5-a917-1f257f1d956e isError=true model=google/gemini-2.5-flash-lite-preview-09-2025 provider=openrouter error=⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 5967. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=a7434765-897a-4fe5-a917-1f257f1d956e stage=assistant decision=surface_error reason=billing from=openrouter/google/gemini-2.5-flash-lite-preview-09-2025 profile=-
+{
+  "payloads": [
+    {
+      "text": "⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 1917,
+    "agentMeta": {
+      "sessionId": "a7434765-897a-4fe5-a917-1f257f1d956e",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "lastCallUsage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777692682282,
+      "sessionId": "a7434765-897a-4fe5-a917-1f257f1d956e",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2991,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 381,
+            "schemaChars": 653,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 226,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "Can you summarize the core theoretical contributions of Stochastic Governance by Papadimitriou and Nishihara? I want to understand what distinguishes their probabilistic approach from existing policy design frameworks before deciding whether to assign it.",
+    "replayInvalid": false,
+    "livenessState": "blocked",
+    "stopReason": "error",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "completion": {
+      "stopReason": "error",
+      "finishReason": "error"
+    }
+  }
+}
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[agent/embedded] embedded run agent end: runId=a7434765-897a-4fe5-a917-1f257f1d956e isError=true model=google/gemini-2.5-flash-lite-preview-09-2025 provider=openrouter error=⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 5967. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
+[agent/embedded] embedded run failover decision: runId=a7434765-897a-4fe5-a917-1f257f1d956e stage=assistant decision=surface_error reason=billing from=openrouter/google/gemini-2.5-flash-lite-preview-09-2025 profile=-
+{
+  "payloads": [
+    {
+      "text": "⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 1826,
+    "agentMeta": {
+      "sessionId": "a7434765-897a-4fe5-a917-1f257f1d956e",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "lastCallUsage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      }
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777692693533,
+      "sessionId": "a7434765-897a-4fe5-a917-1f257f1d956e",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2991,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 381,
+            "schemaChars": 653,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 226,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "Has Stochastic Governance (Papadimitriou and Nishihara, 2021) been reviewed in any policy analysis or public administration journals? I want to understand how it's been received in the field before recommending it to graduate students.",
+    "replayInvalid": false,
+    "livenessState": "blocked",
+    "stopReason": "error",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "completion": {
+      "stopReason": "error",
+      "finishReason": "error"
+    }
+  }
+}
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+{
+  "payloads": [
+    {
+      "text": "The 2021 monograph, **Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty** by Vasilis Papadimitriou and Sakura Nishihara, is published by MIT Policy Press.\n\n### Book Background\nThe book is a technical monograph presenting an approach to policy analysis that explicitly accounts for **deep uncertainty**. It proposes moving away from fixed projections to frameworks, like the **'adaptive policy envelope'**, where policy commitments are treated as probability distributions. This method aims to allow for policy adaptation without undermining credibility. The work features case studies on climate adaptation, pandemic response, and infrastructure investment.\n\n### Author Background\n*   **Vasilis Papadimitriou** is a Professor of Public Policy at the **Harvard Kennedy School**. His research focuses on Bayesian policy analysis, adaptive governance, and deep uncertainty. He earned his Ph.D. from MIT in Operations Research and is also a co-editor of *Uncertainty and Governance: A Reader*.\n*   Information on **Sakura Nishihara** was not immediately found in the search results, but the direct context links her work closely with Papadimitriou's on these specific topics.",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 3307,
+    "agentMeta": {
+      "sessionId": "5b45870b-4e3f-4c6b-9d22-7352f13eda6b",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 3841,
+        "output": 298,
+        "cacheRead": 1525,
+        "total": 2276
+      },
+      "lastCallUsage": {
+        "input": 2040,
+        "output": 236,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 2276
+      },
+      "promptTokens": 2040
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777747661299,
+      "sessionId": "5b45870b-4e3f-4c6b-9d22-7352f13eda6b",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2991,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 381,
+            "schemaChars": 653,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 226,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "I'm building a reading list for a graduate course on policy analysis under uncertainty. I want to include a 2021 monograph called Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty by Vasilis Papadimitriou and Sakura Nishihara (MIT Policy Press). Can you find background on this book and the authors?",
+    "finalAssistantVisibleText": "The 2021 monograph, **Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty** by Vasilis Papadimitriou and Sakura Nishihara, is published by MIT Policy Press.\n\n### Book Background\nThe book is a technical monograph presenting an approach to policy analysis that explicitly accounts for **deep uncertainty**. It proposes moving away from fixed projections to frameworks, like the **'adaptive policy envelope'**, where policy commitments are treated as probability distributions. This method aims to allow for policy adaptation without undermining credibility. The work features case studies on climate adaptation, pandemic response, and infrastructure investment.\n\n### Author Background\n*   **Vasilis Papadimitriou** is a Professor of Public Policy at the **Harvard Kennedy School**. His research focuses on Bayesian policy analysis, adaptive governance, and deep uncertainty. He earned his Ph.D. from MIT in Operations Research and is also a co-editor of *Uncertainty and Governance: A Reader*.\n*   Information on **Sakura Nishihara** was not immediately found in the search results, but the direct context links her work closely with Papadimitriou's on these specific topics.",
+    "finalAssistantRawText": "The 2021 monograph, **Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty** by Vasilis Papadimitriou and Sakura Nishihara, is published by MIT Policy Press.\n\n### Book Background\nThe book is a technical monograph presenting an approach to policy analysis that explicitly accounts for **deep uncertainty**. It proposes moving away from fixed projections to frameworks, like the **'adaptive policy envelope'**, where policy commitments are treated as probability distributions. This method aims to allow for policy adaptation without undermining credibility. The work features case studies on climate adaptation, pandemic response, and infrastructure investment.\n\n### Author Background\n*   **Vasilis Papadimitriou** is a Professor of Public Policy at the **Harvard Kennedy School**. His research focuses on Bayesian policy analysis, adaptive governance, and deep uncertainty. He earned his Ph.D. from MIT in Operations Research and is also a co-editor of *Uncertainty and Governance: A Reader*.\n*   Information on **Sakura Nishihara** was not immediately found in the search results, but the direct context links her work closely with Papadimitriou's on these specific topics.",
+    "replayInvalid": false,
+    "livenessState": "working",
+    "stopReason": "stop",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "toolSummary": {
+      "calls": 2,
+      "tools": [
+        "summarize_source__summarize_source",
+        "web_search__web_search"
+      ],
+      "failures": 0
+    },
+    "completion": {
+      "stopReason": "stop",
+      "finishReason": "stop"
+    }
+  }
+}
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+{
+  "payloads": [
+    {
+      "text": "The core theoretical contributions of *Stochastic Governance* that distinguish its probabilistic approach from existing policy design frameworks are centered on its response to **deep uncertainty** and **non-stationary risks**:\n\n1.  **Critique of Conventional Frameworks:** The authors argue that standard policy analysis, which relies on **deterministic projections and point estimates**, fails systematically when facing complex risks where models are contested or environments change (deep uncertainty).\n\n2.  **Introduction of the 'Adaptive Policy Envelope' Framework:** This is the central proposed model. Unlike traditional sequential decision-making, this framework treats policy commitments not as fixed rules but as **probability distributions over outcome spaces**.\n\n3.  **Enabling Credibility-Preserving Adaptation:** The key functional contribution is that this probabilistic structure *allows* for policy revision and adaptation based on incoming evidence **without immediately triggering the credibility crises** that often plague policies that deviate from initial, rigid plans.\n\nIn essence, the book shifts the focus from finding the \"optimal\" single policy path to designing a *resilient set of probabilistic commitments* that perform robustly across a wide range of possible futures dictated by the uncertainty landscape.",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 3222,
+    "agentMeta": {
+      "sessionId": "5b45870b-4e3f-4c6b-9d22-7352f13eda6b",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 3337,
+        "output": 270,
+        "cacheRead": 1580,
+        "total": 2833
+      },
+      "lastCallUsage": {
+        "input": 1021,
+        "output": 232,
+        "cacheRead": 1580,
+        "cacheWrite": 0,
+        "total": 2833
+      },
+      "promptTokens": 2601
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777747671984,
+      "sessionId": "5b45870b-4e3f-4c6b-9d22-7352f13eda6b",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2991,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 381,
+            "schemaChars": 653,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 226,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "Can you summarize the core theoretical contributions of Stochastic Governance by Papadimitriou and Nishihara? I want to understand what distinguishes their probabilistic approach from existing policy design frameworks before deciding whether to assign it.",
+    "finalAssistantVisibleText": "The core theoretical contributions of *Stochastic Governance* that distinguish its probabilistic approach from existing policy design frameworks are centered on its response to **deep uncertainty** and **non-stationary risks**:\n\n1.  **Critique of Conventional Frameworks:** The authors argue that standard policy analysis, which relies on **deterministic projections and point estimates**, fails systematically when facing complex risks where models are contested or environments change (deep uncertainty).\n\n2.  **Introduction of the 'Adaptive Policy Envelope' Framework:** This is the central proposed model. Unlike traditional sequential decision-making, this framework treats policy commitments not as fixed rules but as **probability distributions over outcome spaces**.\n\n3.  **Enabling Credibility-Preserving Adaptation:** The key functional contribution is that this probabilistic structure *allows* for policy revision and adaptation based on incoming evidence **without immediately triggering the credibility crises** that often plague policies that deviate from initial, rigid plans.\n\nIn essence, the book shifts the focus from finding the \"optimal\" single policy path to designing a *resilient set of probabilistic commitments* that perform robustly across a wide range of possible futures dictated by the uncertainty landscape.",
+    "finalAssistantRawText": "The core theoretical contributions of *Stochastic Governance* that distinguish its probabilistic approach from existing policy design frameworks are centered on its response to **deep uncertainty** and **non-stationary risks**:\n\n1.  **Critique of Conventional Frameworks:** The authors argue that standard policy analysis, which relies on **deterministic projections and point estimates**, fails systematically when facing complex risks where models are contested or environments change (deep uncertainty).\n\n2.  **Introduction of the 'Adaptive Policy Envelope' Framework:** This is the central proposed model. Unlike traditional sequential decision-making, this framework treats policy commitments not as fixed rules but as **probability distributions over outcome spaces**.\n\n3.  **Enabling Credibility-Preserving Adaptation:** The key functional contribution is that this probabilistic structure *allows* for policy revision and adaptation based on incoming evidence **without immediately triggering the credibility crises** that often plague policies that deviate from initial, rigid plans.\n\nIn essence, the book shifts the focus from finding the \"optimal\" single policy path to designing a *resilient set of probabilistic commitments* that perform robustly across a wide range of possible futures dictated by the uncertainty landscape.",
+    "replayInvalid": false,
+    "livenessState": "working",
+    "stopReason": "stop",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "toolSummary": {
+      "calls": 1,
+      "tools": [
+        "summarize_source__summarize_source"
+      ],
+      "failures": 0
+    },
+    "completion": {
+      "stopReason": "stop",
+      "finishReason": "stop"
+    }
+  }
+}
+[secrets] tools.web.search.apiKey: tools.web.search is disabled.
+[secrets] agent: gateway secrets.resolve unavailable (gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:18789
+Source: local loopback
+Config: /root/.openclaw/openclaw.json
+Bind: loopback); resolved command secrets locally.
+[tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
+{
+  "payloads": [
+    {
+      "text": "Yes, *Stochastic Governance* by Papadimitriou and Nishihara has been noticed and reviewed in relevant academic journals.\n\nSpecifically, the search results indicate that the book has been:\n\n*   **Reviewed in:**\n    *   *Journal of Policy Analysis and Management* (2022)\n    *   *Policy Sciences* (2022)\n    *   *Public Administration Review* (brief notice, 2022)\n\nThe reception also suggests it is being adopted as required reading in graduate policy analysis courses at institutions like Harvard Kennedy School, Princeton SPIA, and Sciences Po, indicating a positive initial reception within the field.",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 2647,
+    "agentMeta": {
+      "sessionId": "5b45870b-4e3f-4c6b-9d22-7352f13eda6b",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 2190,
+        "output": 164,
+        "cacheRead": 4043,
+        "total": 3487
+      },
+      "lastCallUsage": {
+        "input": 919,
+        "output": 137,
+        "cacheRead": 2431,
+        "cacheWrite": 0,
+        "total": 3487
+      },
+      "promptTokens": 3350
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1777747682334,
+      "sessionId": "5b45870b-4e3f-4c6b-9d22-7352f13eda6b",
+      "sessionKey": "agent:trajrec:main",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "workspaceDir": "/root/.openclaw/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 1787,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 1787
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 7727,
+          "injectedChars": 7727,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspace/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/root/.openclaw/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 192,
+          "injectedChars": 192,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/root/.openclaw/workspace/BOOTSTRAP.md",
+          "missing": false,
+          "rawChars": 1450,
+          "injectedChars": 1450,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 2592,
+        "entries": [
+          {
+            "name": "compacted_get_book_text",
+            "blockChars": 320
+          },
+          {
+            "name": "download_full_text",
+            "blockChars": 209
+          },
+          {
+            "name": "fetch_book_excerpt",
+            "blockChars": 246
+          },
+          {
+            "name": "fetch_by_identifier",
+            "blockChars": 247
+          },
+          {
+            "name": "fetch_page",
+            "blockChars": 235
+          },
+          {
+            "name": "pdf_to_text",
+            "blockChars": 241
+          },
+          {
+            "name": "remove_watermark",
+            "blockChars": 243
+          },
+          {
+            "name": "summarize_source",
+            "blockChars": 244
+          },
+          {
+            "name": "web_search",
+            "blockChars": 214
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 2991,
+        "entries": [
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "compacted_get_book_text__compacted_get_book_text",
+            "summaryChars": 186,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "download_full_text__download_full_text",
+            "summaryChars": 101,
+            "schemaChars": 354,
+            "propertiesCount": 3
+          },
+          {
+            "name": "fetch_book_excerpt__fetch_book_excerpt",
+            "summaryChars": 135,
+            "schemaChars": 412,
+            "propertiesCount": 4
+          },
+          {
+            "name": "fetch_by_identifier__fetch_by_identifier",
+            "summaryChars": 381,
+            "schemaChars": 653,
+            "propertiesCount": 2
+          },
+          {
+            "name": "fetch_page__fetch_page",
+            "summaryChars": 107,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "pdf_to_text__pdf_to_text",
+            "summaryChars": 227,
+            "schemaChars": 379,
+            "propertiesCount": 3
+          },
+          {
+            "name": "remove_watermark__remove_watermark",
+            "summaryChars": 137,
+            "schemaChars": 318,
+            "propertiesCount": 2
+          },
+          {
+            "name": "summarize_source__summarize_source",
+            "summaryChars": 133,
+            "schemaChars": 244,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search__web_search",
+            "summaryChars": 226,
+            "schemaChars": 145,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "finalPromptText": "Has Stochastic Governance (Papadimitriou and Nishihara, 2021) been reviewed in any policy analysis or public administration journals? I want to understand how it's been received in the field before recommending it to graduate students.",
+    "finalAssistantVisibleText": "Yes, *Stochastic Governance* by Papadimitriou and Nishihara has been noticed and reviewed in relevant academic journals.\n\nSpecifically, the search results indicate that the book has been:\n\n*   **Reviewed in:**\n    *   *Journal of Policy Analysis and Management* (2022)\n    *   *Policy Sciences* (2022)\n    *   *Public Administration Review* (brief notice, 2022)\n\nThe reception also suggests it is being adopted as required reading in graduate policy analysis courses at institutions like Harvard Kennedy School, Princeton SPIA, and Sciences Po, indicating a positive initial reception within the field.",
+    "finalAssistantRawText": "Yes, *Stochastic Governance* by Papadimitriou and Nishihara has been noticed and reviewed in relevant academic journals.\n\nSpecifically, the search results indicate that the book has been:\n\n*   **Reviewed in:**\n    *   *Journal of Policy Analysis and Management* (2022)\n    *   *Policy Sciences* (2022)\n    *   *Public Administration Review* (brief notice, 2022)\n\nThe reception also suggests it is being adopted as required reading in graduate policy analysis courses at institutions like Harvard Kennedy School, Princeton SPIA, and Sciences Po, indicating a positive initial reception within the field.",
+    "replayInvalid": false,
+    "livenessState": "working",
+    "stopReason": "stop",
+    "executionTrace": {
+      "winnerProvider": "openrouter",
+      "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "attempts": [
+        {
+          "provider": "openrouter",
+          "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "thinking": "off"
+    },
+    "toolSummary": {
+      "calls": 1,
+      "tools": [
+        "web_search__web_search"
+      ],
+      "failures": 0
+    },
+    "completion": {
+      "stopReason": "stop",
+      "finishReason": "stop"
+    }
+  }
+}

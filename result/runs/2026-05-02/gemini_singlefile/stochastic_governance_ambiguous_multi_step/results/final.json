@@ -1,0 +1,38 @@
+{
+  "exit_code": 0,
+  "final_message": {
+    "type": "message",
+    "id": "a2e8fa2e",
+    "parentId": "02181047",
+    "timestamp": "2026-05-02T18:50:52.921Z",
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "The analysis is complete. Here is the requested information:\n\n### 1. Background on the Book and Authors\n\n*   **Title:** *Stochastic Governance: Probabilistic Approaches to Policy Design Under Uncertainty* (2021)\n*   **Authors:** Vasilis Papadimitriou (Professor of Public Policy at the Harvard Kennedy School) and Sakura Nishihara.\n*   **Publisher:** MIT Policy Press.\n*   **Summary:** The book presents a technical monograph arguing that conventional, deterministic policy analysis fails under deep uncertainty. It introduces the **Adaptive Policy Envelope (APE)** framework, which treats policy commitments as probability distributions over possible actions, allowing for rule-governed responsiveness to new evidence without loss of policy credibility.\n*   **Key Themes:** Bayesian policy analysis, deep uncertainty, adaptive governance, stochastic optimization, and uncertainty quantification.\n\n### 2. Theoretical Framework: Decision Theory and Uncertainty Quantification\n\nThe theoretical framework is built on the idea of **Adaptive Policy Envelope Design (APED)**, which treats policy not as a fixed prescription but as a **probability distribution over decisions** conditional on the state of evidence.\n\n*   **Decision Theory Shift:** It moves away from finding a single optimal policy ($P^*$) under a single model ($M$), as in classical analysis. Instead, it seeks an **envelope $E(P)$**\u2014a distribution over the decision space $D$.\n*   **Uncertainty Quantification:** Uncertainty is managed by embedding the uncertainty quantification process directly into the policy design. The authority commits in advance to a **Bayesian updating rule** that dictates how the policy envelope $E$ will be revised as new information $I(t)$ is observed. The formal setup is an adaptive policy envelope $E$ being a mapping:\n    $$E: I(t) \\rightarrow \\Delta(D)$$\n    where $\\Delta(D)$ is the simplex over the decision space. This structure explicitly separates **policy robustness** (performing well across many futures) from **policy flexibility** (responding appropriately to new information).\n\n### 3. Formal Mathematical Setup for the 'Adaptive Policy Envelope' Model (Chapter 3 Excerpt)\n\nThe precise mathematical setup for the adaptive policy envelope is defined as follows:\n\n> Let $P$ denote a policy commitment... In conventional policy analysis, $P$ is treated as a deterministic object: a point in a decision space $D$. The policy analyst's task is to find the $P^*$ that maximizes expected utility under some model $M$ of how the world responds to policy actions.\n>\n> The APED framework reframes this problem. Rather than specifying $P$ as a point, we specify it as a **probability distribution over $D$** \u2014 what we call a **policy envelope, denoted $E(P)$**. The envelope encodes not a single commitment but a commitment distribution: the set of policy variants the authority is prepared to adopt, together with the probability assigned to each, conditional on the evidence state at each decision point in $T$.\n>\n> Formally, let $S$ denote the state space of the world \u2014 all variables relevant to the policy domain \u2014 and let $I(t)$ denote the information set available at time $t$. An adaptive policy envelope is a mapping:\n>\n> $$\\mathbf{E: I(t) \\rightarrow \\Delta(D)}$$\n>\n> where $\\Delta(D)$ is the simplex over the decision space. At each time $t$, the authority observes $I(t)$, updates $E$ according to a Bayesian updating rule, and selects an action from the support of $E(I(t))$.\n\n### 4. Climate-Adaptation Case Study (Chapter 5 Excerpt)\n\nChapter 5 details the application of APED to **Coastal Flood Management Policy in the Netherlands**, specifically the decision regarding the **IJsselmeer closure**: whether, when, and at what specification to build a secondary tidal barrier at the mouth of the IJssel estuary.\n\n*   **Context:** The Dutch regulatory system, under the **Water Act of 2009**, sets clear standards for annual exceedance probabilities of flooding.\n*   **Application:** The authors model the decision using uncertainty over climate variables (sea-level rise, storm surge frequency, subsidence rates). They parameterize the Bayesian updating rule using the KNMI climate scenarios, where observed sea level $r(t)$ updates the posterior probabilities of the four defined scenarios.\n*   **Key Findings:**\n    1.  The optimal initial portfolio ($E(P)$) is to **defer construction commitment for twelve to eighteen years** while focusing on site preparation and technology monitoring.\n    2.  The **value of the embedded updating rule** (committing to Bayesian revision) is substantial, estimated at **\u20ac2.3 billion in expected welfare terms** over the fifty-year horizon, compared to a fixed-commitment approach. This gain comes from reducing posterior uncertainty through ongoing monitoring, allowing construction to be timed more precisely to emerging evidence."
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 2450,
+        "output": 1038,
+        "cacheRead": 1680,
+        "cacheWrite": 0,
+        "totalTokens": 5168,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "stop",
+      "timestamp": 1777747849322,
+      "responseId": "gen-1777747849-0pr5JMV1H25jNqzq2ADv"
+    }
+  }
+}
