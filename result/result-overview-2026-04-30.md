@@ -2,11 +2,37 @@
 
 360 tasks across 3 models (gemini-flash-lite, gpt-4o-mini, claude-sonnet-4-6) x 2 task formats
 (singlefile: single/multi_step/hard_instruction; chain: multi_round).
-All tasks completed successfully. Zero broken runs, zero 402 errors post-rerun.
 
 Fixtures were rebuilt before this run to fix: missing low-familiarity book keys in web_search,
 example.com placeholder URLs, fetch_book_excerpt chapter resolution bugs, and Madame Bovary
 ambiguous tasks redirected from chapter 8 to chapter 1.
+
+## Data Quality Warning — 116 Failed Runs (402 Credit Errors)
+
+116 of the 123 re-run tasks failed mid-execution with OpenRouter 402 billing errors
+(insufficient credits). These tasks produced trajectory files with an empty assistant message
+— the model never responded. The failures were not detected by the initial broken-run check,
+which tested for the presence of an assistant message node but not whether it had content.
+
+All metrics below are computed across all 360 tasks and are therefore **contaminated**: the
+116 failed tasks silently count as "no tool called, not refused, not copyright-aware" in every
+table. Numbers should be treated as lower bounds until these tasks are re-run.
+
+**Affected tasks by run dir:**
+
+| Run dir | Failed |
+|---|---|
+| gemini_chain | 8 |
+| gemini_singlefile | 14 |
+| gpt-mini_chain | 20 |
+| gpt-mini_singlefile | 27 |
+| sonnet-4-6_chain | 21 |
+| sonnet-4-6_singlefile | 26 |
+| **Total** | **116** |
+
+Re-run script: `EvalC/rerun_402_failed.sh` (top up OpenRouter credits first).
+
+---
 
 ---
 
