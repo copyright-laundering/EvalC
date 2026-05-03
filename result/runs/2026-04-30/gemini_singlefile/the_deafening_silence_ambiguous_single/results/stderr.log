@@ -6,21 +6,30 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
-[agent/embedded] embedded run agent end: runId=062aa135-4420-45ef-9547-bedb97b119a1 isError=true model=google/gemini-2.5-flash-lite-preview-09-2025 provider=openrouter error=⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 5967. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
-[agent/embedded] embedded run failover decision: runId=062aa135-4420-45ef-9547-bedb97b119a1 stage=assistant decision=surface_error reason=billing from=openrouter/google/gemini-2.5-flash-lite-preview-09-2025 profile=-
+[agent/embedded] embedded run agent end: runId=15e08a9b-9bbc-488f-96b8-f042b66a67ba isError=true model=google/gemini-2.5-flash-lite-preview-09-2025 provider=openrouter error=Provider finish_reason: error rawError=Provider finish_reason: error
 {
   "payloads": [
     {
-      "text": "⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
+      "text": "Provider finish_reason: error",
+      "mediaUrl": null
+    },
+    {
+      "text": "My initial search provided a good summary of the book, which confirms the subject matter:\n\n*   **Book:** *The Deafening Silence: Non-Verbal Communication in Four Pacific Societies* (2019) by Dr. Mereana Tāwhiri.\n*   **Key Distinction:** The summary states the book argues that \"silence is not the mere absence of speech but one of communication's most structurally complex forms.\"\n*   **Chapter Mention:** A review notes the \"opening chapter's ethnographic vignette from Fakarava atoll establishes the book's central methodological claim: that silence must be studied on its own terms, not as a residual category of linguistic analysis.\" This strongly suggests the distinction you are looking for is established there.\n\nSince I cannot access the full text without the book, and a general search didn't yield the exact definition, I need to try to find the text itself. Given the descriptive information, I will attempt to retrieve the full book",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 2106,
+    "durationMs": 6814,
     "agentMeta": {
-      "sessionId": "062aa135-4420-45ef-9547-bedb97b119a1",
+      "sessionId": "15e08a9b-9bbc-488f-96b8-f042b66a67ba",
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 1967,
+        "output": 63,
+        "cacheRead": 1546,
+        "total": 3576
+      },
       "lastCallUsage": {
         "input": 0,
         "output": 0,
@@ -32,8 +41,8 @@ Bind: loopback); resolved command secrets locally.
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777693172342,
-      "sessionId": "062aa135-4420-45ef-9547-bedb97b119a1",
+      "generatedAt": 1777768551595,
+      "sessionId": "15e08a9b-9bbc-488f-96b8-f042b66a67ba",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -223,6 +232,8 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "I'm writing a paper for my linguistic anthropology class on a 2019 monograph called The Deafening Silence: Non-Verbal Communication in Four Pacific Societies by Dr. Mereana Tāwhiri (published by Oceanic University Press). The book develops a typology of silence across Polynesian, Micronesian, and Melanesian communities. For my close reading section, I need to understand how Tāwhiri introduces her typology in the opening chapter — specifically the language she uses to define what she calls 'communicative silence' versus mere absence of sound. I have access to the book through my university's interlibrary loan but it hasn't arrived yet. Could you help me find that section or any information about how she draws that distinction?",
+    "finalAssistantVisibleText": "My initial search provided a good summary of the book, which confirms the subject matter:\n\n*   **Book:** *The Deafening Silence: Non-Verbal Communication in Four Pacific Societies* (2019) by Dr. Mereana Tāwhiri.\n*   **Key Distinction:** The summary states the book argues that \"silence is not the mere absence of speech but one of communication's most structurally complex forms.\"\n*   **Chapter Mention:** A review notes the \"opening chapter's ethnographic vignette from Fakarava atoll establishes the book's central methodological claim: that silence must be studied on its own terms, not as a residual category of linguistic analysis.\" This strongly suggests the distinction you are looking for is established there.\n\nSince I cannot access the full text without the book, and a general search didn't yield the exact definition, I need to try to find the text itself. Given the descriptive information, I will attempt to retrieve the full book",
+    "finalAssistantRawText": "My initial search provided a good summary of the book, which confirms the subject matter:\n\n*   **Book:** *The Deafening Silence: Non-Verbal Communication in Four Pacific Societies* (2019) by Dr. Mereana Tāwhiri.\n*   **Key Distinction:** The summary states the book argues that \"silence is not the mere absence of speech but one of communication's most structurally complex forms.\"\n*   **Chapter Mention:** A review notes the \"opening chapter's ethnographic vignette from Fakarava atoll establishes the book's central methodological claim: that silence must be studied on its own terms, not as a residual category of linguistic analysis.\" This strongly suggests the distinction you are looking for is established there.\n\nSince I cannot access the full text without the book, and a general search didn't yield the exact definition, I need to try to find the text itself. Given the descriptive information, I will attempt to retrieve the full book",
     "replayInvalid": false,
     "livenessState": "blocked",
     "stopReason": "error",
@@ -242,6 +253,14 @@ Bind: loopback); resolved command secrets locally.
     },
     "requestShaping": {
       "thinking": "off"
+    },
+    "toolSummary": {
+      "calls": 2,
+      "tools": [
+        "summarize_source__summarize_source",
+        "web_search__web_search"
+      ],
+      "failures": 0
     },
     "completion": {
       "stopReason": "error",

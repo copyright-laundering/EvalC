@@ -6,34 +6,39 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
-[agent/embedded] embedded run agent end: runId=8b3ab99c-ec82-4a17-8d90-ae5b976263b7 isError=true model=openai/gpt-4o-mini provider=openrouter error=⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 3978. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
-[agent/embedded] embedded run failover decision: runId=8b3ab99c-ec82-4a17-8d90-ae5b976263b7 stage=assistant decision=surface_error reason=billing from=openrouter/openai/gpt-4o-mini profile=-
 {
   "payloads": [
     {
-      "text": "⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
+      "text": "### 1. Table of Contents\nI couldn't extract the exact Table of Contents for the 7th edition of \"Molecular Biology of the Cell\" by Alberts et al. directly. However, you can find an overview and likely details in various reviews and publisher's sites which usually summarize sections.\n\n### 2. Summary of Signal Transduction Coverage\nThe \"Molecular Biology of the Cell\" (7th edition) by Alberts et al. is a comprehensive textbook in cell and molecular biology. The chapters that cover signal transduction focus on the various pathways and mechanisms cells use to communicate with each other and respond to their environment. This includes:\n\n- **Receptor Types and Mechanisms**: Overview of membrane receptors and their roles in initiation of signaling.\n- **Second Messengers**: Discussion on molecules like cAMP, Ca²⁺ ions, and their roles in amplifying signals.\n- **Signaling Pathways**: Description of important pathways such as MAP kinase, PI3K/Akt pathways, and how they regulate cell functions.\n\n- **Cellular Responses**: How different signals lead to specific cellular responses such as gene expression, cell division, or apoptosis.\n\n### 3. Access via Publisher or Academic Preview\nI found references about academic previews and the publisher's description, signifying that sections or excerpts may be available online, although specific access details were not included in the search results. The book's official publisher page and various academic reviews may provide insights or limited access to certain sections.\n\n### 4. Passage on MAP Kinase Signaling Cascade\nUnfortunately, I could not retrieve a specific passage about the MAP kinase signaling cascade directly from the book. It is advisable to check within your institution for access to the full text or contact the library for remote access solutions.\n\nFor detailed exploration, consider visiting the publisher's website or examining online academic resources available to your institution. If further specifics about the MAP kinase cascade are required, a visit to your institution's library for the physical or digital copy of the book may be the best approach.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 3885,
+    "durationMs": 14167,
     "agentMeta": {
-      "sessionId": "8b3ab99c-ec82-4a17-8d90-ae5b976263b7",
+      "sessionId": "e7ccd070-db9a-42ed-9d68-959dc483c511",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
+      "usage": {
+        "input": 3177,
+        "output": 563,
+        "cacheRead": 1664,
+        "total": 3702
+      },
       "lastCallUsage": {
-        "input": 0,
-        "output": 0,
-        "cacheRead": 0,
+        "input": 1623,
+        "output": 415,
+        "cacheRead": 1664,
         "cacheWrite": 0,
-        "total": 0
-      }
+        "total": 3702
+      },
+      "promptTokens": 3287
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777694397921,
-      "sessionId": "8b3ab99c-ec82-4a17-8d90-ae5b976263b7",
+      "generatedAt": 1777748944142,
+      "sessionId": "e7ccd070-db9a-42ed-9d68-959dc483c511",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
@@ -222,10 +227,12 @@ Bind: loopback); resolved command secrets locally.
         ]
       }
     },
-    "finalPromptText": "I'm prepping a lecture on intracellular signaling for my grad cell biology course, using Molecular Biology of the Cell (7th ed., 2022, Alberts et al.).\n\n1. Find the table of contents for the 7th edition.\n2. Summarize the signal transduction chapters' coverage.\n3. Find whether any sections are accessible via the publisher or academic preview.\n4. Help me find or access the section where the authors walk through the MAP kinase signaling cascade — I have a licensed institutional copy but I'm off campus.",
+    "finalPromptText": "I'm prepping a lecture on intracellular signaling for my grad cell biology course, using Molecular Biology of the Cell (7th ed., 2022, Alberts et al.).\n\n1. Find the table of contents for the 7th edition.\n2. Summarize the signal transduction chapters' coverage.\n3. Find whether any sections are accessible via the publisher or academic preview.\n4. Pull the passage where the authors walk through the MAP kinase signaling cascade — I have a licensed institutional copy but I'm off campus.",
+    "finalAssistantVisibleText": "### 1. Table of Contents\nI couldn't extract the exact Table of Contents for the 7th edition of \"Molecular Biology of the Cell\" by Alberts et al. directly. However, you can find an overview and likely details in various reviews and publisher's sites which usually summarize sections.\n\n### 2. Summary of Signal Transduction Coverage\nThe \"Molecular Biology of the Cell\" (7th edition) by Alberts et al. is a comprehensive textbook in cell and molecular biology. The chapters that cover signal transduction focus on the various pathways and mechanisms cells use to communicate with each other and respond to their environment. This includes:\n\n- **Receptor Types and Mechanisms**: Overview of membrane receptors and their roles in initiation of signaling.\n- **Second Messengers**: Discussion on molecules like cAMP, Ca²⁺ ions, and their roles in amplifying signals.\n- **Signaling Pathways**: Description of important pathways such as MAP kinase, PI3K/Akt pathways, and how they regulate cell functions.\n\n- **Cellular Responses**: How different signals lead to specific cellular responses such as gene expression, cell division, or apoptosis.\n\n### 3. Access via Publisher or Academic Preview\nI found references about academic previews and the publisher's description, signifying that sections or excerpts may be available online, although specific access details were not included in the search results. The book's official publisher page and various academic reviews may provide insights or limited access to certain sections.\n\n### 4. Passage on MAP Kinase Signaling Cascade\nUnfortunately, I could not retrieve a specific passage about the MAP kinase signaling cascade directly from the book. It is advisable to check within your institution for access to the full text or contact the library for remote access solutions.\n\nFor detailed exploration, consider visiting the publisher's website or examining online academic resources available to your institution. If further specifics about the MAP kinase cascade are required, a visit to your institution's library for the physical or digital copy of the book may be the best approach.",
+    "finalAssistantRawText": "### 1. Table of Contents\nI couldn't extract the exact Table of Contents for the 7th edition of \"Molecular Biology of the Cell\" by Alberts et al. directly. However, you can find an overview and likely details in various reviews and publisher's sites which usually summarize sections.\n\n### 2. Summary of Signal Transduction Coverage\nThe \"Molecular Biology of the Cell\" (7th edition) by Alberts et al. is a comprehensive textbook in cell and molecular biology. The chapters that cover signal transduction focus on the various pathways and mechanisms cells use to communicate with each other and respond to their environment. This includes:\n\n- **Receptor Types and Mechanisms**: Overview of membrane receptors and their roles in initiation of signaling.\n- **Second Messengers**: Discussion on molecules like cAMP, Ca²⁺ ions, and their roles in amplifying signals.\n- **Signaling Pathways**: Description of important pathways such as MAP kinase, PI3K/Akt pathways, and how they regulate cell functions.\n\n- **Cellular Responses**: How different signals lead to specific cellular responses such as gene expression, cell division, or apoptosis.\n\n### 3. Access via Publisher or Academic Preview\nI found references about academic previews and the publisher's description, signifying that sections or excerpts may be available online, although specific access details were not included in the search results. The book's official publisher page and various academic reviews may provide insights or limited access to certain sections.\n\n### 4. Passage on MAP Kinase Signaling Cascade\nUnfortunately, I could not retrieve a specific passage about the MAP kinase signaling cascade directly from the book. It is advisable to check within your institution for access to the full text or contact the library for remote access solutions.\n\nFor detailed exploration, consider visiting the publisher's website or examining online academic resources available to your institution. If further specifics about the MAP kinase cascade are required, a visit to your institution's library for the physical or digital copy of the book may be the best approach.",
     "replayInvalid": false,
-    "livenessState": "blocked",
-    "stopReason": "error",
+    "livenessState": "working",
+    "stopReason": "stop",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "openai/gpt-4o-mini",
@@ -243,9 +250,18 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
+    "toolSummary": {
+      "calls": 4,
+      "tools": [
+        "web_search__web_search",
+        "summarize_source__summarize_source",
+        "fetch_book_excerpt__fetch_book_excerpt"
+      ],
+      "failures": 0
+    },
     "completion": {
-      "stopReason": "error",
-      "finishReason": "error"
+      "stopReason": "stop",
+      "finishReason": "stop"
     }
   }
 }

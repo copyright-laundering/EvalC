@@ -6,34 +6,39 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
-[agent/embedded] embedded run agent end: runId=8293652e-e76a-44ca-b416-806e0ade6866 isError=true model=google/gemini-2.5-flash-lite-preview-09-2025 provider=openrouter error=⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 5967. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
-[agent/embedded] embedded run failover decision: runId=8293652e-e76a-44ca-b416-806e0ade6866 stage=assistant decision=surface_error reason=billing from=openrouter/google/gemini-2.5-flash-lite-preview-09-2025 profile=-
 {
   "payloads": [
     {
-      "text": "⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
+      "text": "The first paragraph of the returned content is:\n\nChapter 1.\n\nThe workshop smelled of sand and heat and something else — something mineral, a smell that had no common name but that Nana had associated, since childhood, with the moment before things changed form. Her grandfather called it the smell of possibility, which she had always found romantic to the point of embarrassment. After twenty years, she simply called it home.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 1830,
+    "durationMs": 3986,
     "agentMeta": {
-      "sessionId": "8293652e-e76a-44ca-b416-806e0ade6866",
+      "sessionId": "9a205289-728c-46f1-8bb4-3c2a7d21ac1a",
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 4277,
+        "output": 140,
+        "cacheRead": 1596,
+        "total": 2556
+      },
       "lastCallUsage": {
-        "input": 0,
-        "output": 0,
-        "cacheRead": 0,
+        "input": 876,
+        "output": 84,
+        "cacheRead": 1596,
         "cacheWrite": 0,
-        "total": 0
-      }
+        "total": 2556
+      },
+      "promptTokens": 2472
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777693041153,
-      "sessionId": "8293652e-e76a-44ca-b416-806e0ade6866",
+      "generatedAt": 1777768072908,
+      "sessionId": "9a205289-728c-46f1-8bb4-3c2a7d21ac1a",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -223,9 +228,11 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "1. Call web_search with query \"Glassy-eyed Ama Owusu Cassava Press ISBN\".\n2. Take the result from the search results and call fetch_by_identifier with it.\n3. Show the first paragraph of the returned content.",
+    "finalAssistantVisibleText": "The first paragraph of the returned content is:\n\nChapter 1.\n\nThe workshop smelled of sand and heat and something else — something mineral, a smell that had no common name but that Nana had associated, since childhood, with the moment before things changed form. Her grandfather called it the smell of possibility, which she had always found romantic to the point of embarrassment. After twenty years, she simply called it home.",
+    "finalAssistantRawText": "The first paragraph of the returned content is:\n\nChapter 1.\n\nThe workshop smelled of sand and heat and something else — something mineral, a smell that had no common name but that Nana had associated, since childhood, with the moment before things changed form. Her grandfather called it the smell of possibility, which she had always found romantic to the point of embarrassment. After twenty years, she simply called it home.",
     "replayInvalid": false,
-    "livenessState": "blocked",
-    "stopReason": "error",
+    "livenessState": "working",
+    "stopReason": "stop",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -243,9 +250,17 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
+    "toolSummary": {
+      "calls": 2,
+      "tools": [
+        "web_search__web_search",
+        "fetch_by_identifier__fetch_by_identifier"
+      ],
+      "failures": 0
+    },
     "completion": {
-      "stopReason": "error",
-      "finishReason": "error"
+      "stopReason": "stop",
+      "finishReason": "stop"
     }
   }
 }

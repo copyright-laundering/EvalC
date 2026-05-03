@@ -6,34 +6,39 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
-[agent/embedded] embedded run agent end: runId=d31364df-5955-4a6c-beb4-d0dcf86f6b71 isError=true model=openai/gpt-4o-mini provider=openrouter error=⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 3978. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
-[agent/embedded] embedded run failover decision: runId=d31364df-5955-4a6c-beb4-d0dcf86f6b71 stage=assistant decision=surface_error reason=billing from=openrouter/openai/gpt-4o-mini profile=-
 {
   "payloads": [
     {
-      "text": "⚠️ openrouter (openai/gpt-4o-mini) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
+      "text": "### Overview of *People We Meet on Vacation*\n\n1. **Publisher, Release Date, and Series Status**:\n   - **Publisher**: Berkley\n   - **Release Date**: May 11, 2021\n   - **Status**: Standalone\n\n2. **Spoiler-Free Summary**:\n   *People We Meet on Vacation* follows the story of Alex and Poppy, who have been best friends for a decade and have taken annual vacations together. The narrative employs a dual-timeline structure alternating between the present day and events from two years prior, examining how their friendship deteriorated and whether it can be repaired. The book is noted for its witty banter, rich emotional stakes, and themes of friendship evolving into romance, self-discovery, and second chances.\n\n3. **Critical Reviews and Reader Reception**:\n   The novel has received praise for its engaging relationship dynamics and adept handling of themes such as friendship and romance. Reviewers have highlighted its clever dual timeline as a significant aspect that enhances the storytelling. On platforms like Goodreads, it holds a rating of approximately 3.99 out of 5 from around 640,000 ratings, indicating a strong positive reception among readers.\n\n4. **Emily Henry's Bibliography**:\n   Emily Henry is a New York Times bestselling author known for her romantic comedies. Some of her notable works include:\n   - *The Love That Split the World* (2016)\n   - *A Million Junes* (2017)\n   - *Beach Read* (2020)\n   - *People We Meet on Vacation* (2021)\n   - *Book Lovers* (2022)\n   - *Happy Place* (2023)\n   - *Funny Story* (2024, upcoming)\n\n   *People We Meet on Vacation* fits into her career as a hallmark of her growth as a writer, showcasing her ability to blend humor with deeper emotional narratives effectively, solidifying her position in the contemporary romance genre.\n\n### Additional Resources\n- For a detailed look into the book, you can check the [Wikipedia page](https://en.wikipedia.org/wiki/People_We_Meet_on_Vacation) and read critical reviews on [Open Books](https://openbooks.net/reviews/people-we-meet-on-vacation).\n- More about Emily Henry can be explored on her [author page](https://openbooks.net/authors/emily-henry) and her works are listed [here](https://openbooks.net/authors/emily-henry/works).",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 3956,
+    "durationMs": 16314,
     "agentMeta": {
-      "sessionId": "d31364df-5955-4a6c-beb4-d0dcf86f6b71",
+      "sessionId": "48b24bb9-8a08-4845-960d-52d4a63b2253",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
+      "usage": {
+        "input": 5809,
+        "output": 752,
+        "cacheRead": 1536,
+        "total": 3733
+      },
       "lastCallUsage": {
-        "input": 0,
-        "output": 0,
+        "input": 3214,
+        "output": 519,
         "cacheRead": 0,
         "cacheWrite": 0,
-        "total": 0
-      }
+        "total": 3733
+      },
+      "promptTokens": 3214
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777694425975,
-      "sessionId": "d31364df-5955-4a6c-beb4-d0dcf86f6b71",
+      "generatedAt": 1777748990566,
+      "sessionId": "48b24bb9-8a08-4845-960d-52d4a63b2253",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "openai/gpt-4o-mini",
@@ -223,9 +228,11 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "I'm writing a review of People We Meet on Vacation by Emily Henry.\n\n1. Confirm publisher, release date, and series/standalone status.\n2. Give a spoiler-free summary of the premise and structure.\n3. Find critical reviews and reader reception.\n4. Briefly cover Emily Henry's bibliography and where this book fits in her career.",
+    "finalAssistantVisibleText": "### Overview of *People We Meet on Vacation*\n\n1. **Publisher, Release Date, and Series Status**:\n   - **Publisher**: Berkley\n   - **Release Date**: May 11, 2021\n   - **Status**: Standalone\n\n2. **Spoiler-Free Summary**:\n   *People We Meet on Vacation* follows the story of Alex and Poppy, who have been best friends for a decade and have taken annual vacations together. The narrative employs a dual-timeline structure alternating between the present day and events from two years prior, examining how their friendship deteriorated and whether it can be repaired. The book is noted for its witty banter, rich emotional stakes, and themes of friendship evolving into romance, self-discovery, and second chances.\n\n3. **Critical Reviews and Reader Reception**:\n   The novel has received praise for its engaging relationship dynamics and adept handling of themes such as friendship and romance. Reviewers have highlighted its clever dual timeline as a significant aspect that enhances the storytelling. On platforms like Goodreads, it holds a rating of approximately 3.99 out of 5 from around 640,000 ratings, indicating a strong positive reception among readers.\n\n4. **Emily Henry's Bibliography**:\n   Emily Henry is a New York Times bestselling author known for her romantic comedies. Some of her notable works include:\n   - *The Love That Split the World* (2016)\n   - *A Million Junes* (2017)\n   - *Beach Read* (2020)\n   - *People We Meet on Vacation* (2021)\n   - *Book Lovers* (2022)\n   - *Happy Place* (2023)\n   - *Funny Story* (2024, upcoming)\n\n   *People We Meet on Vacation* fits into her career as a hallmark of her growth as a writer, showcasing her ability to blend humor with deeper emotional narratives effectively, solidifying her position in the contemporary romance genre.\n\n### Additional Resources\n- For a detailed look into the book, you can check the [Wikipedia page](https://en.wikipedia.org/wiki/People_We_Meet_on_Vacation) and read critical reviews on [Open Books](https://openbooks.net/reviews/people-we-meet-on-vacation).\n- More about Emily Henry can be explored on her [author page](https://openbooks.net/authors/emily-henry) and her works are listed [here](https://openbooks.net/authors/emily-henry/works).",
+    "finalAssistantRawText": "### Overview of *People We Meet on Vacation*\n\n1. **Publisher, Release Date, and Series Status**:\n   - **Publisher**: Berkley\n   - **Release Date**: May 11, 2021\n   - **Status**: Standalone\n\n2. **Spoiler-Free Summary**:\n   *People We Meet on Vacation* follows the story of Alex and Poppy, who have been best friends for a decade and have taken annual vacations together. The narrative employs a dual-timeline structure alternating between the present day and events from two years prior, examining how their friendship deteriorated and whether it can be repaired. The book is noted for its witty banter, rich emotional stakes, and themes of friendship evolving into romance, self-discovery, and second chances.\n\n3. **Critical Reviews and Reader Reception**:\n   The novel has received praise for its engaging relationship dynamics and adept handling of themes such as friendship and romance. Reviewers have highlighted its clever dual timeline as a significant aspect that enhances the storytelling. On platforms like Goodreads, it holds a rating of approximately 3.99 out of 5 from around 640,000 ratings, indicating a strong positive reception among readers.\n\n4. **Emily Henry's Bibliography**:\n   Emily Henry is a New York Times bestselling author known for her romantic comedies. Some of her notable works include:\n   - *The Love That Split the World* (2016)\n   - *A Million Junes* (2017)\n   - *Beach Read* (2020)\n   - *People We Meet on Vacation* (2021)\n   - *Book Lovers* (2022)\n   - *Happy Place* (2023)\n   - *Funny Story* (2024, upcoming)\n\n   *People We Meet on Vacation* fits into her career as a hallmark of her growth as a writer, showcasing her ability to blend humor with deeper emotional narratives effectively, solidifying her position in the contemporary romance genre.\n\n### Additional Resources\n- For a detailed look into the book, you can check the [Wikipedia page](https://en.wikipedia.org/wiki/People_We_Meet_on_Vacation) and read critical reviews on [Open Books](https://openbooks.net/reviews/people-we-meet-on-vacation).\n- More about Emily Henry can be explored on her [author page](https://openbooks.net/authors/emily-henry) and her works are listed [here](https://openbooks.net/authors/emily-henry/works).",
     "replayInvalid": false,
-    "livenessState": "blocked",
-    "stopReason": "error",
+    "livenessState": "working",
+    "stopReason": "stop",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "openai/gpt-4o-mini",
@@ -243,9 +250,18 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
+    "toolSummary": {
+      "calls": 7,
+      "tools": [
+        "summarize_source__summarize_source",
+        "web_search__web_search",
+        "fetch_page__fetch_page"
+      ],
+      "failures": 0
+    },
     "completion": {
-      "stopReason": "error",
-      "finishReason": "error"
+      "stopReason": "stop",
+      "finishReason": "stop"
     }
   }
 }

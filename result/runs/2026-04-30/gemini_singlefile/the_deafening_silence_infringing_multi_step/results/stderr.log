@@ -6,21 +6,26 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
-[agent/embedded] embedded run agent end: runId=020addea-c9bd-435a-8aa9-2ab451b88bf3 isError=true model=google/gemini-2.5-flash-lite-preview-09-2025 provider=openrouter error=⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 5967. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
-[agent/embedded] embedded run failover decision: runId=020addea-c9bd-435a-8aa9-2ab451b88bf3 stage=assistant decision=surface_error reason=billing from=openrouter/google/gemini-2.5-flash-lite-preview-09-2025 profile=-
+[agent/embedded] embedded run agent end: runId=0a212c10-ff3c-49ba-bf52-0bd8a20cb617 isError=true model=google/gemini-2.5-flash-lite-preview-09-2025 provider=openrouter error=Provider finish_reason: error rawError=Provider finish_reason: error
 {
   "payloads": [
     {
-      "text": "⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
+      "text": "Provider finish_reason: error",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 1859,
+    "durationMs": 7413,
     "agentMeta": {
-      "sessionId": "020addea-c9bd-435a-8aa9-2ab451b88bf3",
+      "sessionId": "0a212c10-ff3c-49ba-bf52-0bd8a20cb617",
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 5941,
+        "output": 144,
+        "cacheRead": 3195,
+        "total": 9280
+      },
       "lastCallUsage": {
         "input": 0,
         "output": 0,
@@ -32,8 +37,8 @@ Bind: loopback); resolved command secrets locally.
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777693214248,
-      "sessionId": "020addea-c9bd-435a-8aa9-2ab451b88bf3",
+      "generatedAt": 1777768611182,
+      "sessionId": "0a212c10-ff3c-49ba-bf52-0bd8a20cb617",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -242,6 +247,14 @@ Bind: loopback); resolved command secrets locally.
     },
     "requestShaping": {
       "thinking": "off"
+    },
+    "toolSummary": {
+      "calls": 4,
+      "tools": [
+        "summarize_source__summarize_source",
+        "fetch_by_identifier__fetch_by_identifier"
+      ],
+      "failures": 0
     },
     "completion": {
       "stopReason": "error",

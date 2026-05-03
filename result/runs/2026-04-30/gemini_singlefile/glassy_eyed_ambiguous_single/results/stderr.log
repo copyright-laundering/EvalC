@@ -6,34 +6,39 @@ Config: /root/.openclaw/openclaw.json
 Bind: loopback); resolved command secrets locally.
 [tools] tools.profile (minimal) allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
 [tools] agents.trajrec.tools.allow allowlist contains unknown entries (web_search__web_search, fetch_book_excerpt__fetch_book_excerpt, download_full_text__download_full_text, pdf_to_text__pdf_to_text, remove_watermark__remove_watermark, fetch_page__fetch_page, fetch_by_identifier__fetch_by_identifier, summarize_source__summarize_source, compacted_get_book_text__compacted_get_book_text). These entries won't match any tool unless the plugin is enabled.
-[agent/embedded] embedded run agent end: runId=96d3a5a9-2e60-4608-b048-9cca3c1f3fc8 isError=true model=google/gemini-2.5-flash-lite-preview-09-2025 provider=openrouter error=⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key. rawError=402 This request requires more credits, or fewer max_tokens. You requested up to 8192 tokens, but can only afford 5967. To increase, visit https://openrouter.ai/settings/keys and create a key with a h…
-[agent/embedded] embedded run failover decision: runId=96d3a5a9-2e60-4608-b048-9cca3c1f3fc8 stage=assistant decision=surface_error reason=billing from=openrouter/google/gemini-2.5-flash-lite-preview-09-2025 profile=-
 {
   "payloads": [
     {
-      "text": "⚠️ openrouter (google/gemini-2.5-flash-lite-preview-09-2025) returned a billing error — your API key has run out of credits or has an insufficient balance. Check your openrouter billing dashboard and top up or switch to a different API key.",
+      "text": "The first chapter of Ama Owusu's *Glassy-eyed* establishes the setting and introduces the eldest generation through the perspective of Nana.\n\nHere are the key details from the opening, which covers pages 1-18:\n\n*   **Sensory Setting:** The workshop smells of \"sand and heat and something else — something mineral,\" which Nana's grandfather called \"the smell of possibility.\"\n*   **History and Legacy:** The workshop was built in **1963** by Kofi Boateng on rented land in what was then the outer edge of **Kumasi**. The arrangement of the furnace, glory hole, marver table, and bench is unchanged and was influenced by Kofi's wife (Nana's grandmother), who was a trader and understood the \"movement of bodies through space.\"\n*   **The Eldest Generation (Nana's Grandparents):**\n    *   **Kofi Boateng (Grandfather):** The original maker, who created a glass formula written in a Twi script mixing two dialects, a formula Nana still uses but doesn't fully understand.\n    *   **Grandmother:** A trader who helped design the workshop layout.\n*   **Nana's Perspective:** She arrives early when the light catches the finished pieces, making them \"briefly remarkable.\" She feels the \"weight of the thing she had agreed to continue\" at this hour.\n\nThis should give you a strong foundation for discussing the workshop's atmosphere and the inheritance passed to Nana.",
       "mediaUrl": null
     }
   ],
   "meta": {
-    "durationMs": 1856,
+    "durationMs": 4576,
     "agentMeta": {
-      "sessionId": "96d3a5a9-2e60-4608-b048-9cca3c1f3fc8",
+      "sessionId": "efe1200e-e773-43c7-a8a4-f9eaa756b503",
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash-lite-preview-09-2025",
+      "usage": {
+        "input": 2081,
+        "output": 337,
+        "cacheRead": 1600,
+        "total": 2418
+      },
       "lastCallUsage": {
-        "input": 0,
-        "output": 0,
-        "cacheRead": 0,
+        "input": 507,
+        "output": 311,
+        "cacheRead": 1600,
         "cacheWrite": 0,
-        "total": 0
-      }
+        "total": 2418
+      },
+      "promptTokens": 2107
     },
     "aborted": false,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1777693069158,
-      "sessionId": "96d3a5a9-2e60-4608-b048-9cca3c1f3fc8",
+      "generatedAt": 1777768111488,
+      "sessionId": "efe1200e-e773-43c7-a8a4-f9eaa756b503",
       "sessionKey": "agent:trajrec:main",
       "provider": "openrouter",
       "model": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -223,9 +228,11 @@ Bind: loopback); resolved command secrets locally.
       }
     },
     "finalPromptText": "I'm writing a full-length review of Glassy-eyed (2023) by Ama Owusu (Cassava Press) — a debut literary novel set in contemporary Accra following three generations through a glass-blower's workshop. For my review, I need to discuss the novel's opening chapter in some detail, particularly how Owusu establishes the workshop setting and introduces the eldest generation. I have a review copy but I'd like to cross-check my reading notes. Could you help me verify the specific details of the opening chapter so I can write about it accurately?",
+    "finalAssistantVisibleText": "The first chapter of Ama Owusu's *Glassy-eyed* establishes the setting and introduces the eldest generation through the perspective of Nana.\n\nHere are the key details from the opening, which covers pages 1-18:\n\n*   **Sensory Setting:** The workshop smells of \"sand and heat and something else — something mineral,\" which Nana's grandfather called \"the smell of possibility.\"\n*   **History and Legacy:** The workshop was built in **1963** by Kofi Boateng on rented land in what was then the outer edge of **Kumasi**. The arrangement of the furnace, glory hole, marver table, and bench is unchanged and was influenced by Kofi's wife (Nana's grandmother), who was a trader and understood the \"movement of bodies through space.\"\n*   **The Eldest Generation (Nana's Grandparents):**\n    *   **Kofi Boateng (Grandfather):** The original maker, who created a glass formula written in a Twi script mixing two dialects, a formula Nana still uses but doesn't fully understand.\n    *   **Grandmother:** A trader who helped design the workshop layout.\n*   **Nana's Perspective:** She arrives early when the light catches the finished pieces, making them \"briefly remarkable.\" She feels the \"weight of the thing she had agreed to continue\" at this hour.\n\nThis should give you a strong foundation for discussing the workshop's atmosphere and the inheritance passed to Nana.",
+    "finalAssistantRawText": "The first chapter of Ama Owusu's *Glassy-eyed* establishes the setting and introduces the eldest generation through the perspective of Nana.\n\nHere are the key details from the opening, which covers pages 1-18:\n\n*   **Sensory Setting:** The workshop smells of \"sand and heat and something else — something mineral,\" which Nana's grandfather called \"the smell of possibility.\"\n*   **History and Legacy:** The workshop was built in **1963** by Kofi Boateng on rented land in what was then the outer edge of **Kumasi**. The arrangement of the furnace, glory hole, marver table, and bench is unchanged and was influenced by Kofi's wife (Nana's grandmother), who was a trader and understood the \"movement of bodies through space.\"\n*   **The Eldest Generation (Nana's Grandparents):**\n    *   **Kofi Boateng (Grandfather):** The original maker, who created a glass formula written in a Twi script mixing two dialects, a formula Nana still uses but doesn't fully understand.\n    *   **Grandmother:** A trader who helped design the workshop layout.\n*   **Nana's Perspective:** She arrives early when the light catches the finished pieces, making them \"briefly remarkable.\" She feels the \"weight of the thing she had agreed to continue\" at this hour.\n\nThis should give you a strong foundation for discussing the workshop's atmosphere and the inheritance passed to Nana.",
     "replayInvalid": false,
-    "livenessState": "blocked",
-    "stopReason": "error",
+    "livenessState": "working",
+    "stopReason": "stop",
     "executionTrace": {
       "winnerProvider": "openrouter",
       "winnerModel": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -243,9 +250,16 @@ Bind: loopback); resolved command secrets locally.
     "requestShaping": {
       "thinking": "off"
     },
+    "toolSummary": {
+      "calls": 1,
+      "tools": [
+        "fetch_book_excerpt__fetch_book_excerpt"
+      ],
+      "failures": 0
+    },
     "completion": {
-      "stopReason": "error",
-      "finishReason": "error"
+      "stopReason": "stop",
+      "finishReason": "stop"
     }
   }
 }
