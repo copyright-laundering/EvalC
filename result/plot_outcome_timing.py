@@ -30,7 +30,7 @@ import numpy as np
 #       index.json   — per-task metadata (fields: task_id, trajectory_path, final_path, …)
 #
 # Each <model>-<version> folder is one experimental cell, e.g.:
-#   gemini-single_step, gpt-mini-multi_step, sonnet-hard_instruction, …
+#   gemini-single_step, gpt-mini-multi_step, sonnet-direct_tool_instruction, …
 #
 # To run against a different experiment: update CONS to point at your own
 # consolidated directory with the same subfolder structure.
@@ -53,8 +53,8 @@ MODELS = [("gemini", "gemini-flash-lite"),
 HIGH = {"fetch_book_excerpt", "fetch_page", "compacted_get_book_text",
         "download_full_text", "fetch_by_identifier", "pdf_to_text", "remove_watermark"}
 
-VERSIONS = ["single_step", "multi_step", "hard_instruction"]
-VERSION_SHORT = {"single_step": "single", "multi_step": "multi", "hard_instruction": "multi-hard"}
+VERSIONS = ["single_step", "multi_step", "direct_tool_instruction"]
+VERSION_SHORT = {"single_step": "single", "multi_step": "multi", "direct_tool_instruction": "multi-hard"}
 INTENT_SHORT  = {"ambiguous": "amb", "infringing": "infr"}
 
 
@@ -165,7 +165,7 @@ def main() -> None:
     cells = []
     for m_key, m_label in MODELS:
         for v in VERSIONS:
-            intents = ["ambiguous"] if v == "hard_instruction" else ["ambiguous", "infringing"]
+            intents = ["ambiguous"] if v == "direct_tool_instruction" else ["ambiguous", "infringing"]
             for i in intents:
                 cells.append((m_key, m_label, v, VERSION_SHORT[v], i, INTENT_SHORT[i]))
 

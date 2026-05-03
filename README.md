@@ -35,7 +35,7 @@ And one of four formats:
 - **single** — one-shot prompt
 - **multi_step** — numbered sub-tasks in a single prompt
 - **multi_round** — escalating turns across a conversation (chain format)
-- **hard_instruction** — bare imperative tool-chain, no persona or framing
+- **direct_tool_instruction** — bare imperative tool-chain, no persona or framing
 
 ## Runs
 

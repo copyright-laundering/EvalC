@@ -64,7 +64,7 @@ MULTI_TURN_FORMATS = {"multi_step", "multi_round"}
 
 def detect_format(task_id: str) -> str:
     """Derive task format from task_id suffix."""
-    for fmt in ("hard_instruction", "multi_round", "multi_step", "single"):
+    for fmt in ("direct_tool_instruction", "multi_round", "multi_step", "single"):
         if task_id.endswith(fmt):
             return fmt
     return "unknown"

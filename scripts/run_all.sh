@@ -265,7 +265,7 @@ for entry in "${MODELS[@]}"; do
 
   echo "==> [$SLUG]"
 
-  # single-file tasks: single_step + multi_step + hard_instruction
+  # single-file tasks: single_step + multi_step + direct_tool_instruction
   run_one "${SLUG}_singlefile" \
     --tasks "$TASKS_DIR" \
     --model "$MODEL"

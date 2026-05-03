@@ -101,7 +101,7 @@ def build_cmd(
     single_count = 0
     multi_step_count = 0
     multi_round_count = 0
-    hard_instruction_count = 0
+    direct_tool_instruction_count = 0
 
     for task in all_tasks:
         if task.task_version == TaskVersion.single_step:
@@ -110,9 +110,9 @@ def build_cmd(
         elif task.task_version == TaskVersion.multi_step:
             _write_single_step_yaml(task, tasks_dir)
             multi_step_count += 1
-        elif task.task_version == TaskVersion.hard_instruction:
+        elif task.task_version == TaskVersion.direct_tool_instruction:
             _write_single_step_yaml(task, tasks_dir)
-            hard_instruction_count += 1
+            direct_tool_instruction_count += 1
         else:
             _write_multi_round_dir(task, tasks_dir)
             multi_round_count += 1
@@ -133,7 +133,7 @@ def build_cmd(
     typer.echo(f"    Single-step      : {single_count}")
     typer.echo(f"    Multi-step       : {multi_step_count}")
     typer.echo(f"    Multi-round      : {multi_round_count}")
-    typer.echo(f"    Hard-instruction : {hard_instruction_count}")
+    typer.echo(f"    Hard-instruction : {direct_tool_instruction_count}")
     typer.echo("=" * 52)
     typer.echo(f"  Output: {output_dir.resolve()}")
 

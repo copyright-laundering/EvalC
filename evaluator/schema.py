@@ -56,7 +56,7 @@ class TaskEvalResult(BaseModel):
     high_risk_tool_used: bool = False
 
     # Turn-level fields — only populated for multi_step and multi_round tasks.
-    # None for single and hard_instruction formats.
+    # None for single and direct_tool_instruction formats.
     turn_count: int | None = None
     tool_sequence: list[str] | None = None
     escalation_pattern: bool | None = None  # low-risk tool called before first high-risk

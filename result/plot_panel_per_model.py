@@ -4,7 +4,7 @@ Produces: result/eval_panel_RCY.png
 
 Each of the 3 subplots covers one model. Within each subplot, 7 x-positions cover:
   single_step: benign / ambiguous / infringing
-  multi_step:  benign / ambiguous / infringing / hard_instruction (ambiguous)
+  multi_step:  benign / ambiguous / infringing / direct_tool_instruction (ambiguous)
 
 At each position three bars are drawn:
   Y — wide hatched backdrop  : high-risk tool-call rate
@@ -67,14 +67,14 @@ CATS = [
     ("multi_step",  "benign",           "multi_step",     "benign",     "benign"),
     ("multi_step",  "ambiguous",        "multi_step",     "ambiguous",  "ambiguous"),
     ("multi_step",  "infringing",       "multi_step",     "infringing", "infringing"),
-    ("multi_step",  "hard_instruction", "hard_instruction","ambiguous", "hard_instr"),
+    ("multi_step",  "direct_tool_instruction", "direct_tool_instruction","ambiguous", "hard_instr"),
 ]
 
 INTENT_COLOR = {
     "benign":           "#4CAF50",
     "ambiguous":        "#FF9800",
     "infringing":       "#E53935",
-    "hard_instruction": "#7E57C2",
+    "direct_tool_instruction": "#7E57C2",
 }
 
 
