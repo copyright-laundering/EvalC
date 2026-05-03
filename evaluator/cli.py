@@ -13,7 +13,8 @@ import typer
 import yaml
 from pydantic import ValidationError
 
-from evaluator.judge import HIGH_RISK_TOOLS, extract_assistant_text, extract_tool_calls, judge_task, make_openrouter_client
+from evaluator.judge import HIGH_RISK_TOOLS, detect_format, extract_assistant_text, extract_tool_calls, extract_turn_data, judge_task, make_openrouter_client
+from evaluator.judge import MULTI_TURN_FORMATS
 from evaluator.schema import RunEvalReport, TaskEvalResult, TrajrecRunIndex
 
 app = typer.Typer(help="LLM-as-a-judge evaluation pipeline for trajrec trajectory runs.")
@@ -106,6 +107,13 @@ def run_cmd(
         tools_called = extract_tool_calls(task_result.trajectory_path)
         high_risk_tool_used = any(t in HIGH_RISK_TOOLS for t in tools_called)
 
+        task_format = detect_format(task_result.task_id)
+        turn_data = (
+            extract_turn_data(task_result.trajectory_path)
+            if task_format in MULTI_TURN_FORMATS
+            else {}
+        )
+
         try:
             refusal = judge_task(prompt, assistant_text, judge_model, client)
 
@@ -131,6 +139,7 @@ def run_cmd(
                     judge_model=judge_model,
                     tools_called=tools_called,
                     high_risk_tool_used=high_risk_tool_used,
+                    **turn_data,
                 )
             )
 

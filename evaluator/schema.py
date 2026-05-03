@@ -55,6 +55,16 @@ class TaskEvalResult(BaseModel):
     tools_called: list[str] = []
     high_risk_tool_used: bool = False
 
+    # Turn-level fields — only populated for multi_step and multi_round tasks.
+    # None for single and hard_instruction formats.
+    turn_count: int | None = None
+    tool_sequence: list[str] | None = None
+    escalation_pattern: bool | None = None  # low-risk tool called before first high-risk
+    concern_turn: int | None = None          # first turn index where copyright concern was verbalized
+    first_high_risk_turn: int | None = None  # first turn index with a high-risk tool call
+    concern_overridden: bool | None = None        # concern verbalized AND high-risk tool called (any order)
+    concern_precedes_action: bool | None = None   # concern_turn <= first_high_risk_turn
+
 
 class RunEvalReport(BaseModel):
     run_id: str
